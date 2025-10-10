@@ -20,8 +20,8 @@ export async function GET(request) {
     if (slug) {
       console.log("🔍 Tek place aranıyor - slug:", slug);
 
-      // Slug ile ara
-      const place = await Place.findOne({ slug: slug });
+      // Slug ile ara (sadece published olanlar - anasayfa için)
+      const place = await Place.findOne({ slug: slug, status: "published" });
       console.log("🔍 Place bulundu (slug):", place ? { name: place.name, slug: place.slug } : "null");
 
       if (!place) {
@@ -67,8 +67,8 @@ export async function GET(request) {
 
       return NextResponse.json(response);
     } else {
-      // Tüm places getir
-      const places = await Place.find({ status: "published" });
+      // Tüm places getir (admin panel için hem published hem draft)
+      const places = await Place.find({});
       const placesData = {};
 
       places.forEach((place) => {

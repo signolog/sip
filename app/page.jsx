@@ -152,7 +152,7 @@ export default function MapLibreMap() {
   const [showEndDropdown, setShowEndDropdown] = useState(false);
   const [isCardMinimized, setIsCardMinimized] = useState(true); // Mobilde başlangıçta kapalı
   const [activeNavItem, setActiveNavItem] = useState(1); // 0: Rota, 1: Asistan, 2-3: Boş
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true); // Desktop'ta sol panel açık/kapalı
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // Desktop'ta sol panel açık/kapalı
 
   const [showAllQuickAccess, setShowAllQuickAccess] = useState(false);
   const [showLocationWarning, setShowLocationWarning] = useState(false);
@@ -2040,10 +2040,15 @@ export default function MapLibreMap() {
               <div
                 className={`
         fixed bottom-16 left-1 right-1 rounded-lg transition-transform duration-300 
-        md:absolute md:top-4 md:left-4 md:right-auto md:bottom-auto md:rounded-xl md:max-w-96
+        md:absolute md:bottom-4 md:left-1/2 md:-translate-x-1/2 md:right-auto md:top-auto md:rounded-xl md:max-w-96
         bg-white shadow-lg z-40 border border-gray-200
         p-3 pb-4 md:p-4
-        ${isCardMinimized ? "translate-y-full" : "translate-y-0"}
+        ${
+          isCardMinimized
+            ? "translate-y-full md:translate-y-full md:translate-x-[-50%]"
+            : "translate-y-0 md:-translate-x-1/2"
+        }
+        ${activeNavItem !== 0 || routeSteps.length === 0 ? "md:hidden" : ""}
       `}
               >
                 <>
@@ -2390,8 +2395,8 @@ export default function MapLibreMap() {
 
           {/* Desktop Bilgi Kartları - Haritanın sol altında */}
           {routeSteps.length > 0 ? (
-            <div className="hidden md:block absolute bottom-4 left-4 max-w-sm z-40">
-              <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-gray-200 p-4">
+            <div className="hidden md:block absolute bottom-4 left-16 max-w-sm min-w-[380px] z-40">
+              <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-gray-200 p-4 min-h-[190px]">
                 <div className="flex items-start justify-between mb-3">
                   <h2 className="text-lg font-bold text-gray-800">
                     {rooms.find((r) => r.id === selectedEndRoom)?.name || "Seçili Oda"}
@@ -2521,8 +2526,8 @@ export default function MapLibreMap() {
             </div>
           ) : selectedEndRoom ? (
             // Desktop'ta oda seçilmiş durumu - Haritanın sol altında
-            <div className="hidden md:block absolute bottom-4 left-4 max-w-sm z-40">
-              <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-gray-200 p-4">
+            <div className="hidden md:block absolute bottom-4 left-16 max-w-sm min-w-[380px] z-40">
+              <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-gray-200 p-4 min-h-[190px]">
                 <div className="flex items-start justify-between mb-3">
                   <div>
                     <h2 className="text-base font-bold text-gray-800">
@@ -2553,7 +2558,7 @@ export default function MapLibreMap() {
                     setEndQuery(rooms.find((r) => r.id === selectedEndRoom)?.name || "");
                     setStartQuery("");
                   }}
-                  className="w-full py-2 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition"
+                  className="w-full py-2 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition mt-4"
                 >
                   {isSelectingStartRoom ? "Konumunuzu Seçin" : "Yol Tarifi Al"}
                 </button>
@@ -2561,8 +2566,8 @@ export default function MapLibreMap() {
             </div>
           ) : (
             // Desktop'ta oda seçilmedi durumu - Haritanın sol altında
-            <div className="hidden md:block absolute bottom-4 left-4 max-w-sm z-40">
-              <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-gray-200 p-4">
+            <div className="hidden md:block absolute bottom-4 left-16 max-w-sm min-w-[380px] z-40">
+              <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-gray-200 p-4 min-h-[190px]">
                 <div className="text-center py-4">
                   <div className="text-gray-400 mb-3">
                     <svg className="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
