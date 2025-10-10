@@ -57,7 +57,7 @@ export async function POST(request) {
       username: user.username,
       email: user.email,
       role: user.role,
-      place_id: user.place_id,
+      place_id: user.place_id?.toString(),
       store_id: user.store_id,
       last_login: user.last_login,
     };
