@@ -25,135 +25,105 @@ async function migrateToMongoDB() {
     console.log("📊 Bağlantı durumu:", mongoose.connection.readyState === 1 ? "✅ Aktif" : "❌ Pasif");
     console.log("🗄️  Database:", mongoose.connection.db.databaseName);
 
-    // 1. Places kontrolü (places.json yoksa, MongoDB'den al veya manuel ekle)
+    // 1. Places manuel ekleme (MongoDB'de yoksa ekle)
     console.log("\n📁 Places kontrol ediliyor...");
-    const placesPath = path.join(process.cwd(), "public", "places", "places.json");
 
     let existingPlaces = await Place.find();
 
-    if (fs.existsSync(placesPath)) {
-      console.log("📄 places.json bulundu, migrate ediliyor...");
-      const placesData = JSON.parse(fs.readFileSync(placesPath, "utf8"));
+    if (existingPlaces.length === 0) {
+      console.log("❌ MongoDB'de place yok, manuel eklenecek...");
 
-      for (const [placeId, placeData] of Object.entries(placesData)) {
-        const place = new Place({
-          name: placeData.name,
-          slug: placeData.slug,
-          legacy_id: placeId,
-          center: {
-            type: "Point",
-            coordinates: placeData.center,
+      // Manuel place ekleme
+      const manualPlaces = [
+        {
+          name: "Ankamall",
+          slug: "ankamall",
+          center: { type: "Point", coordinates: [32.8315, 39.9503] },
+          zoom: 18,
+          status: "published",
+          floors: {
+            0: "places/ankamall/final/floor_0.geojson",
+            1: "places/ankamall/final/floor_1.geojson",
+            2: "places/ankamall/final/floor_2.geojson",
           },
-          zoom: placeData.zoom,
-          status: placeData.status,
-          floors: placeData.floors || {},
-          floor_photos: placeData.floor_photos || {},
-          content: placeData.content || {},
-        });
+          floor_photos: {
+            0: "images/places/ankamall/floors/ankamall-floor-K0.svg",
+          },
+          content: {
+            description:
+              "Ankara'nın en büyük alışveriş merkezlerinden biri olan Ankamall, 200+ mağaza ve restoran ile ziyaretçilerine unutulmaz bir deneyim sunuyor.",
+            header_image: "/images/places/ankamall-header.png",
+            logo: "/images/places/ankamall-logo.png",
+            gallery: [
+              "/images/places/ankamall-1.jpg",
+              "/images/places/ankamall-2.jpg",
+              "/images/places/ankamall-3.jpg",
+            ],
+            working_hours: {
+              monday: {},
+              tuesday: {},
+              wednesday: {},
+              thursday: {},
+              friday: {},
+              saturday: {},
+              sunday: {},
+            },
+            contact: {
+              phone: "+90 312 123 45 67",
+              email: "info@ankamall.com",
+              website: "https://www.ankamall.com",
+              address: "Bilkent, Ankara",
+            },
+            amenities: ["Ücretsiz WiFi", "Çocuk Oyun Alanı", "Eczane", "Kütüphane"],
+          },
+        },
+        {
+          name: "Mall of Ankara",
+          slug: "mall-of-ankara",
+          center: { type: "Point", coordinates: [32.8597, 39.9334] },
+          zoom: 18,
+          status: "published",
+          floors: {
+            0: "places/mall-of-ankara/final/floor_0.geojson",
+            1: "places/mall-of-ankara/final/floor_1.geojson",
+            2: "places/mall-of-ankara/final/floor_2.geojson",
+          },
+          floor_photos: {
+            0: "images/places/mall-of-ankara/floors/floor-0.svg",
+          },
+          content: {
+            description:
+              "Mall of Ankara, modern mimarisi ve geniş mağaza seçenekleriyle Ankara'nın önemli alışveriş merkezlerinden biridir.",
+            header_image: "/images/places/mall-of-ankara-header.png",
+            logo: "/images/places/mall-of-ankara-logo.png",
+            gallery: [],
+            working_hours: {
+              monday: {},
+              tuesday: {},
+              wednesday: {},
+              thursday: {},
+              friday: {},
+              saturday: {},
+              sunday: {},
+            },
+            contact: {
+              phone: "+90 312 987 65 43",
+              email: "info@mallofankara.com",
+              website: "https://www.mallofankara.com",
+              address: "Çankaya, Ankara",
+            },
+            amenities: ["Ücretsiz WiFi", "Çocuk Oyun Alanı", "Sinema"],
+          },
+        },
+      ];
 
-        const placeObj = place.toObject();
-        delete placeObj._id;
-
-        await Place.findOneAndUpdate({ name: placeData.name }, placeObj, { upsert: true, new: true });
-        console.log(`✅ Place kaydedildi: ${placeData.name}`);
+      for (const placeData of manualPlaces) {
+        await Place.findOneAndUpdate({ slug: placeData.slug }, placeData, { upsert: true, new: true });
+        console.log(`✅ Manuel place eklendi: ${placeData.name}`);
       }
       existingPlaces = await Place.find();
     } else {
-      console.log("⚠️ places.json bulunamadı");
-      if (existingPlaces.length === 0) {
-        console.log("❌ MongoDB'de de place yok, manuel eklenecek...");
-        // Manuel place ekleme
-        const manualPlaces = [
-          {
-            name: "Ankamall",
-            slug: "ankamall",
-            center: { type: "Point", coordinates: [32.8315, 39.9503] },
-            zoom: 18,
-            status: "published",
-            floors: {
-              0: "places/ankamall/final/floor_0.geojson",
-              1: "places/ankamall/final/floor_1.geojson",
-              2: "places/ankamall/final/floor_2.geojson",
-            },
-            floor_photos: {
-              0: "images/places/acity/floors/ankamall-floor-K0.svg",
-            },
-            content: {
-              description:
-                "Ankara'nın en büyük alışveriş merkezlerinden biri olan Ankamall, 200+ mağaza ve restoran ile ziyaretçilerine unutulmaz bir deneyim sunuyor.",
-              header_image: "/images/places/ankamall-header.png",
-              logo: "/images/places/ankamall-logo.png",
-              gallery: [
-                "/images/places/ankamall-1.jpg",
-                "/images/places/ankamall-2.jpg",
-                "/images/places/ankamall-3.jpg",
-              ],
-              working_hours: {
-                monday: {},
-                tuesday: {},
-                wednesday: {},
-                thursday: {},
-                friday: {},
-                saturday: {},
-                sunday: {},
-              },
-              contact: {
-                phone: "+90 312 123 45 67",
-                email: "info@ankamall.com",
-                website: "https://www.ankamall.com",
-                address: "Bilkent, Ankara",
-              },
-              amenities: ["Ücretsiz WiFi", "Çocuk Oyun Alanı", "Eczane", "Kütüphane"],
-            },
-          },
-          {
-            name: "Mall of Ankara",
-            slug: "mall-of-ankara",
-            center: { type: "Point", coordinates: [32.8597, 39.9334] },
-            zoom: 18,
-            status: "published",
-            floors: {
-              0: "places/mall-of-ankara/final/floor_0.geojson",
-              1: "places/mall-of-ankara/final/floor_1.geojson",
-              2: "places/mall-of-ankara/final/floor_2.geojson",
-            },
-            floor_photos: {
-              0: "images/places/mall-of-ankara/floors/floor-0.svg",
-            },
-            content: {
-              description:
-                "Mall of Ankara, modern mimarisi ve geniş mağaza seçenekleriyle Ankara'nın önemli alışveriş merkezlerinden biridir.",
-              header_image: "/images/places/mall-of-ankara-header.png",
-              logo: "/images/places/mall-of-ankara-logo.png",
-              gallery: [],
-              working_hours: {
-                monday: {},
-                tuesday: {},
-                wednesday: {},
-                thursday: {},
-                friday: {},
-                saturday: {},
-                sunday: {},
-              },
-              contact: {
-                phone: "+90 312 987 65 43",
-                email: "info@mallofankara.com",
-                website: "https://www.mallofankara.com",
-                address: "Çankaya, Ankara",
-              },
-              amenities: ["Ücretsiz WiFi", "Çocuk Oyun Alanı", "Sinema"],
-            },
-          },
-        ];
-
-        for (const placeData of manualPlaces) {
-          await Place.findOneAndUpdate({ slug: placeData.slug }, placeData, { upsert: true, new: true });
-          console.log(`✅ Manuel place eklendi: ${placeData.name}`);
-        }
-        existingPlaces = await Place.find();
-      } else {
-        console.log(`✅ MongoDB'de ${existingPlaces.length} place mevcut`);
-      }
+      console.log(`✅ MongoDB'de ${existingPlaces.length} place mevcut`);
     }
 
     // 2. Place'leri al (user'lar için place_id atamak için)
