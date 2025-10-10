@@ -30,8 +30,8 @@ export default function AdminLoginPage() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          username,
-          password,
+          username: username.trim(),
+          password: password.trim(),
         }),
       });
 
@@ -163,6 +163,19 @@ export default function AdminLoginPage() {
               )}
             </button>
           </div>
+
+          <div>
+            <button
+              type="button"
+              onClick={() => router.push('/admin/register')}
+              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+            >
+              Üye Ol
+            </button>
+          </div>
+
+
+
 
           <div className="text-center">
             <div className="text-sm text-gray-600">
