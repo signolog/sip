@@ -1,6 +1,8 @@
 // app/api/auth/register/route.js
 import { NextResponse } from "next/server";
 import jwt from "jsonwebtoken";
+import fs from "fs";
+import path from "path";
 import connectDB from "@/lib/mongodb";
 import User from "@/models/User";
 import Place from "@/models/Place";
@@ -77,6 +79,40 @@ export async function POST(request) {
       const savedPlace = await newPlace.save();
       placeId = savedPlace._id;
       console.log("✅ Place created:", { id: placeId, name: placeName, status: savedPlace.status });
+
+      // Mekan için klasör yapısı oluştur
+      try {
+        const publicDir = path.join(process.cwd(), "public");
+        const placesDir = path.join(publicDir, "places");
+        const placeDir = path.join(placesDir, slug);
+
+        // public/places klasörü yoksa oluştur
+        if (!fs.existsSync(placesDir)) {
+          fs.mkdirSync(placesDir, { recursive: true });
+          console.log("📁 Created places directory");
+        }
+
+        // public/places/{slug} klasörü oluştur
+        if (!fs.existsSync(placeDir)) {
+          fs.mkdirSync(placeDir, { recursive: true });
+          console.log(`📁 Created place directory: ${slug}`);
+        }
+
+        // Alt klasörleri oluştur (base ve final)
+        const subDirs = ["base", "final"];
+        subDirs.forEach((subDir) => {
+          const subDirPath = path.join(placeDir, subDir);
+          if (!fs.existsSync(subDirPath)) {
+            fs.mkdirSync(subDirPath, { recursive: true });
+            console.log(`📁 Created subdirectory: ${slug}/${subDir}`);
+          }
+        });
+
+        console.log(`✅ Folder structure created for: ${slug}`);
+      } catch (fsError) {
+        console.error("❌ Folder creation error:", fsError);
+        // Klasör oluşturma hatası kayıt işlemini engellemez
+      }
     }
 
     // Yeni kullanıcı oluştur
