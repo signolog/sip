@@ -32,6 +32,7 @@ export async function GET(request) {
       // Anasayfa için uyumlu format
       const responseData = {
         place: place.name,
+        place_id: place._id.toString(), // Room'ları getirmek için place_id ekle
         floors: Object.fromEntries(place.floors || new Map()),
         center: place.center.coordinates,
         zoom: place.zoom,
@@ -39,10 +40,10 @@ export async function GET(request) {
 
       // CACHE KONTROLÜ: No-cache header'ları ekle
       const response = NextResponse.json(responseData);
-      response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
-      response.headers.set('Pragma', 'no-cache');
-      response.headers.set('Expires', '0');
-      
+      response.headers.set("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
+      response.headers.set("Pragma", "no-cache");
+      response.headers.set("Expires", "0");
+
       return response;
     } else if (id) {
       console.log("🔍 Tek place aranıyor - id:", id);
@@ -73,10 +74,10 @@ export async function GET(request) {
 
       // CACHE KONTROLÜ: No-cache header'ları ekle
       const response = NextResponse.json(responseData);
-      response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
-      response.headers.set('Pragma', 'no-cache');
-      response.headers.set('Expires', '0');
-      
+      response.headers.set("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
+      response.headers.set("Pragma", "no-cache");
+      response.headers.set("Expires", "0");
+
       return response;
     } else {
       // Tüm places getir (admin panel için hem published hem draft)
@@ -101,10 +102,10 @@ export async function GET(request) {
 
       // CACHE KONTROLÜ: No-cache header'ları ekle
       const response = NextResponse.json(placesData);
-      response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
-      response.headers.set('Pragma', 'no-cache');
-      response.headers.set('Expires', '0');
-      
+      response.headers.set("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
+      response.headers.set("Pragma", "no-cache");
+      response.headers.set("Expires", "0");
+
       return response;
     }
   } catch (error) {

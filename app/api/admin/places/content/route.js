@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 import connectDB from "@/lib/mongodb";
 import Place from "@/models/Place";
 
-const JWT_SECRET = process.env.JWT_SECRET || "signolog_assist_secret_key_2024";
+import { verifyJWTToken } from "../../../../utils/auth.js";
 
 export const dynamic = "force-dynamic";
 
@@ -25,7 +25,7 @@ export async function GET(request) {
     const token = authHeader.substring(7);
     let user;
     try {
-      user = jwt.verify(token, JWT_SECRET);
+      user = verifyJWTToken(token);
     } catch (error) {
       return NextResponse.json({ error: "Geçersiz token" }, { status: 401 });
     }
@@ -79,7 +79,7 @@ export async function PUT(request) {
     const token = authHeader.substring(7);
     let user;
     try {
-      user = jwt.verify(token, JWT_SECRET);
+      user = verifyJWTToken(token);
       console.log("✅ Token doğrulandı, user:", user);
     } catch (error) {
       console.log("❌ Token doğrulama hatası:", error.message);

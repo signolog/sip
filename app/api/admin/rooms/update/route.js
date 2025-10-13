@@ -7,7 +7,7 @@ import Room from "@/models/Room";
 import fs from "fs";
 import path from "path";
 
-const JWT_SECRET = process.env.JWT_SECRET || "signolog_assist_secret_key_2024";
+import { verifyJWTToken } from "../../../../utils/auth.js";
 
 export const dynamic = "force-dynamic";
 
@@ -22,7 +22,7 @@ export async function POST(request) {
     const token = authHeader.substring(7);
     let user;
     try {
-      user = jwt.verify(token, JWT_SECRET);
+      user = verifyJWTToken(token);
     } catch (error) {
       return NextResponse.json({ error: "Geçersiz token" }, { status: 401 });
     }
@@ -93,9 +93,13 @@ export async function POST(request) {
           directUpdate[key] = value;
         } else {
           // Görsel path'lerine cache-busting ekle (sadece yeni yüklenen görseller için)
-          if ((key === "logo" || key === "header_image") && typeof value === "string" && !value.startsWith("data:image/")) {
+          if (
+            (key === "logo" || key === "header_image") &&
+            typeof value === "string" &&
+            !value.startsWith("data:image/")
+          ) {
             // Eğer path'te zaten timestamp varsa, onu kaldır ve yenisini ekle
-            const cleanPath = value.split('?')[0];
+            const cleanPath = value.split("?")[0];
             contentUpdate[`content.${key}`] = cleanPath; // MongoDB'de temiz path sakla
           } else {
             // TÜM diğer alanlar content içine (temel bilgiler dahil)
@@ -137,16 +141,16 @@ export async function POST(request) {
     // CACHE TEMİZLEME - Tüm ilgili sayfaları revalidate et
     try {
       // Ana sayfa ve place sayfalarını revalidate et
-      revalidatePath('/', 'page');
-      revalidatePath('/[slug]', 'page');
-      
+      revalidatePath("/", "page");
+      revalidatePath("/[slug]", "page");
+
       // API route'larını revalidate et
-      revalidatePath('/api/places', 'route');
-      revalidatePath('/api/admin/rooms', 'route');
-      
-      console.log('✅ Cache temizlendi (revalidated)');
+      revalidatePath("/api/places", "route");
+      revalidatePath("/api/admin/rooms", "route");
+
+      console.log("✅ Cache temizlendi (revalidated)");
     } catch (revalidateError) {
-      console.warn('⚠️ Revalidation hatası:', revalidateError);
+      console.warn("⚠️ Revalidation hatası:", revalidateError);
     }
 
     return NextResponse.json({
@@ -193,14 +197,6 @@ async function syncToGeoJSON(place_id, floor, room) {
     // Room'u bul ve güncelle
     const featureIndex = geoJsonData.features.findIndex((f) => f.properties.id === room.room_id);
     if (featureIndex >= 0) {
-      // CACHE-BUSTING: Görsellere timestamp ekle
-      const timestamp = Date.now();
-      const addCacheBusting = (path) => {
-        if (!path) return "";
-        const cleanPath = path.split('?')[0];
-        return `${cleanPath}?t=${timestamp}`;
-      };
-
       // Properties'leri güncelle - TÜM field'ları ekle
       geoJsonData.features[featureIndex].properties = {
         ...geoJsonData.features[featureIndex].properties,
@@ -216,8 +212,8 @@ async function syncToGeoJSON(place_id, floor, room) {
         promotion: room.content.promotion || "",
         // İçerik yönetimi
         description: room.content.description || "",
-        header_image: addCacheBusting(room.content.header_image),
-        logo: addCacheBusting(room.content.logo),
+        header_image: room.content.header_image || "",
+        logo: room.content.logo || "",
         website: room.content.website || "",
         email: room.content.email || "",
         instagram: room.content.instagram || "",

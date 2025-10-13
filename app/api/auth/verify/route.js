@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 import connectDB from "@/lib/mongodb";
 import User from "@/models/User";
 
-const JWT_SECRET = process.env.JWT_SECRET || "signolog_assist_secret_key_2024";
+import { verifyJWTToken } from "../../../../utils/auth.js";
 
 export async function POST(request) {
   try {
@@ -17,7 +17,7 @@ export async function POST(request) {
     // Token'ı verify et
     let decoded;
     try {
-      decoded = jwt.verify(token, JWT_SECRET);
+      decoded = verifyJWTToken(token);
     } catch (error) {
       return NextResponse.json({ error: "Geçersiz token" }, { status: 401 });
     }

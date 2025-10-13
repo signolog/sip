@@ -7,7 +7,7 @@ import connectDB from "@/lib/mongodb";
 import User from "@/models/User";
 import Place from "@/models/Place";
 
-const JWT_SECRET = process.env.JWT_SECRET || "signolog_assist_secret_key_2024";
+import { verifyJWTToken, createJWTToken } from "../../../../utils/auth.js";
 
 export async function POST(request) {
   try {
@@ -136,7 +136,7 @@ export async function POST(request) {
       place_id: savedUser.place_id,
     };
 
-    const token = jwt.sign(tokenPayload, JWT_SECRET, { expiresIn: "24h" });
+    const token = createJWTToken(tokenPayload, "24h");
 
     // Kullanıcı bilgilerini döndür (şifre hariç)
     const userInfo = {

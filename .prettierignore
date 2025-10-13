@@ -1,0 +1,18 @@
+# Prettier ignore dosyası
+# Minify edilmiş dosyaları ignore et
+
+# JS dosyaları
+*.min.js
+public/js/*.min.js
+
+# Build dosyaları
+.next/
+dist/
+build/
+
+# Node modules
+node_modules/
+
+# Diğer
+*.log
+.env*
