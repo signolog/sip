@@ -1,5 +1,6 @@
 // app/api/admin/rooms/update/route.js
 import { NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import jwt from "jsonwebtoken";
 import connectDB from "@/lib/mongodb";
 import Room from "@/models/Room";
@@ -126,10 +127,26 @@ export async function POST(request) {
     // GeoJSON dosyasını güncelle
     await syncToGeoJSON(place_id, floor, updatedRoom);
 
+    // CACHE TEMİZLEME - Tüm ilgili sayfaları revalidate et
+    try {
+      // Ana sayfa ve place sayfalarını revalidate et
+      revalidatePath('/', 'page');
+      revalidatePath('/[slug]', 'page');
+      
+      // API route'larını revalidate et
+      revalidatePath('/api/places', 'route');
+      revalidatePath('/api/admin/rooms', 'route');
+      
+      console.log('✅ Cache temizlendi (revalidated)');
+    } catch (revalidateError) {
+      console.warn('⚠️ Revalidation hatası:', revalidateError);
+    }
+
     return NextResponse.json({
       success: true,
       message: `Room ${effectiveRoomId} başarıyla güncellendi`,
       room: updatedRoom,
+      cacheCleared: true,
     });
   } catch (error) {
     console.error("❌ Room güncelleme hatası:", error);

@@ -118,8 +118,19 @@ export function mergeAllFloors(floorsData, updatesData) {
  */
 export async function loadGeoJSONFromURL(url) {
   try {
-    console.log("📥 GeoJSON yükleniyor:", url);
-    const response = await fetch(url);
+    // CACHE-BUSTING: Her istekte timestamp ekle
+    const cacheBuster = `?t=${Date.now()}`;
+    const urlWithCache = url.includes('?') ? `${url}&t=${Date.now()}` : `${url}${cacheBuster}`;
+    
+    console.log("📥 GeoJSON yükleniyor:", urlWithCache);
+    const response = await fetch(urlWithCache, {
+      cache: 'no-store', // Cache'i devre dışı bırak
+      headers: {
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Pragma': 'no-cache',
+        'Expires': '0'
+      }
+    });
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);

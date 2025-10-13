@@ -248,6 +248,8 @@ export default function AdminRoomsPage() {
       const result = await response.json();
 
       if (result.success) {
+        console.log('✅ Güncelleme başarılı, cache temizlendi:', result.cacheCleared);
+        
         // KRITIK: State'i hemen güncelle
         if (user.role === "store_owner") {
           // Store owner için birim bilgilerini yeniden yükle
@@ -260,9 +262,13 @@ export default function AdminRoomsPage() {
             await handleFloorSelect(selectedFloor);
           }
         }
+        
+        // Başarı mesajı göster
+        alert('✅ Değişiklikler kaydedildi!');
       }
     } catch (error) {
       console.error("Güncelleme hatası:", error);
+      alert('❌ Güncelleme sırasında hata oluştu!');
     }
   };
 

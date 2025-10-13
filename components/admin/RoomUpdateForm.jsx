@@ -132,6 +132,19 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
       }
 
       await onRoomUpdate({ action: "update", floor, ...updatedPayload });
+      
+      // CLIENT-SIDE CACHE TEMİZLEME
+      // Browser cache'ini temizle (GeoJSON dosyaları için)
+      if (typeof window !== 'undefined' && window.caches) {
+        try {
+          const cacheNames = await window.caches.keys();
+          await Promise.all(cacheNames.map(name => window.caches.delete(name)));
+          console.log('✅ Browser cache temizlendi');
+        } catch (cacheError) {
+          console.warn('⚠️ Cache temizleme hatası:', cacheError);
+        }
+      }
+      
       // Kaydet sonrası: üst sayfadaki liste ve arama verilerini tazele
       if (onRoomUpdated) {
         await onRoomUpdated();
