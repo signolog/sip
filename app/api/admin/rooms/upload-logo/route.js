@@ -67,6 +67,8 @@ export async function POST(request) {
     fs.writeFileSync(filePath, buffer);
 
     const publicPath = `/images/rooms/${slug}/room-${roomId}/${fileName}`;
+    // CACHE-BUSTING: Timestamp ekle
+    const publicPathWithCache = `${publicPath}?t=${Date.now()}`;
 
     // MongoDB'de room'un logo path'ini güncelle
     await Room.findOneAndUpdate(
@@ -78,7 +80,7 @@ export async function POST(request) {
       }
     );
 
-    return NextResponse.json({ success: true, path: publicPath });
+    return NextResponse.json({ success: true, path: publicPathWithCache });
   } catch (error) {
     console.error("Room logo upload error:", error);
     return NextResponse.json({ error: "Sunucu hatası", details: error.message }, { status: 500 });

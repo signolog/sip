@@ -213,7 +213,9 @@ function RoomsPageContent() {
       const result = await response.json();
 
       if (result.success) {
-        // Başarılı güncelleme sonrası reload
+        console.log('✅ Güncelleme başarılı, cache temizlendi:', result.cacheCleared);
+        
+        // KRITIK: State'i hemen güncelle
         if (user.role === "store_owner") {
           // Store owner için kendi birimini yeniden yükle
           const storeRoom = rooms[0];
@@ -233,9 +235,13 @@ function RoomsPageContent() {
           const data = await response.json();
           setRooms(Array.isArray(data) ? data : data.rooms || []);
         }
+        
+        // Başarı mesajı göster
+        alert('✅ Değişiklikler kaydedildi!');
       }
     } catch (error) {
       console.error("Güncelleme hatası:", error);
+      alert('❌ Güncelleme sırasında hata oluştu!');
     }
   };
 

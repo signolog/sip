@@ -30,14 +30,20 @@ export async function GET(request) {
       }
 
       // Anasayfa için uyumlu format
-      const response = {
+      const responseData = {
         place: place.name,
         floors: Object.fromEntries(place.floors || new Map()),
         center: place.center.coordinates,
         zoom: place.zoom,
       };
 
-      return NextResponse.json(response);
+      // CACHE KONTROLÜ: No-cache header'ları ekle
+      const response = NextResponse.json(responseData);
+      response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+      response.headers.set('Pragma', 'no-cache');
+      response.headers.set('Expires', '0');
+      
+      return response;
     } else if (id) {
       console.log("🔍 Tek place aranıyor - id:", id);
 
@@ -51,7 +57,7 @@ export async function GET(request) {
       }
 
       // Admin panel için uyumlu format
-      const response = {
+      const responseData = {
         id: place._id.toString(),
         name: place.name,
         slug: place.slug,
@@ -65,7 +71,13 @@ export async function GET(request) {
         updated_at: place.updatedAt,
       };
 
-      return NextResponse.json(response);
+      // CACHE KONTROLÜ: No-cache header'ları ekle
+      const response = NextResponse.json(responseData);
+      response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+      response.headers.set('Pragma', 'no-cache');
+      response.headers.set('Expires', '0');
+      
+      return response;
     } else {
       // Tüm places getir (admin panel için hem published hem draft)
       const places = await Place.find({});
@@ -87,7 +99,13 @@ export async function GET(request) {
         };
       });
 
-      return NextResponse.json(placesData);
+      // CACHE KONTROLÜ: No-cache header'ları ekle
+      const response = NextResponse.json(placesData);
+      response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+      response.headers.set('Pragma', 'no-cache');
+      response.headers.set('Expires', '0');
+      
+      return response;
     }
   } catch (error) {
     console.error("❌ Places API hatası:", error);
