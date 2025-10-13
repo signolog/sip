@@ -126,3 +126,4 @@ async function cleanGeoJSONFiles() {
 
 // Scripti çalıştır
 cleanImagePaths();
+
