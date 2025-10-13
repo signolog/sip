@@ -71,8 +71,8 @@ export default function AdminDashboard() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <button className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-left">
               <div className="text-2xl mb-2">📊</div>
-              <h4 className="font-medium text-gray-900">Rapor Oluştur</h4>
-              <p className="text-sm text-gray-600">Sistem raporu oluştur</p>
+              <h4 className="font-medium text-gray-900"></h4>
+              <p className="text-sm text-gray-600"></p>
             </button>
           </div>
         </div>
