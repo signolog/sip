@@ -95,7 +95,7 @@ export async function POST(request) {
         last_synced: new Date(),
       }
     );
-
+    console.log("✅ MongoDB room logo güncellendi", publicPath);
     return NextResponse.json({ success: true, path: publicPath });
   } catch (error) {
     console.error("Room logo upload error:", error);
