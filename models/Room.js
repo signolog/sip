@@ -38,6 +38,7 @@ const RoomSchema = new mongoose.Schema(
     // İçerik yönetimi (admin panel için)
     content: {
       // Temel Bilgiler
+      type: { type: String, default: "room" }, // GeoJSON için gerekli
       category: String,
       subtype: String,
       icon: String,

@@ -202,6 +202,7 @@ async function migrateToMongoDB() {
                     name: feature.properties.name || feature.properties.title || "İsimsiz",
                     geometry: feature.geometry,
                     content: {
+                      type: "room", // GeoJSON için gerekli
                       description: feature.properties.description || "",
                       header_image: feature.properties.header_image || "",
                       logo: feature.properties.logo || "",

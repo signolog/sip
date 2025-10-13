@@ -4,7 +4,7 @@ const arrowIcon = `data:image/svg+xml;base64,${btoa(`
         <polygon points="12,2 22,12 17,12 17,22 7,22 7,12 2,12" fill="#FF6B35" stroke="#FFFFFF" stroke-width="2"/>
       </svg>
     `)}`;
-
+// Custom elevator icon'u oluştur
 const elevatorIcon = `data:image/svg+xml;base64,${btoa(`
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
       <rect x="2.962" y="0.744" width="66.601" height="64.815" style="fill: rgb(232, 232, 232); stroke: rgb(0, 0, 0);" rx="26.077" ry="26.077"></rect>

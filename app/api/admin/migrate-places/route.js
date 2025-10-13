@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 import connectDB from "@/lib/mongodb";
 import Place from "@/models/Place";
 
-const JWT_SECRET = process.env.JWT_SECRET || "signolog_assist_secret_key_2024";
+import { verifyJWTToken } from "../../../../utils/auth.js";
 
 export async function POST(request) {
   try {
@@ -15,7 +15,7 @@ export async function POST(request) {
     }
 
     const token = authHeader.split(" ")[1];
-    const decoded = jwt.verify(token, JWT_SECRET);
+    const decoded = verifyJWTToken(token);
 
     // Sadece admin yapabilir
     if (decoded.role !== "admin") {
