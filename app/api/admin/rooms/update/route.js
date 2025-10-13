@@ -11,15 +11,6 @@ const JWT_SECRET = process.env.JWT_SECRET || "signolog_assist_secret_key_2024";
 
 export const dynamic = "force-dynamic";
 
-// API Route body size limit
-export const config = {
-  api: {
-    bodyParser: {
-      sizeLimit: "50mb",
-    },
-  },
-};
-
 export async function POST(request) {
   try {
     // JWT token kontrolü
