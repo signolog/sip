@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
+import crypto from "crypto";
 import jwt from "jsonwebtoken";
 import connectDB from "@/lib/mongodb";
 import Room from "@/models/Room";
@@ -62,13 +63,28 @@ export async function POST(request) {
 
     const roomDir = path.join(process.cwd(), "public", "images", "rooms", slug, `room-${roomId}`);
     fs.mkdirSync(roomDir, { recursive: true });
-    const fileName = `logo.${ext}`;
+
+    // ESKİ LOGO DOSYALARINI SİL
+    const existingFiles = fs.readdirSync(roomDir);
+    existingFiles.forEach((file) => {
+      if (file.startsWith("logo-") || file.startsWith("logo.")) {
+        const oldFilePath = path.join(roomDir, file);
+        try {
+          fs.unlinkSync(oldFilePath);
+          console.log(`🗑️ Eski logo silindi: ${file}`);
+        } catch (e) {
+          console.error(`⚠️ Eski logo silinemedi: ${file}`, e.message);
+        }
+      }
+    });
+
+    // Unique ID ile dosya adı oluştur
+    const uniqueId = crypto.randomBytes(8).toString("hex");
+    const fileName = `logo-${uniqueId}.${ext}`;
     const filePath = path.join(roomDir, fileName);
     fs.writeFileSync(filePath, buffer);
 
     const publicPath = `/images/rooms/${slug}/room-${roomId}/${fileName}`;
-    // CACHE-BUSTING: Timestamp ekle
-    const publicPathWithCache = `${publicPath}?t=${Date.now()}`;
 
     // MongoDB'de room'un logo path'ini güncelle
     await Room.findOneAndUpdate(
@@ -80,7 +96,7 @@ export async function POST(request) {
       }
     );
 
-    return NextResponse.json({ success: true, path: publicPathWithCache });
+    return NextResponse.json({ success: true, path: publicPath });
   } catch (error) {
     console.error("Room logo upload error:", error);
     return NextResponse.json({ error: "Sunucu hatası", details: error.message }, { status: 500 });
