@@ -92,8 +92,15 @@ export async function POST(request) {
         if (key === "name") {
           directUpdate[key] = value;
         } else {
-          // TÜM diğer alanlar content içine (temel bilgiler dahil)
-          contentUpdate[`content.${key}`] = value;
+          // Görsel path'lerine cache-busting ekle (sadece yeni yüklenen görseller için)
+          if ((key === "logo" || key === "header_image") && typeof value === "string" && !value.startsWith("data:image/")) {
+            // Eğer path'te zaten timestamp varsa, onu kaldır ve yenisini ekle
+            const cleanPath = value.split('?')[0];
+            contentUpdate[`content.${key}`] = cleanPath; // MongoDB'de temiz path sakla
+          } else {
+            // TÜM diğer alanlar content içine (temel bilgiler dahil)
+            contentUpdate[`content.${key}`] = value;
+          }
         }
       }
     });
@@ -186,6 +193,14 @@ async function syncToGeoJSON(place_id, floor, room) {
     // Room'u bul ve güncelle
     const featureIndex = geoJsonData.features.findIndex((f) => f.properties.id === room.room_id);
     if (featureIndex >= 0) {
+      // CACHE-BUSTING: Görsellere timestamp ekle
+      const timestamp = Date.now();
+      const addCacheBusting = (path) => {
+        if (!path) return "";
+        const cleanPath = path.split('?')[0];
+        return `${cleanPath}?t=${timestamp}`;
+      };
+
       // Properties'leri güncelle - TÜM field'ları ekle
       geoJsonData.features[featureIndex].properties = {
         ...geoJsonData.features[featureIndex].properties,
@@ -201,8 +216,8 @@ async function syncToGeoJSON(place_id, floor, room) {
         promotion: room.content.promotion || "",
         // İçerik yönetimi
         description: room.content.description || "",
-        header_image: room.content.header_image || "",
-        logo: room.content.logo || "",
+        header_image: addCacheBusting(room.content.header_image),
+        logo: addCacheBusting(room.content.logo),
         website: room.content.website || "",
         email: room.content.email || "",
         instagram: room.content.instagram || "",
