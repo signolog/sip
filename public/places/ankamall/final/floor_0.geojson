@@ -785,8 +785,8 @@
         "hours": "",
         "promotion": "",
         "description": "",
-        "header_image": "/images/rooms/ankamall/room-room-105/header.png?t=1760355889382",
-        "logo": "/images/rooms/ankamall/room-room-105/logo.png?t=1760355889382",
+        "header_image": "/images/rooms/ankamall/room-room-105/header.png?t=1760425026232",
+        "logo": "/images/rooms/ankamall/room-room-105/logo.png?t=1760425026232",
         "website": "",
         "email": "",
         "instagram": "",
@@ -794,7 +794,7 @@
         "services": "",
         "tags": "",
         "special_offers": "",
-        "updated_at": "2025-10-13T11:44:49.382Z"
+        "updated_at": "2025-10-14T06:57:06.232Z"
       }
     },
     {
@@ -1157,10 +1157,28 @@
       "properties": {
         "id": "room-113",
         "type": "room",
-        "name": "room-113",
+        "name": "SWAROVSKİ",
         "floor": 0,
         "title": "Swarovski",
-        "is_special": false
+        "is_special": false,
+        "category": "fashion",
+        "subtype": "",
+        "icon": "",
+        "status": "open",
+        "phone": "",
+        "hours": "",
+        "promotion": "",
+        "description": "",
+        "header_image": "/images/rooms/ankamall/room-room-113/header.png?t=1760422463069",
+        "logo": "/images/rooms/ankamall/room-room-113/logo.png?t=1760422463069",
+        "website": "",
+        "email": "",
+        "instagram": "",
+        "twitter": "",
+        "services": "",
+        "tags": "",
+        "special_offers": "",
+        "updated_at": "2025-10-14T06:14:23.070Z"
       }
     },
     {
@@ -2660,11 +2678,11 @@
       "properties": {
         "id": "room-155",
         "type": "room",
-        "name": "deneme",
+        "name": "deneme123",
         "floor": 0,
         "title": "Kip",
         "is_special": false,
-        "updated_at": "2025-10-13T05:58:09.187Z",
+        "updated_at": "2025-10-14T06:41:26.825Z",
         "category": "general",
         "status": "open",
         "subtype": "",
