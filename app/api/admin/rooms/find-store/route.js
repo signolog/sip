@@ -4,7 +4,7 @@ import connectDB from "@/lib/mongodb";
 import Room from "@/models/Room";
 import Place from "@/models/Place";
 
-import { verifyJWTToken } from "../../../../utils/auth.js";
+import { verifyJWTToken } from "@/utils/auth.js";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
