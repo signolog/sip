@@ -1873,6 +1873,7 @@ export default function MapLibreMap() {
           rooms.push({
             id: `${floorPrefix}-${properties.id}`,
             name: properties.name, // ✅ Sadece name, fallback yok
+            logo: properties.logo || null,
             doorId: doorObj?.originalId || null,
             floor: parseInt(floor),
             originalId: properties.id,
@@ -2117,9 +2118,26 @@ export default function MapLibreMap() {
                       // ROTA VAR - Sadece mobilde göster, desktop'ta haritanın sol altında gösterilecek
                       <div className="md:hidden">
                         <div className="flex items-start justify-between mb-3">
-                          <h2 className="text-lg font-bold text-gray-800">
-                            {rooms.find((r) => r.id === selectedEndRoom)?.name || "Seçili Oda"}
-                          </h2>
+                          <div className="flex items-center gap-3">
+                            {rooms.find((r) => r.id === selectedEndRoom)?.logo && (
+                              <img
+                                src={rooms.find((r) => r.id === selectedEndRoom)?.logo}
+                                alt={`${rooms.find((r) => r.id === selectedEndRoom)?.name} Logo`}
+                                className="h-10 w-10 object-contain rounded-md border p-1"
+                              />
+                            )}
+                            <div>
+                              <h2 className="text-lg font-bold text-gray-800">
+                                {rooms.find((r) => r.id === selectedEndRoom)?.name || "Seçili Oda"}
+                              </h2>
+                              {rooms.find((r) => r.id === selectedEndRoom)?.category &&
+                                rooms.find((r) => r.id === selectedEndRoom)?.category !== "general" && (
+                                  <p className="text-xs text-blue-600 font-semibold">
+                                    #{rooms.find((r) => r.id === selectedEndRoom)?.category}
+                                  </p>
+                                )}
+                            </div>
+                          </div>
                           <div className="flex gap-2">
                             <button
                               onClick={handleFinish}
@@ -2395,12 +2413,29 @@ export default function MapLibreMap() {
 
           {/* Desktop Bilgi Kartları - Haritanın sol altında */}
           {routeSteps.length > 0 ? (
-            <div className="hidden md:block absolute bottom-4 left-16 max-w-sm min-w-[380px] z-40">
+            <div className="hidden md:block absolute bottom-4 left-24 max-w-sm min-w-[380px] z-40">
               <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-gray-200 p-4 min-h-[190px]">
                 <div className="flex items-start justify-between mb-3">
-                  <h2 className="text-lg font-bold text-gray-800">
-                    {rooms.find((r) => r.id === selectedEndRoom)?.name || "Seçili Oda"}
-                  </h2>
+                  <div className="flex items-center gap-3">
+                    {rooms.find((r) => r.id === selectedEndRoom)?.logo && (
+                      <img
+                        src={rooms.find((r) => r.id === selectedEndRoom)?.logo}
+                        alt={`${rooms.find((r) => r.id === selectedEndRoom)?.name} Logo`}
+                        className="h-10 w-10 object-contain rounded-md border p-1"
+                      />
+                    )}
+                    <div>
+                      <h2 className="text-lg font-bold text-gray-800">
+                        {rooms.find((r) => r.id === selectedEndRoom)?.name || "Seçili Oda"}
+                      </h2>
+                      {rooms.find((r) => r.id === selectedEndRoom)?.category &&
+                        rooms.find((r) => r.id === selectedEndRoom)?.category !== "general" && (
+                          <p className="text-xs text-blue-600 font-semibold">
+                            #{rooms.find((r) => r.id === selectedEndRoom)?.category}
+                          </p>
+                        )}
+                    </div>
+                  </div>
                   <button
                     onClick={handleFinish}
                     className="bg-red-600 hover:bg-red-700 text-white text-sm px-3 py-1 rounded-lg"
