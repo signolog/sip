@@ -10,26 +10,11 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
   const [showAll, setShowAll] = useState(false);
   const [activeTab, setActiveTab] = useState("basic"); // "basic" veya "content"
 
-  // Single room mode için otomatik seçim
-  useEffect(() => {
-    if (singleRoomMode && rooms.length === 1 && !selectedRoom) {
-      handleRoomSelect(rooms[0]);
-    }
-  }, [singleRoomMode, rooms, selectedRoom]);
-
-  // Room'ları filtrele ve paginate et
-  const filteredRooms = rooms.filter(
-    (room) => room.name && room.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
-  const displayedRooms = showAll ? filteredRooms : filteredRooms.slice(0, 5);
-  const hasMoreRooms = filteredRooms.length > 5;
-
   // Oda seçildiğinde form verilerini hazırla
   const handleRoomSelect = (room) => {
     setSelectedRoom(room);
     setFormData({
-      id: room.originalId,
+      id: room.originalId || room.room_id,
       name: room.name || "",
       category: room.category || "general",
       subtype: room.subtype || "",
@@ -58,6 +43,65 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
     setIsEditing(false);
     setActiveTab("basic"); // Yeni oda seçildiğinde basic tab'a dön
   };
+
+  // Single room mode için otomatik seçim
+  useEffect(() => {
+    if (singleRoomMode && rooms.length === 1 && !selectedRoom) {
+      handleRoomSelect(rooms[0]);
+    }
+  }, [singleRoomMode, rooms, selectedRoom]);
+
+  // rooms prop'u değiştiğinde seçili odayı güncelle
+  useEffect(() => {
+    if (rooms.length === 1 && singleRoomMode) {
+      // Single room mode'da tek bir oda varsa, onu otomatik seç
+      const room = rooms[0];
+      if (!selectedRoom || selectedRoom.id !== room.id || selectedRoom.room_id !== room.room_id) {
+        handleRoomSelect(room);
+      }
+    } else if (selectedRoom && rooms.length > 0) {
+      // Multi room mode'da seçili odanın güncel halini bul
+      const updatedRoom = rooms.find(r => r.id === selectedRoom.id || r.originalId === selectedRoom.originalId || r.room_id === selectedRoom.room_id);
+      if (updatedRoom && JSON.stringify(updatedRoom) !== JSON.stringify(selectedRoom)) {
+        // Seçili odayı güncelle
+        setSelectedRoom(updatedRoom);
+        // Form verilerini de güncelle
+        setFormData({
+          id: updatedRoom.originalId || updatedRoom.room_id,
+          name: updatedRoom.name || "",
+          category: updatedRoom.category || "general",
+          subtype: updatedRoom.subtype || "",
+          icon: updatedRoom.icon || "",
+          gender: updatedRoom.gender || "",
+          priority: updatedRoom.priority || "",
+          is_special: updatedRoom.is_special || false,
+          special_type: updatedRoom.special_type || "",
+          status: updatedRoom.status || "open",
+          phone: updatedRoom.phone || "",
+          hours: updatedRoom.hours || "",
+          promotion: updatedRoom.promotion || "",
+          description: updatedRoom.description || "",
+          website: updatedRoom.website || "",
+          email: updatedRoom.email || "",
+          instagram: updatedRoom.instagram || "",
+          twitter: updatedRoom.twitter || "",
+          services: Array.isArray(updatedRoom.services) ? updatedRoom.services.join(", ") : updatedRoom.services || "",
+          special_offers: updatedRoom.special_offers || "",
+          header_image: updatedRoom.header_image || "",
+          logo: updatedRoom.logo || "",
+          tags: Array.isArray(updatedRoom.tags) ? updatedRoom.tags.join(", ") : updatedRoom.tags || "",
+        });
+      }
+    }
+  }, [rooms, singleRoomMode]);
+
+  // Room'ları filtrele ve paginate et
+  const filteredRooms = rooms.filter(
+    (room) => room.name && room.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  const displayedRooms = showAll ? filteredRooms : filteredRooms.slice(0, 5);
+  const hasMoreRooms = filteredRooms.length > 5;
 
   // Form verilerini güncelle
   const handleInputChange = (field, value) => {

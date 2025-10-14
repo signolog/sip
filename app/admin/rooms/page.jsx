@@ -166,7 +166,7 @@ function RoomsPageContent() {
   };
 
   const handleSearchResultSelect = (room) => {
-    setRooms([room]);
+    setRooms([{ ...room, _selected: Date.now() }]);
     setSearchQuery("");
     setSearchResults([]);
     setShowSearchResults(false);
@@ -234,6 +234,16 @@ function RoomsPageContent() {
           });
           const data = await response.json();
           setRooms(Array.isArray(data) ? data : data.rooms || []);
+          
+          // Tüm odaları da güncelle (arama için)
+          const allRoomsResponse = await fetch(`/api/admin/rooms?placeId=${selectedPlace.id}&floor=all`, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+            },
+          });
+          const allRoomsData = await allRoomsResponse.json();
+          setAllRooms(Array.isArray(allRoomsData) ? allRoomsData : allRoomsData.rooms || []);
         }
         
         // Başarı mesajı göster
@@ -242,6 +252,51 @@ function RoomsPageContent() {
     } catch (error) {
       console.error("Güncelleme hatası:", error);
       alert('❌ Güncelleme sırasında hata oluştu!');
+    }
+  };
+
+  // ============ ROOM GÜNCELLEME SONRASI YENİLEME ============
+  const handleRoomUpdated = async () => {
+    try {
+      const token = localStorage.getItem("admin_token");
+      
+      if (user.role === "store_owner") {
+        // Store owner için kendi birimini yeniden yükle
+        const response = await fetch(`/api/admin/rooms?placeId=${user.place_id}&floor=all`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        });
+        const data = await response.json();
+        const allRooms = Array.isArray(data) ? data : data.rooms || [];
+        const storeRoom = allRooms.find((room) => room.room_id === user.store_id);
+        if (storeRoom) {
+          setRooms([storeRoom]);
+        }
+      } else {
+        // Admin/place owner için seçili katı yeniden yükle
+        const response = await fetch(`/api/admin/rooms?placeId=${selectedPlace.id}&floor=${selectedFloor}`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        });
+        const data = await response.json();
+        setRooms(Array.isArray(data) ? data : data.rooms || []);
+        
+        // Tüm odaları da güncelle (arama için)
+        const allRoomsResponse = await fetch(`/api/admin/rooms?placeId=${selectedPlace.id}&floor=all`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        });
+        const allRoomsData = await allRoomsResponse.json();
+        setAllRooms(Array.isArray(allRoomsData) ? allRoomsData : allRoomsData.rooms || []);
+      }
+    } catch (error) {
+      console.error("Yenileme hatası:", error);
     }
   };
 
@@ -278,6 +333,7 @@ function RoomsPageContent() {
                     placeId={user.place_id}
                     floor={rooms[0]?.floor}
                     onRoomUpdate={handleRoomUpdate}
+                    onRoomUpdated={handleRoomUpdated}
                     singleRoomMode={true}
                   />
                 ) : (
@@ -345,7 +401,7 @@ function RoomsPageContent() {
               ).map((room) => (
                 <div
                   key={room.id}
-                  onClick={() => setRooms([room])}
+                  onClick={() => setRooms([{ ...room, _selected: Date.now() }])}
                   className={`p-3 border rounded-lg cursor-pointer transition-colors ${
                     rooms.length === 1 && rooms[0].room_id === room.room_id
                       ? "bg-blue-50 border-blue-500"
@@ -382,6 +438,7 @@ function RoomsPageContent() {
               placeId={selectedPlace?.id}
               floor={selectedFloor}
               onRoomUpdate={handleRoomUpdate}
+              onRoomUpdated={handleRoomUpdated}
               singleRoomMode={true}
             />
           ) : (
