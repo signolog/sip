@@ -1,0 +1,14 @@
+{
+  "prettier.ignorePath": ".prettierignore",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.formatOnSave": false
+  },
+  "files.associations": {
+    "*.min.js": "plaintext"
+  }
+}
