@@ -979,10 +979,28 @@
       "properties": {
         "id": "room-109",
         "type": "room",
-        "name": "room-109",
+        "name": "Tüzün",
         "floor": 0,
         "title": "Tüzün",
-        "is_special": false
+        "is_special": false,
+        "category": "general",
+        "subtype": "",
+        "icon": "",
+        "status": "open",
+        "phone": "",
+        "hours": "",
+        "promotion": "",
+        "description": "",
+        "header_image": "/images/rooms/ankamall/room-room-109/header-c26f3fe5d0050d5c.png",
+        "logo": "/images/rooms/ankamall/room-room-109/logo-054aa21b8a64fce2.png",
+        "website": "",
+        "email": "",
+        "instagram": "",
+        "twitter": "",
+        "services": "",
+        "tags": "",
+        "special_offers": "",
+        "updated_at": "2025-10-14T14:01:12.259Z"
       }
     },
     {

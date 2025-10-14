@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 import connectDB from "@/lib/mongodb";
 import User from "@/models/User";
 
-import { verifyJWTToken, createJWTToken } from "../../../../utils/auth.js";
+import { verifyJWTToken, createJWTToken } from "@/utils/auth.js";
 
 export async function POST(request) {
   try {

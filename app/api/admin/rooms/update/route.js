@@ -7,7 +7,7 @@ import Room from "@/models/Room";
 import fs from "fs";
 import path from "path";
 
-import { verifyJWTToken } from "../../../../utils/auth.js";
+import { verifyJWTToken } from "@/utils/auth.js";
 
 export const dynamic = "force-dynamic";
 

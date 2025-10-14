@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 import connectDB from "@/lib/mongodb";
 import Place from "@/models/Place";
 
-import { verifyJWTToken } from "../../../../utils/auth.js";
+import { verifyJWTToken } from "@/utils/auth.js";
 
 export async function POST(request) {
   try {
