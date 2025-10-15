@@ -37,9 +37,24 @@
         "floor": 0,
         "title": "Naramaxx",
         "is_special": false,
-        "updated_at": "2025-10-06T06:48:02.945Z",
+        "updated_at": "2025-10-15T05:47:14.151Z",
         "category": "general",
-        "status": "open"
+        "status": "open",
+        "subtype": "",
+        "icon": "",
+        "phone": "",
+        "hours": "",
+        "promotion": "",
+        "description": "",
+        "header_image": "",
+        "logo": "",
+        "website": "",
+        "email": "",
+        "instagram": "",
+        "twitter": "",
+        "services": "",
+        "tags": "",
+        "special_offers": "indirim var yeni"
       }
     },
     {
@@ -304,8 +319,8 @@
         "twitter": "",
         "services": "",
         "tags": "",
-        "special_offers": "",
-        "updated_at": "2025-10-13T05:57:35.294Z"
+        "special_offers": "deneme",
+        "updated_at": "2025-10-15T05:56:02.929Z"
       }
     },
     {
@@ -603,7 +618,7 @@
         "floor": 0,
         "title": "Migros",
         "is_special": false,
-        "updated_at": "2025-10-13T11:43:23.294Z",
+        "updated_at": "2025-10-15T06:16:53.857Z",
         "status": "open",
         "phone": "",
         "hours": "",
@@ -612,15 +627,16 @@
         "icon": "",
         "promotion": "",
         "description": "deneme",
-        "header_image": "/images/rooms/ankamall/room-room-101/header.png?t=1760355803294",
-        "logo": "/images/rooms/ankamall/room-room-101/logo.png?t=1760355803294",
+        "header_image": "/images/rooms/ankamall/room-room-101/header.png",
+        "logo": "/images/rooms/ankamall/room-room-101/logo.png",
         "website": "migros.com",
         "email": "",
         "instagram": "",
         "twitter": "",
         "services": "",
-        "tags": "",
-        "special_offers": ""
+        "tags": "market, alışveriş",
+        "special_offers": "indirim",
+        "discount_image": ""
       }
     },
     {
@@ -785,16 +801,16 @@
         "hours": "",
         "promotion": "",
         "description": "",
-        "header_image": "/images/rooms/ankamall/room-room-105/header.png?t=1760425026232",
-        "logo": "/images/rooms/ankamall/room-room-105/logo.png?t=1760425026232",
+        "header_image": "/images/rooms/ankamall/room-room-105/header.png",
+        "logo": "/images/rooms/ankamall/room-room-105/logo.png",
         "website": "",
         "email": "",
         "instagram": "",
         "twitter": "",
         "services": "",
         "tags": "",
-        "special_offers": "",
-        "updated_at": "2025-10-14T06:57:06.232Z"
+        "special_offers": "indirim var uybed",
+        "updated_at": "2025-10-15T05:47:35.408Z"
       }
     },
     {
@@ -897,16 +913,16 @@
         "hours": "",
         "promotion": "",
         "description": "",
-        "header_image": "/images/rooms/ankamall/room-room-107/header.png?t=1760355922072",
-        "logo": "/images/rooms/ankamall/room-room-107/logo.png?t=1760355922072",
+        "header_image": "/images/rooms/ankamall/room-room-107/header.png",
+        "logo": "/images/rooms/ankamall/room-room-107/logo.png",
         "website": "",
         "email": "",
         "instagram": "",
         "twitter": "",
         "services": "",
         "tags": "",
-        "special_offers": "",
-        "updated_at": "2025-10-13T11:45:22.072Z"
+        "special_offers": "indirim var",
+        "updated_at": "2025-10-15T05:44:57.123Z"
       }
     },
     {

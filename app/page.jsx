@@ -2148,6 +2148,19 @@ export default function MapLibreMap() {
             display_name: properties.name,
             gender: properties.gender || null,
             priority: properties.priority || null,
+            // İçerik alanları
+            special_offers: properties.special_offers || null,
+            description: properties.description || null,
+            phone: properties.phone || null,
+            hours: properties.hours || null,
+            promotion: properties.promotion || null,
+            website: properties.website || null,
+            email: properties.email || null,
+            instagram: properties.instagram || null,
+            twitter: properties.twitter || null,
+            services: properties.services || null,
+            tags: properties.tags || null,
+            header_image: properties.header_image || null,
           });
         }
       });
@@ -2806,7 +2819,7 @@ export default function MapLibreMap() {
                       activeNavItem === 2 ? 'block' : 'hidden'
                     }`}
                   >
-                    <div className="space-y-3">
+                    <div className="h-80 overflow-y-auto space-y-3">
                       {/* Popüler Yerler */}
                       <div>
                         <h3 className="text-sm font-semibold text-gray-700 mb-2">
@@ -2966,8 +2979,8 @@ export default function MapLibreMap() {
                                         >
                                           {room.category || 'Mağaza'}
                                         </span>
-                                        {room.tags && room.tags.length > 0 ? (
-                                          room.tags
+                                        {room.tags && (Array.isArray(room.tags) ? room.tags.length > 0 : room.tags.trim() !== '') ? (
+                                          (Array.isArray(room.tags) ? room.tags : room.tags.split(',').map(t => t.trim()))
                                             .slice(0, 1)
                                             .map((tag, idx) => (
                                               <span
@@ -3075,7 +3088,50 @@ export default function MapLibreMap() {
                         <h3 className="text-sm font-semibold text-gray-700 mb-2">
                           Kampanyalar
                         </h3>
-                        <div className="h-40 flex items-center justify-center bg-gray-50 rounded-lg"></div>
+                        <div className="bg-gray-50 rounded-lg p-2">
+                          {(() => {
+                            // Özel teklifleri olan mağazaları filtrele
+                            console.log('🔍 Tüm rooms:', rooms.length);
+                            console.log('🔍 İlk 3 room örneği:', rooms.slice(0, 3));
+                            const offersRooms = rooms.filter(
+                              r => r.special_offers && r.special_offers.trim() !== ''
+                            );
+                            console.log('🎁 Özel teklifli mağazalar:', offersRooms.length, offersRooms);
+
+                            if (offersRooms.length === 0) {
+                              return (
+                                <div className="h-36 flex items-center justify-center text-gray-400 text-sm">
+                                  Henüz kampanya bulunmuyor
+                                </div>
+                              );
+                            }
+
+                            return (
+                              <div className="space-y-2">
+                                {offersRooms.map((room, idx) => (
+                                  <div
+                                    key={idx}
+                                    className="bg-white rounded-lg p-3 border border-gray-200 shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+                                    onClick={() => {
+                                      setSelectedEndRoom(room.id);
+                                      setEndQuery(room.name);
+                                      setActiveNavItem(0);
+                                    }}
+                                  >
+                                    {/* Mağaza İsmi */}
+                                    <h4 className="text-sm font-bold text-gray-800 mb-1">
+                                      {room.name}
+                                    </h4>
+                                    {/* Özel Teklif */}
+                                    <p className="text-xs text-gray-600">
+                                      {room.special_offers}
+                                    </p>
+                                  </div>
+                                ))}
+                              </div>
+                            );
+                          })()}
+                        </div>
                       </div>
                     </div>
                   </div>
