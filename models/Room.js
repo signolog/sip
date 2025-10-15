@@ -59,7 +59,21 @@ const RoomSchema = new mongoose.Schema(
       twitter: String,
       services: String, // comma-separated
       tags: String, // comma-separated
-      special_offers: String,
+      
+
+      // Kampanya/İndirim Yönetimi
+      campaigns: [{
+        title: String, // Kampanya başlığı
+        description: String, // Kampanya açıklaması
+        discount_percentage: Number, // İndirim yüzdesi
+        discount_amount: Number, // Sabit indirim miktarı
+        start_date: Date, // Kampanya başlangıç tarihi
+        end_date: Date, // Kampanya bitiş tarihi
+        image: String, // Kampanya görseli
+        is_active: { type: Boolean, default: true }, // Aktif kampanya mı
+        created_at: { type: Date, default: Date.now },
+        updated_at: { type: Date, default: Date.now }
+      }],
     },
 
     // Sync durumu

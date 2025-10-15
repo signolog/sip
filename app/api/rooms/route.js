@@ -62,7 +62,11 @@ export async function GET(request) {
           twitter: room.content?.twitter || "",
           services: room.content?.services || "",
           tags: room.content?.tags || "",
-          special_offers: room.content?.special_offers || "",
+          
+          // Kampanya/İndirim Bilgileri
+          campaigns: room.content?.campaigns || [],
+          active_campaigns: room.content?.campaigns?.filter(c => c.is_active && 
+            (!c.end_date || new Date(c.end_date) > new Date())) || [],
         },
       });
     });

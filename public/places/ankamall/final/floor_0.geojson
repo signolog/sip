@@ -54,7 +54,37 @@
         "twitter": "",
         "services": "",
         "tags": "",
-        "special_offers": "indirim var yeni"
+        "special_offers": "indirim var yeni",
+        "campaigns": [
+          {
+            "title": "Anneler Gününe Özel 3",
+            "description": "Seçili Parfüm Ürünlerinde",
+            "discount_percentage": 20,
+            "discount_amount": 300,
+            "start_date": "2025-10-14T00:00:00.000Z",
+            "end_date": "2025-10-18T00:00:00.000Z",
+            "image": "images/rooms/ankamall/room-187/discount-1760514531758.png",
+            "is_active": true,
+            "created_at": "2025-10-15T07:48:51.760Z",
+            "updated_at": "2025-10-15T08:24:40.443Z",
+            "_id": "68ef5a487ea8e6fcda2129ec"
+          }
+        ],
+        "active_campaigns": [
+          {
+            "title": "Anneler Gününe Özel 3",
+            "description": "Seçili Parfüm Ürünlerinde",
+            "discount_percentage": 20,
+            "discount_amount": 300,
+            "start_date": "2025-10-14T00:00:00.000Z",
+            "end_date": "2025-10-18T00:00:00.000Z",
+            "image": "images/rooms/ankamall/room-187/discount-1760514531758.png",
+            "is_active": true,
+            "created_at": "2025-10-15T07:48:51.760Z",
+            "updated_at": "2025-10-15T08:24:40.443Z",
+            "_id": "68ef5a487ea8e6fcda2129ec"
+          }
+        ]
       }
     },
     {

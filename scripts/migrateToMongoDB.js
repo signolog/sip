@@ -212,7 +212,7 @@ async function migrateToMongoDB() {
                       twitter: feature.properties.twitter || "",
                       services: feature.properties.services || "",
                       tags: feature.properties.tags || "",
-                      special_offers: feature.properties.special_offers || "",
+                      
                     },
                     needs_sync: false, // Zaten sync'li
                     last_synced: new Date(),
