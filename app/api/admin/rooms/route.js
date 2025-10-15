@@ -117,7 +117,6 @@ export async function GET(request) {
         twitter: room.content?.twitter || "",
         services: room.content?.services || "",
         tags: room.content?.tags || "",
-        special_offers: room.content?.special_offers || "",
         // Content objesini de ekle
         content: room.content || {},
       };
@@ -166,7 +165,6 @@ export async function GET(request) {
       twitter: room.content?.twitter || "",
       services: room.content?.services || "",
       tags: room.content?.tags || "",
-      special_offers: room.content?.special_offers || "",
       // Content objesini de ekle
       content: room.content || {},
     }));

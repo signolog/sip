@@ -104,7 +104,6 @@ async function importRoomsFromBase() {
                 twitter: feature.properties.twitter || "",
                 services: feature.properties.services || "",
                 tags: feature.properties.tags || "",
-                special_offers: feature.properties.special_offers || "",
                 category: feature.properties.category || "general",
                 subtype: feature.properties.subtype || "",
                 icon: feature.properties.icon || "",

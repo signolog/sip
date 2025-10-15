@@ -1,47 +1,56 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
+import CampaignManager from './CampaignManager';
 
-export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, onRoomUpdated, singleRoomMode = false }) {
+export default function RoomUpdateForm({
+  rooms,
+  placeId,
+  floor,
+  onRoomUpdate,
+  onRoomUpdated,
+  singleRoomMode = false,
+}) {
   const [selectedRoom, setSelectedRoom] = useState(null);
   const [formData, setFormData] = useState({});
   const [isEditing, setIsEditing] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState('');
   const [showAll, setShowAll] = useState(false);
-  const [activeTab, setActiveTab] = useState("basic"); // "basic" veya "content"
+  const [activeTab, setActiveTab] = useState('basic'); // "basic" veya "content"
 
   // Oda seçildiğinde form verilerini hazırla
-  const handleRoomSelect = (room) => {
+  const handleRoomSelect = room => {
     setSelectedRoom(room);
     setFormData({
       id: room.originalId || room.room_id,
-      name: room.name || "",
-      category: room.category || "general",
-      subtype: room.subtype || "",
-      icon: room.icon || "",
-      gender: room.gender || "",
-      priority: room.priority || "",
+      name: room.name || '',
+      category: room.category || 'general',
+      subtype: room.subtype || '',
+      icon: room.icon || '',
+      gender: room.gender || '',
+      priority: room.priority || '',
       is_special: room.is_special || false,
-      special_type: room.special_type || "",
-      status: room.status || "open", // Room'dan gelen status'u kullan
-      phone: room.phone || "",
-      hours: room.hours || "",
-      promotion: room.promotion || "",
+      special_type: room.special_type || '',
+      status: room.status || 'open', // Room'dan gelen status'u kullan
+      phone: room.phone || '',
+      hours: room.hours || '',
+      promotion: room.promotion || '',
       // İçerik alanları
-      description: room.description || "",
-      website: room.website || "",
-      email: room.email || "",
-      instagram: room.instagram || "",
-      twitter: room.twitter || "",
-      services: Array.isArray(room.services) ? room.services.join(", ") : room.services || "",
-      special_offers: room.special_offers || "",
+      description: room.description || '',
+      website: room.website || '',
+      email: room.email || '',
+      instagram: room.instagram || '',
+      twitter: room.twitter || '',
+      services: Array.isArray(room.services)
+        ? room.services.join(', ')
+        : room.services || '',
       // Görseller ve Etiketler
-      header_image: room.header_image || "",
-      logo: room.logo || "",
-      tags: Array.isArray(room.tags) ? room.tags.join(", ") : room.tags || "",
+      header_image: room.header_image || '',
+      logo: room.logo || '',
+      tags: Array.isArray(room.tags) ? room.tags.join(', ') : room.tags || '',
     });
     setIsEditing(false);
-    setActiveTab("basic"); // Yeni oda seçildiğinde basic tab'a dön
+    setActiveTab('basic'); // Yeni oda seçildiğinde basic tab'a dön
   };
 
   // Single room mode için otomatik seçim
@@ -56,40 +65,55 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
     if (rooms.length === 1 && singleRoomMode) {
       // Single room mode'da tek bir oda varsa, onu otomatik seç
       const room = rooms[0];
-      if (!selectedRoom || selectedRoom.id !== room.id || selectedRoom.room_id !== room.room_id) {
+      if (
+        !selectedRoom ||
+        selectedRoom.id !== room.id ||
+        selectedRoom.room_id !== room.room_id
+      ) {
         handleRoomSelect(room);
       }
     } else if (selectedRoom && rooms.length > 0) {
       // Multi room mode'da seçili odanın güncel halini bul
-      const updatedRoom = rooms.find(r => r.id === selectedRoom.id || r.originalId === selectedRoom.originalId || r.room_id === selectedRoom.room_id);
-      if (updatedRoom && JSON.stringify(updatedRoom) !== JSON.stringify(selectedRoom)) {
+      const updatedRoom = rooms.find(
+        r =>
+          r.id === selectedRoom.id ||
+          r.originalId === selectedRoom.originalId ||
+          r.room_id === selectedRoom.room_id
+      );
+      if (
+        updatedRoom &&
+        JSON.stringify(updatedRoom) !== JSON.stringify(selectedRoom)
+      ) {
         // Seçili odayı güncelle
         setSelectedRoom(updatedRoom);
         // Form verilerini de güncelle
         setFormData({
           id: updatedRoom.originalId || updatedRoom.room_id,
-          name: updatedRoom.name || "",
-          category: updatedRoom.category || "general",
-          subtype: updatedRoom.subtype || "",
-          icon: updatedRoom.icon || "",
-          gender: updatedRoom.gender || "",
-          priority: updatedRoom.priority || "",
+          name: updatedRoom.name || '',
+          category: updatedRoom.category || 'general',
+          subtype: updatedRoom.subtype || '',
+          icon: updatedRoom.icon || '',
+          gender: updatedRoom.gender || '',
+          priority: updatedRoom.priority || '',
           is_special: updatedRoom.is_special || false,
-          special_type: updatedRoom.special_type || "",
-          status: updatedRoom.status || "open",
-          phone: updatedRoom.phone || "",
-          hours: updatedRoom.hours || "",
-          promotion: updatedRoom.promotion || "",
-          description: updatedRoom.description || "",
-          website: updatedRoom.website || "",
-          email: updatedRoom.email || "",
-          instagram: updatedRoom.instagram || "",
-          twitter: updatedRoom.twitter || "",
-          services: Array.isArray(updatedRoom.services) ? updatedRoom.services.join(", ") : updatedRoom.services || "",
-          special_offers: updatedRoom.special_offers || "",
-          header_image: updatedRoom.header_image || "",
-          logo: updatedRoom.logo || "",
-          tags: Array.isArray(updatedRoom.tags) ? updatedRoom.tags.join(", ") : updatedRoom.tags || "",
+          special_type: updatedRoom.special_type || '',
+          status: updatedRoom.status || 'open',
+          phone: updatedRoom.phone || '',
+          hours: updatedRoom.hours || '',
+          promotion: updatedRoom.promotion || '',
+          description: updatedRoom.description || '',
+          website: updatedRoom.website || '',
+          email: updatedRoom.email || '',
+          instagram: updatedRoom.instagram || '',
+          twitter: updatedRoom.twitter || '',
+          services: Array.isArray(updatedRoom.services)
+            ? updatedRoom.services.join(', ')
+            : updatedRoom.services || '',
+          header_image: updatedRoom.header_image || '',
+          logo: updatedRoom.logo || '',
+          tags: Array.isArray(updatedRoom.tags)
+            ? updatedRoom.tags.join(', ')
+            : updatedRoom.tags || '',
         });
       }
     }
@@ -97,7 +121,8 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
 
   // Room'ları filtrele ve paginate et
   const filteredRooms = rooms.filter(
-    (room) => room.name && room.name.toLowerCase().includes(searchQuery.toLowerCase())
+    room =>
+      room.name && room.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   const displayedRooms = showAll ? filteredRooms : filteredRooms.slice(0, 5);
@@ -105,7 +130,7 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
 
   // Form verilerini güncelle
   const handleInputChange = (field, value) => {
-    setFormData((prev) => ({
+    setFormData(prev => ({
       ...prev,
       [field]: value,
     }));
@@ -119,12 +144,18 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
   // Yardımcı: Base64 resmi odaya yükle ve dosya yolunu döndür
   const uploadRoomImage = async (type, dataUrl) => {
     try {
-      const token = typeof window !== "undefined" ? localStorage.getItem("admin_token") : null;
-      const endpoint = type === "header" ? "/api/admin/rooms/upload-header" : "/api/admin/rooms/upload-logo";
+      const token =
+        typeof window !== 'undefined'
+          ? localStorage.getItem('admin_token')
+          : null;
+      const endpoint =
+        type === 'header'
+          ? '/api/admin/rooms/upload-header'
+          : '/api/admin/rooms/upload-logo';
       const response = await fetch(endpoint, {
-        method: "POST",
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({
@@ -136,12 +167,15 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
 
       const result = await response.json();
       if (!response.ok || !result.success) {
-        console.error("❌ Görsel yüklenemedi:", result.error || response.statusText);
+        console.error(
+          '❌ Görsel yüklenemedi:',
+          result.error || response.statusText
+        );
         return null;
       }
       return result.path; // Kaydedilen dosya yolu
     } catch (e) {
-      console.error("❌ Görsel yükleme hatası:", e);
+      console.error('❌ Görsel yükleme hatası:', e);
       return null;
     }
   };
@@ -154,10 +188,13 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
       // Header image Base64 ise önce sunucuya yükle
       if (
         updatedPayload.header_image &&
-        typeof updatedPayload.header_image === "string" &&
-        updatedPayload.header_image.startsWith("data:image/")
+        typeof updatedPayload.header_image === 'string' &&
+        updatedPayload.header_image.startsWith('data:image/')
       ) {
-        const savedPath = await uploadRoomImage("header", updatedPayload.header_image);
+        const savedPath = await uploadRoomImage(
+          'header',
+          updatedPayload.header_image
+        );
         if (savedPath) {
           updatedPayload.header_image = savedPath;
         }
@@ -166,17 +203,17 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
       // Logo Base64 ise önce sunucuya yükle
       if (
         updatedPayload.logo &&
-        typeof updatedPayload.logo === "string" &&
-        updatedPayload.logo.startsWith("data:image/")
+        typeof updatedPayload.logo === 'string' &&
+        updatedPayload.logo.startsWith('data:image/')
       ) {
-        const savedPath = await uploadRoomImage("logo", updatedPayload.logo);
+        const savedPath = await uploadRoomImage('logo', updatedPayload.logo);
         if (savedPath) {
           updatedPayload.logo = savedPath;
         }
       }
 
-      await onRoomUpdate({ action: "update", floor, ...updatedPayload });
-      
+      await onRoomUpdate({ action: 'update', floor, ...updatedPayload });
+
       // CLIENT-SIDE CACHE TEMİZLEME
       // Browser cache'ini temizle (GeoJSON dosyaları için)
       if (typeof window !== 'undefined' && window.caches) {
@@ -188,14 +225,14 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
           console.warn('⚠️ Cache temizleme hatası:', cacheError);
         }
       }
-      
+
       // Kaydet sonrası: üst sayfadaki liste ve arama verilerini tazele
       if (onRoomUpdated) {
         await onRoomUpdated();
       }
       setIsEditing(false);
     } catch (error) {
-      console.error("Güncelleme hatası:", error);
+      console.error('Güncelleme hatası:', error);
     }
   };
 
@@ -203,36 +240,41 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
   const handleCancel = () => {
     setFormData({
       id: selectedRoom.originalId,
-      name: selectedRoom.name || "",
-      category: selectedRoom.category || "general",
-      subtype: selectedRoom.subtype || "",
-      icon: selectedRoom.icon || "",
-      gender: selectedRoom.gender || "",
-      priority: selectedRoom.priority || "",
+      name: selectedRoom.name || '',
+      category: selectedRoom.category || 'general',
+      subtype: selectedRoom.subtype || '',
+      icon: selectedRoom.icon || '',
+      gender: selectedRoom.gender || '',
+      priority: selectedRoom.priority || '',
       is_special: selectedRoom.is_special || false,
-      special_type: selectedRoom.special_type || "",
-      status: selectedRoom.status || "open",
-      phone: selectedRoom.phone || "",
-      hours: selectedRoom.hours || "",
-      promotion: selectedRoom.promotion || "",
+      special_type: selectedRoom.special_type || '',
+      status: selectedRoom.status || 'open',
+      phone: selectedRoom.phone || '',
+      hours: selectedRoom.hours || '',
+      promotion: selectedRoom.promotion || '',
       // İçerik alanları
-      description: selectedRoom.description || "",
-      website: selectedRoom.website || "",
-      email: selectedRoom.email || "",
-      instagram: selectedRoom.instagram || "",
-      twitter: selectedRoom.twitter || "",
-      services: Array.isArray(selectedRoom.services) ? selectedRoom.services.join(", ") : selectedRoom.services || "",
-      special_offers: selectedRoom.special_offers || "",
+      description: selectedRoom.description || '',
+      website: selectedRoom.website || '',
+      email: selectedRoom.email || '',
+      instagram: selectedRoom.instagram || '',
+      twitter: selectedRoom.twitter || '',
+      services: Array.isArray(selectedRoom.services)
+        ? selectedRoom.services.join(', ')
+        : selectedRoom.services || '',
       // Görseller ve Etiketler
-      header_image: selectedRoom.header_image || "",
-      logo: selectedRoom.logo || "",
-      tags: Array.isArray(selectedRoom.tags) ? selectedRoom.tags.join(", ") : selectedRoom.tags || "",
+      header_image: selectedRoom.header_image || '',
+      logo: selectedRoom.logo || '',
+      tags: Array.isArray(selectedRoom.tags)
+        ? selectedRoom.tags.join(', ')
+        : selectedRoom.tags || '',
     });
     setIsEditing(false);
   };
 
   return (
-    <div className={`flex gap-6 h-full ${singleRoomMode ? "justify-center" : ""}`}>
+    <div
+      className={`flex gap-6 h-full ${singleRoomMode ? 'justify-center' : ''}`}
+    >
       {/* Sol Panel - Oda Listesi (sadece multi-room mode'da) */}
       {!singleRoomMode && (
         <div className="w-1/2 bg-white rounded-lg shadow-sm border border-gray-200 flex flex-col">
@@ -247,7 +289,7 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
                 type="text"
                 placeholder="Birim ara..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={e => setSearchQuery(e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
@@ -258,28 +300,32 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
 
           <div className="p-4 flex-1">
             <div className="space-y-2 h-full overflow-y-auto">
-              {displayedRooms.map((room) => (
+              {displayedRooms.map(room => (
                 <div
                   key={room.id}
                   onClick={() => handleRoomSelect(room)}
                   className={`p-3 rounded-md border cursor-pointer transition-colors ${
                     selectedRoom?.id === room.id
-                      ? "bg-blue-50 border-blue-200"
-                      : "bg-white border-gray-200 hover:bg-gray-50"
+                      ? 'bg-blue-50 border-blue-200'
+                      : 'bg-white border-gray-200 hover:bg-gray-50'
                   }`}
                 >
                   <div className="flex items-center justify-between">
                     <div>
                       <h4 className="font-medium text-gray-900">{room.name}</h4>
-                      <p className="text-sm text-gray-500">ID: {room.originalId}</p>
+                      <p className="text-sm text-gray-500">
+                        ID: {room.originalId}
+                      </p>
                     </div>
                     <div className="text-right">
                       <span
                         className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
-                          room.is_special ? "bg-purple-100 text-purple-800" : "bg-gray-100 text-gray-800"
+                          room.is_special
+                            ? 'bg-purple-100 text-purple-800'
+                            : 'bg-gray-100 text-gray-800'
                         }`}
                       >
-                        {room.is_special ? "Özel" : "Normal"}
+                        {room.is_special ? 'Özel' : 'Normal'}
                       </span>
                     </div>
                   </div>
@@ -325,13 +371,15 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
       {/* Sağ Panel - Oda Düzenleme */}
       <div
         className={`bg-white rounded-lg shadow-sm border border-gray-200 flex flex-col ${
-          singleRoomMode ? "w-full max-w-4xl" : "w-1/2"
+          singleRoomMode ? 'w-full ' : 'w-1/2'
         }`}
       >
         <div className="p-4 border-b border-gray-200">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-semibold text-gray-900">
-              {selectedRoom ? `Birim Düzenleme - ${selectedRoom.name}` : "Birim Seçin"}
+              {selectedRoom
+                ? `Birim Düzenleme - ${selectedRoom.name}`
+                : 'Birim Seçin'}
             </h3>
             {selectedRoom && (
               <div className="flex gap-2">
@@ -368,24 +416,34 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
           <div className="border-b border-gray-200">
             <nav className="flex space-x-8 px-4">
               <button
-                onClick={() => setActiveTab("basic")}
+                onClick={() => setActiveTab('basic')}
                 className={`py-3 px-1 border-b-2 font-medium text-sm ${
-                  activeTab === "basic"
-                    ? "border-blue-500 text-blue-600"
-                    : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                  activeTab === 'basic'
+                    ? 'border-blue-500 text-blue-600'
+                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                 }`}
               >
                 Temel Bilgiler
               </button>
               <button
-                onClick={() => setActiveTab("content")}
+                onClick={() => setActiveTab('content')}
                 className={`py-3 px-1 border-b-2 font-medium text-sm ${
-                  activeTab === "content"
-                    ? "border-blue-500 text-blue-600"
-                    : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                  activeTab === 'content'
+                    ? 'border-blue-500 text-blue-600'
+                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                 }`}
               >
                 İçerik Yönetimi
+              </button>
+              <button
+                onClick={() => setActiveTab('campaigns')}
+                className={`py-3 px-1 border-b-2 font-medium text-sm ${
+                  activeTab === 'campaigns'
+                    ? 'border-blue-500 text-blue-600'
+                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                }`}
+              >
+                Kampanyalar
               </button>
             </nav>
           </div>
@@ -394,29 +452,39 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
         <div className="p-4 flex-1 overflow-y-auto">
           {selectedRoom ? (
             <div className="space-y-4">
-              {activeTab === "basic" ? (
+              {activeTab === 'basic' && (
                 /* Temel Bilgiler Tab */
                 <>
                   {/* Temel Bilgiler */}
                   <div>
-                    <h4 className="text-md font-medium text-gray-900 mb-3">Temel Bilgiler</h4>
+                    <h4 className="text-md font-medium text-gray-900 mb-3">
+                      Temel Bilgiler
+                    </h4>
                     <div className="grid grid-cols-1 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Birim Adı</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                          Birim Adı
+                        </label>
                         <input
                           type="text"
                           value={formData.name}
-                          onChange={(e) => handleInputChange("name", e.target.value)}
+                          onChange={e =>
+                            handleInputChange('name', e.target.value)
+                          }
                           disabled={!isEditing}
                           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
                         />
                       </div>
 
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Kategori</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                          Kategori
+                        </label>
                         <select
                           value={formData.category}
-                          onChange={(e) => handleInputChange("category", e.target.value)}
+                          onChange={e =>
+                            handleInputChange('category', e.target.value)
+                          }
                           disabled={!isEditing}
                           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
                         >
@@ -434,26 +502,36 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
 
                   {/* Özel Bilgiler */}
                   <div>
-                    <h4 className="text-md font-medium text-gray-900 mb-3">Özel Bilgiler</h4>
+                    <h4 className="text-md font-medium text-gray-900 mb-3">
+                      Özel Bilgiler
+                    </h4>
                     <div className="grid grid-cols-1 gap-4">
                       <div className="flex items-center">
                         <input
                           type="checkbox"
                           checked={formData.is_special}
-                          onChange={(e) => handleInputChange("is_special", e.target.checked)}
+                          onChange={e =>
+                            handleInputChange('is_special', e.target.checked)
+                          }
                           disabled={!isEditing}
                           className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded disabled:bg-gray-100"
                         />
-                        <label className="ml-2 text-sm text-gray-700">Özel Lokasyon</label>
+                        <label className="ml-2 text-sm text-gray-700">
+                          Özel Lokasyon
+                        </label>
                       </div>
 
                       {formData.is_special && (
                         <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-1">Özel Tip</label>
+                          <label className="block text-sm font-medium text-gray-700 mb-1">
+                            Özel Tip
+                          </label>
                           <input
                             type="text"
                             value={formData.special_type}
-                            onChange={(e) => handleInputChange("special_type", e.target.value)}
+                            onChange={e =>
+                              handleInputChange('special_type', e.target.value)
+                            }
                             disabled={!isEditing}
                             placeholder="Örn: WC, Asansör, Merdiven"
                             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
@@ -462,11 +540,15 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
                       )}
 
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Alt Tip</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                          Alt Tip
+                        </label>
                         <input
                           type="text"
                           value={formData.subtype}
-                          onChange={(e) => handleInputChange("subtype", e.target.value)}
+                          onChange={e =>
+                            handleInputChange('subtype', e.target.value)
+                          }
                           disabled={!isEditing}
                           placeholder="Örn: Kahve, Restoran, Mağaza"
                           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
@@ -474,11 +556,15 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
                       </div>
 
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">İkon</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                          İkon
+                        </label>
                         <input
                           type="text"
                           value={formData.icon}
-                          onChange={(e) => handleInputChange("icon", e.target.value)}
+                          onChange={e =>
+                            handleInputChange('icon', e.target.value)
+                          }
                           disabled={!isEditing}
                           placeholder="Örn: coffee, restaurant, shop"
                           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
@@ -489,14 +575,20 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
 
                   {/* Ek Bilgiler */}
                   <div>
-                    <h4 className="text-md font-medium text-gray-900 mb-3">Ek Bilgiler</h4>
+                    <h4 className="text-md font-medium text-gray-900 mb-3">
+                      Ek Bilgiler
+                    </h4>
                     <div className="grid grid-cols-1 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Telefon</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                          Telefon
+                        </label>
                         <input
                           type="text"
                           value={formData.phone}
-                          onChange={(e) => handleInputChange("phone", e.target.value)}
+                          onChange={e =>
+                            handleInputChange('phone', e.target.value)
+                          }
                           disabled={!isEditing}
                           placeholder="+90 312 123 4567"
                           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
@@ -504,11 +596,15 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
                       </div>
 
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Çalışma Saatleri</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                          Çalışma Saatleri
+                        </label>
                         <input
                           type="text"
                           value={formData.hours}
-                          onChange={(e) => handleInputChange("hours", e.target.value)}
+                          onChange={e =>
+                            handleInputChange('hours', e.target.value)
+                          }
                           disabled={!isEditing}
                           placeholder="08:00-22:00"
                           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
@@ -516,11 +612,15 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
                       </div>
 
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Promosyon</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                          Promosyon
+                        </label>
                         <input
                           type="text"
                           value={formData.promotion}
-                          onChange={(e) => handleInputChange("promotion", e.target.value)}
+                          onChange={e =>
+                            handleInputChange('promotion', e.target.value)
+                          }
                           disabled={!isEditing}
                           placeholder="İndirim %30"
                           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
@@ -529,30 +629,39 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
                     </div>
                   </div>
                 </>
-              ) : (
+              )}
+
+              {activeTab === 'content' && (
                 /* İçerik Yönetimi Tab */
                 <>
                   {/* Görseller */}
                   <div>
-                    <h4 className="text-md font-medium text-gray-900 mb-3">Görseller</h4>
+                    <h4 className="text-md font-medium text-gray-900 mb-3">
+                      Görseller
+                    </h4>
                     <div className="grid grid-cols-1 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Header Görseli</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                          Header Görseli
+                        </label>
                         {/* Anlık önizleme */}
                         {formData.header_image && (
                           <div
                             className={`mb-2 ${
-                              typeof formData.header_image === "string" &&
-                              formData.header_image.startsWith("data:image/")
-                                ? "border-2 border-blue-400"
-                                : ""
+                              typeof formData.header_image === 'string' &&
+                              formData.header_image.startsWith('data:image/')
+                                ? 'border-2 border-blue-400'
+                                : ''
                             }`}
                           >
                             <img
                               src={
-                                typeof formData.header_image === "string" && formData.header_image.startsWith("data:image/")
+                                typeof formData.header_image === 'string' &&
+                                formData.header_image.startsWith('data:image/')
                                   ? formData.header_image
-                                  : `${formData.header_image.split('?')[0]}?t=${Date.now()}`
+                                  : `${
+                                      formData.header_image.split('?')[0]
+                                    }?t=${Date.now()}`
                               }
                               alt="Header Preview"
                               className="w-full h-32 object-cover rounded"
@@ -564,12 +673,12 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
                           type="file"
                           accept="image/png,image/jpeg,image/jpg,image/gif,image/webp,image/svg+xml"
                           disabled={!isEditing}
-                          onChange={(e) => {
+                          onChange={e => {
                             const file = e.target.files && e.target.files[0];
                             if (!file) return;
                             const reader = new FileReader();
                             reader.onload = () => {
-                              handleInputChange("header_image", reader.result);
+                              handleInputChange('header_image', reader.result);
                             };
                             reader.readAsDataURL(file);
                           }}
@@ -577,21 +686,27 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Logo</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                          Logo
+                        </label>
                         {/* Anlık önizleme */}
                         {formData.logo && (
                           <div
                             className={`mb-2 ${
-                              typeof formData.logo === "string" && formData.logo.startsWith("data:image/")
-                                ? "border-2 border-blue-400"
-                                : ""
+                              typeof formData.logo === 'string' &&
+                              formData.logo.startsWith('data:image/')
+                                ? 'border-2 border-blue-400'
+                                : ''
                             }`}
                           >
                             <img
                               src={
-                                typeof formData.logo === "string" && formData.logo.startsWith("data:image/")
+                                typeof formData.logo === 'string' &&
+                                formData.logo.startsWith('data:image/')
                                   ? formData.logo
-                                  : `${formData.logo.split('?')[0]}?t=${Date.now()}`
+                                  : `${
+                                      formData.logo.split('?')[0]
+                                    }?t=${Date.now()}`
                               }
                               alt="Logo Preview"
                               className="h-16 object-contain rounded"
@@ -603,12 +718,12 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
                           type="file"
                           accept="image/png,image/jpeg,image/jpg,image/gif,image/webp,image/svg+xml"
                           disabled={!isEditing}
-                          onChange={(e) => {
+                          onChange={e => {
                             const file = e.target.files && e.target.files[0];
                             if (!file) return;
                             const reader = new FileReader();
                             reader.onload = () => {
-                              handleInputChange("logo", reader.result);
+                              handleInputChange('logo', reader.result);
                             };
                             reader.readAsDataURL(file);
                           }}
@@ -620,10 +735,14 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
 
                   {/* Açıklama */}
                   <div>
-                    <h4 className="text-md font-medium text-gray-900 mb-3">Açıklama</h4>
+                    <h4 className="text-md font-medium text-gray-900 mb-3">
+                      Açıklama
+                    </h4>
                     <textarea
                       value={formData.description}
-                      onChange={(e) => handleInputChange("description", e.target.value)}
+                      onChange={e =>
+                        handleInputChange('description', e.target.value)
+                      }
                       disabled={!isEditing}
                       rows={3}
                       placeholder="Mağaza açıklaması..."
@@ -633,47 +752,65 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
 
                   {/* İletişim Bilgileri */}
                   <div>
-                    <h4 className="text-md font-medium text-gray-900 mb-3">İletişim Bilgileri</h4>
+                    <h4 className="text-md font-medium text-gray-900 mb-3">
+                      İletişim Bilgileri
+                    </h4>
                     <div className="grid grid-cols-1 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Website</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                          Website
+                        </label>
                         <input
                           type="url"
                           value={formData.website}
-                          onChange={(e) => handleInputChange("website", e.target.value)}
+                          onChange={e =>
+                            handleInputChange('website', e.target.value)
+                          }
                           disabled={!isEditing}
                           placeholder="https://example.com"
                           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">E-posta</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                          E-posta
+                        </label>
                         <input
                           type="email"
                           value={formData.email}
-                          onChange={(e) => handleInputChange("email", e.target.value)}
+                          onChange={e =>
+                            handleInputChange('email', e.target.value)
+                          }
                           disabled={!isEditing}
                           placeholder="info@example.com"
                           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Instagram Kullanıcı Adı</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                          Instagram Kullanıcı Adı
+                        </label>
                         <input
                           type="text"
                           value={formData.instagram}
-                          onChange={(e) => handleInputChange("instagram", e.target.value)}
+                          onChange={e =>
+                            handleInputChange('instagram', e.target.value)
+                          }
                           disabled={!isEditing}
                           placeholder="ornekhesap"
                           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Twitter Kullanıcı Adı</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                          Twitter Kullanıcı Adı
+                        </label>
                         <input
                           type="text"
                           value={formData.twitter}
-                          onChange={(e) => handleInputChange("twitter", e.target.value)}
+                          onChange={e =>
+                            handleInputChange('twitter', e.target.value)
+                          }
                           disabled={!isEditing}
                           placeholder="ornekhesap"
                           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
@@ -684,53 +821,68 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
 
                   {/* Hizmetler */}
                   <div>
-                    <h4 className="text-md font-medium text-gray-900 mb-3">Hizmetler</h4>
+                    <h4 className="text-md font-medium text-gray-900 mb-3">
+                      Hizmetler
+                    </h4>
                     <div className="grid grid-cols-1 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Hizmetler</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                          Hizmetler
+                        </label>
                         <input
                           type="text"
                           value={formData.services}
-                          onChange={(e) => handleInputChange("services", e.target.value)}
+                          onChange={e =>
+                            handleInputChange('services', e.target.value)
+                          }
                           disabled={!isEditing}
                           placeholder="Örn: tamir, kurulum, iade kabul"
                           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
                         />
-                        <p className="text-xs text-gray-500 mt-1">Virgülle ayırarak birden fazla hizmet ekleyin</p>
-                      </div>
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Özel Teklifler</label>
-                        <textarea
-                          value={formData.special_offers}
-                          onChange={(e) => handleInputChange("special_offers", e.target.value)}
-                          disabled={!isEditing}
-                          rows={2}
-                          placeholder="Özel indirimler ve teklifler..."
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
-                        />
+                        <p className="text-xs text-gray-500 mt-1">
+                          Virgülle ayırarak birden fazla hizmet ekleyin
+                        </p>
                       </div>
                     </div>
                   </div>
 
                   {/* Etiketler */}
                   <div>
-                    <h4 className="text-md font-medium text-gray-900 mb-3">Etiketler</h4>
+                    <h4 className="text-md font-medium text-gray-900 mb-3">
+                      Etiketler
+                    </h4>
                     <input
                       type="text"
                       value={formData.tags}
-                      onChange={(e) => handleInputChange("tags", e.target.value)}
+                      onChange={e => handleInputChange('tags', e.target.value)}
                       disabled={!isEditing}
                       placeholder="Örn: teknoloji, elektronik, kampanya"
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
                     />
-                    <p className="text-xs text-gray-500 mt-1">Virgülle ayırarak birden fazla etiket ekleyin</p>
+                    <p className="text-xs text-gray-500 mt-1">
+                      Virgülle ayırarak birden fazla etiket ekleyin
+                    </p>
                   </div>
                 </>
+              )}
+
+              {activeTab === 'campaigns' && (
+                /* Kampanyalar Tab */
+                <CampaignManager
+                  room={selectedRoom}
+                  placeId={placeId}
+                  onCampaignUpdate={onRoomUpdated}
+                />
               )}
             </div>
           ) : (
             <div className="text-center py-8">
-              <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg
+                className="mx-auto h-12 w-12 text-gray-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -738,8 +890,12 @@ export default function RoomUpdateForm({ rooms, placeId, floor, onRoomUpdate, on
                   d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
                 />
               </svg>
-              <h3 className="mt-2 text-sm font-medium text-gray-900">Birim Seçin</h3>
-              <p className="mt-1 text-sm text-gray-500">Düzenlemek için sol panelden bir birim seçin</p>
+              <h3 className="mt-2 text-sm font-medium text-gray-900">
+                Birim Seçin
+              </h3>
+              <p className="mt-1 text-sm text-gray-500">
+                Düzenlemek için sol panelden bir birim seçin
+              </p>
             </div>
           )}
         </div>

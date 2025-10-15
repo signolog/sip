@@ -220,7 +220,6 @@ async function syncToGeoJSON(place_id, floor, room) {
         twitter: room.content.twitter || "",
         services: room.content.services || "",
         tags: room.content.tags || "",
-        special_offers: room.content.special_offers || "",
         updated_at: new Date().toISOString(),
       };
 
