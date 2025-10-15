@@ -173,6 +173,7 @@ export default function MapLibreMap() {
   const [placeId, setPlaceId] = useState(''); // Place ID - room'ları getirmek için
   const [mapCenter, setMapCenter] = useState([0, 0]); // API'den gelecek
   const [mapZoom, setMapZoom] = useState(15); // API'den gelecek
+  const [campaignRooms, setCampaignRooms] = useState([]); // Campaign verileri
   const [popularPlacesIndex, setPopularPlacesIndex] = useState(0); // Popüler yerler kaydırma index
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
@@ -1430,6 +1431,40 @@ export default function MapLibreMap() {
     }
   };
 
+  // Campaign verilerini yükle
+  const loadCampaignRooms = useCallback(async () => {
+    if (!placeId) return;
+
+    try {
+      console.log('🎁 Campaign verileri yükleniyor, placeId:', placeId);
+      const response = await fetch(`/api/rooms?place_id=${placeId}`);
+      if (!response.ok) {
+        console.error('❌ Campaign verileri yüklenemedi');
+        return;
+      }
+
+      const roomsData = await response.json();
+      console.log('🎁 Campaign verileri yüklendi:', roomsData);
+
+      // Tüm katlardaki room'ları birleştir
+      const allRooms = [];
+      Object.values(roomsData).forEach(floorData => {
+        if (floorData.features) {
+          floorData.features.forEach(feature => {
+            if (feature.properties.type === 'room') {
+              allRooms.push(feature.properties);
+            }
+          });
+        }
+      });
+
+      setCampaignRooms(allRooms);
+      console.log('🎁 Campaign için roomlar hazırlandı:', allRooms.length);
+    } catch (error) {
+      console.error('❌ Campaign verileri yükleme hatası:', error);
+    }
+  }, [placeId]);
+
   // Multi-floor GeoJSON yükleme (Final + DB Room Merge)
   const loadAllFloors = async () => {
     console.log('🔄 Tüm katlar yükleniyor (Final + DB Merge)...');
@@ -1522,6 +1557,10 @@ export default function MapLibreMap() {
 
     setAllGeoData(floorData);
     console.log('✅ Tüm katlar yüklendi ve merge edildi');
+
+    // Campaign verilerini de yükle
+    loadCampaignRooms();
+
     return floorData;
   };
 
@@ -2905,7 +2944,7 @@ export default function MapLibreMap() {
 
                       {/* Kampanyalar */}
                       <Campaigns
-                        placeId={placeId}
+                        campaignRooms={campaignRooms}
                         onRoomSelect={room => {
                           // Room ID'yi namespaced format'a çevir
                           const namespacedRoomId = `f${room.floor}-${room.id}`;
