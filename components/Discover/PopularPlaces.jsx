@@ -1,12 +1,15 @@
 // components/Discover/PopularPlaces.jsx
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 export default function PopularPlaces({ rooms, onRoomSelect }) {
-  const [popularPlacesIndex, setPopularPlacesIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragOffset, setDragOffset] = useState(0);
+  const containerRef = useRef(null);
 
   // Popüler yerleri filtrele (logo'su olanlar)
   const popularRooms = rooms.filter(r => r.logo);
@@ -14,24 +17,74 @@ export default function PopularPlaces({ rooms, onRoomSelect }) {
   const handleTouchStart = e => {
     setTouchEnd(null);
     setTouchStart(e.targetTouches[0].clientX);
+    setIsDragging(true);
+    setDragOffset(0);
   };
 
   const handleTouchMove = e => {
-    setTouchEnd(e.targetTouches[0].clientX);
+    if (!isDragging) return;
+    const currentTouch = e.targetTouches[0].clientX;
+    setTouchEnd(currentTouch);
+    const offset = touchStart - currentTouch;
+    setDragOffset(offset);
   };
 
   const handleTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
+    if (!isDragging) return;
+    setIsDragging(false);
+
+    if (!touchStart || !touchEnd) {
+      setDragOffset(0);
+      return;
+    }
+
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > 50;
     const isRightSwipe = distance < -50;
 
-    if (isLeftSwipe && popularPlacesIndex < popularRooms.length - 1) {
-      setPopularPlacesIndex(popularPlacesIndex + 1);
+    if (isLeftSwipe && currentIndex < popularRooms.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+    } else if (isRightSwipe && currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
     }
-    if (isRightSwipe && popularPlacesIndex > 0) {
-      setPopularPlacesIndex(popularPlacesIndex - 1);
+
+    setDragOffset(0);
+  };
+
+  const handleMouseDown = e => {
+    setTouchStart(e.clientX);
+    setIsDragging(true);
+    setDragOffset(0);
+  };
+
+  const handleMouseMove = e => {
+    if (!isDragging) return;
+    const currentX = e.clientX;
+    setTouchEnd(currentX);
+    const offset = touchStart - currentX;
+    setDragOffset(offset);
+  };
+
+  const handleMouseUp = () => {
+    if (!isDragging) return;
+    setIsDragging(false);
+
+    if (!touchStart || !touchEnd) {
+      setDragOffset(0);
+      return;
     }
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe && currentIndex < popularRooms.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+    } else if (isRightSwipe && currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
+
+    setDragOffset(0);
   };
 
   if (popularRooms.length === 0) {
@@ -42,73 +95,36 @@ export default function PopularPlaces({ rooms, onRoomSelect }) {
     );
   }
 
-  const prevIndex = popularPlacesIndex > 0 ? popularPlacesIndex - 1 : null;
-  const currentIndex = popularPlacesIndex;
-  const nextIndex =
-    popularPlacesIndex < popularRooms.length - 1
-      ? popularPlacesIndex + 1
-      : null;
-
-  const renderCard = (room, isCenter, index) => (
+  const renderCard = (room, index) => (
     <div
       key={room.id}
-      onClick={() => {
-        if (!isCenter) {
-          setPopularPlacesIndex(index);
-        }
-      }}
-      className={`bg-white rounded-lg border border-gray-200 flex-shrink-0 transition-all duration-500 ease-out ${
-        isCenter
-          ? 'w-[55%] h-full p-3 shadow-md'
-          : 'w-[22%] h-[85%] p-2 shadow-sm cursor-pointer hover:opacity-80'
-      }`}
+      className="w-48 h-32 bg-white rounded-lg border border-gray-200 flex-shrink-0 p-3 shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+      onClick={() => onRoomSelect(room)}
     >
-      <div
-        className={`h-full flex flex-col overflow-hidden transition-opacity duration-500 ${
-          isCenter ? 'opacity-100' : 'opacity-40'
-        }`}
-      >
+      <div className="h-full flex flex-col">
         {/* Üst Kısım: Logo ve Bilgiler */}
-        <div className={`flex gap-2 ${isCenter ? 'mb-2' : 'mb-1'}`}>
+        <div className="flex gap-2 mb-2">
           {/* Logo */}
           <img
             src={room.logo}
             alt={room.name}
-            className={`flex-shrink-0 object-contain rounded-lg border border-gray-200 bg-white transition-all duration-500 ${
-              isCenter ? 'h-12 w-12 p-1.5' : 'h-8 w-8 p-1'
-            }`}
+            className="h-8 w-8 flex-shrink-0 object-contain rounded border border-gray-200 bg-white p-1"
           />
 
           {/* Bilgiler */}
           <div className="flex-1 min-w-0">
-            <h4
-              className={`font-bold text-gray-800 mb-0.5 truncate transition-all duration-500 ${
-                isCenter ? 'text-xs' : 'text-[9px]'
-              }`}
-            >
+            <h4 className="font-bold text-gray-800 text-xs mb-0.5 truncate">
               {room.name}
             </h4>
-            <p
-              className={`text-gray-600 whitespace-nowrap transition-all duration-500 ${
-                isCenter ? 'text-[10px]' : 'text-[8px]'
-              }`}
-            >
+            <p className="text-gray-600 text-[10px] whitespace-nowrap">
               {room.openingHours || '10:00 - 22:00'}
             </p>
           </div>
         </div>
 
         {/* Kategori ve Etiketler */}
-        <div
-          className={`flex items-center gap-1.5 mb-2 flex-wrap transition-all duration-500 ${
-            isCenter ? 'opacity-100' : 'opacity-60'
-          }`}
-        >
-          <span
-            className={`bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded-full font-medium transition-all duration-500 ${
-              isCenter ? 'text-[10px]' : 'text-[7px]'
-            }`}
-          >
+        <div className="flex items-center gap-1 mb-2 flex-wrap">
+          <span className="bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded-full font-medium text-[9px]">
             {room.category || 'Mağaza'}
           </span>
           {room.tags &&
@@ -123,33 +139,25 @@ export default function PopularPlaces({ rooms, onRoomSelect }) {
               .map((tag, idx) => (
                 <span
                   key={idx}
-                  className={`bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded-full transition-all duration-500 ${
-                    isCenter ? 'text-[10px]' : 'text-[7px]'
-                  }`}
+                  className="bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded-full text-[8px]"
                 >
                   {tag}
                 </span>
               ))
           ) : (
-            <span
-              className={`bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded-full transition-all duration-500 ${
-                isCenter ? 'text-[10px]' : 'text-[7px]'
-              }`}
-            >
+            <span className="bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded-full text-[8px]">
               Kat {room.floor}
             </span>
           )}
         </div>
 
-        {/* Yol Tarif Butonu - Sadece ortadaki kartta */}
-        {isCenter && (
-          <button
-            onClick={() => onRoomSelect(room)}
-            className="mt-auto w-full bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-lg transition-colors text-xs py-1.5 px-3"
-          >
-            Yol Tarifi Al
-          </button>
-        )}
+        {/* Yol Tarif Butonu */}
+        <button
+          onClick={() => onRoomSelect(room)}
+          className="mt-auto w-full bg-blue-500 hover:bg-blue-600 text-white font-medium rounded text-xs py-1 px-2 transition-colors"
+        >
+          Yol Tarifi Al
+        </button>
       </div>
     </div>
   );
@@ -159,19 +167,19 @@ export default function PopularPlaces({ rooms, onRoomSelect }) {
       <h3 className="text-sm font-semibold text-gray-700 mb-2">
         Popüler Yerler
       </h3>
-      <div className="relative flex items-center gap-1">
+      <div className="relative flex items-center gap-2">
         {/* Sol Ok */}
         <button
-          className="flex-shrink-0 bg-white hover:bg-gray-50 rounded-full p-1.5 shadow-sm transition-all border border-gray-200 disabled:opacity-30 disabled:cursor-not-allowed z-10"
+          className="flex-shrink-0 bg-white hover:bg-gray-50 rounded-full p-2 shadow-sm transition-all border border-gray-200 disabled:opacity-30 disabled:cursor-not-allowed z-10"
           onClick={() => {
-            if (popularPlacesIndex > 0) {
-              setPopularPlacesIndex(popularPlacesIndex - 1);
+            if (currentIndex > 0) {
+              setCurrentIndex(currentIndex - 1);
             }
           }}
-          disabled={popularPlacesIndex === 0}
+          disabled={currentIndex === 0}
         >
           <svg
-            className="w-3 h-3 text-gray-700"
+            className="w-4 h-4 text-gray-700"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -179,7 +187,7 @@ export default function PopularPlaces({ rooms, onRoomSelect }) {
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2.5}
+              strokeWidth={2}
               d="M15 19l-7-7 7-7"
             />
           </svg>
@@ -187,32 +195,42 @@ export default function PopularPlaces({ rooms, onRoomSelect }) {
 
         {/* Carousel Container */}
         <div
-          className="flex-1 relative h-40 overflow-hidden"
+          ref={containerRef}
+          className="flex-1 relative h-32 overflow-hidden"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseUp}
         >
-          <div className="absolute inset-0 flex items-center justify-center gap-2 px-1 transition-transform duration-500 ease-out">
-            {prevIndex !== null &&
-              renderCard(popularRooms[prevIndex], false, prevIndex)}
-            {renderCard(popularRooms[currentIndex], true, currentIndex)}
-            {nextIndex !== null &&
-              renderCard(popularRooms[nextIndex], false, nextIndex)}
+          <div
+            className="flex gap-2 transition-transform duration-300 ease-out"
+            style={{
+              transform: `translateX(-${currentIndex * 200}px)`,
+              width: `${popularRooms.length * 200}px`,
+            }}
+          >
+            {popularRooms.map((room, index) => renderCard(room, index))}
           </div>
+
+          {/* Sağ taraf fade-out efekti */}
+          <div className="absolute top-0 right-0 w-8 h-full bg-gradient-to-l from-white to-transparent pointer-events-none z-10"></div>
         </div>
 
         {/* Sağ Ok */}
         <button
-          className="flex-shrink-0 bg-white hover:bg-gray-50 rounded-full p-1.5 shadow-sm transition-all border border-gray-200 disabled:opacity-30 disabled:cursor-not-allowed z-10"
+          className="flex-shrink-0 bg-white hover:bg-gray-50 rounded-full p-2 shadow-sm transition-all border border-gray-200 disabled:opacity-30 disabled:cursor-not-allowed z-10"
           onClick={() => {
-            if (popularPlacesIndex < popularRooms.length - 1) {
-              setPopularPlacesIndex(popularPlacesIndex + 1);
+            if (currentIndex < popularRooms.length - 1) {
+              setCurrentIndex(currentIndex + 1);
             }
           }}
-          disabled={popularPlacesIndex >= popularRooms.length - 1}
+          disabled={currentIndex >= popularRooms.length - 1}
         >
           <svg
-            className="w-3 h-3 text-gray-700"
+            className="w-4 h-4 text-gray-700"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -220,7 +238,7 @@ export default function PopularPlaces({ rooms, onRoomSelect }) {
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2.5}
+              strokeWidth={2}
               d="M9 5l7 7-7 7"
             />
           </svg>

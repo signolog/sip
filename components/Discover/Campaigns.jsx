@@ -1,53 +1,7 @@
 // components/Discover/Campaigns.jsx
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
-
-export default function Campaigns({ placeId, onRoomSelect }) {
-  const [campaignRooms, setCampaignRooms] = useState([]);
-
-  // Kampanya verilerini yükle
-  const loadCampaignRooms = useCallback(async () => {
-    try {
-      const response = await fetch(`/api/rooms?place_id=${placeId}`);
-      if (!response.ok) {
-        console.error('❌ Kampanya verileri yüklenemedi');
-        return;
-      }
-
-      const roomsData = await response.json();
-      console.log('🎁 Kampanya verileri yüklendi:', roomsData);
-
-      // Tüm katlardaki room'ları birleştir
-      const allRooms = [];
-      Object.values(roomsData).forEach(floorData => {
-        if (floorData.features) {
-          floorData.features.forEach(feature => {
-            if (feature.properties.type === 'room') {
-              allRooms.push(feature.properties);
-            }
-          });
-        }
-      });
-
-      setCampaignRooms(allRooms);
-      console.log('🎁 Kampanya için roomlar hazırlandı:', allRooms.length);
-      if (allRooms.length > 0) {
-        console.log('🎁 İlk room objesi:', allRooms[0]);
-        console.log('🎁 İlk room ID:', allRooms[0].id);
-      }
-    } catch (error) {
-      console.error('❌ Kampanya verileri yükleme hatası:', error);
-    }
-  }, [placeId]);
-
-  // PlaceId değiştiğinde kampanya verilerini yükle
-  useEffect(() => {
-    if (placeId) {
-      loadCampaignRooms();
-    }
-  }, [placeId, loadCampaignRooms]);
-
+export default function Campaigns({ campaignRooms, onRoomSelect }) {
   // Aktif kampanyaları olan mağazaları filtrele
   const activeCampaignRooms = campaignRooms.filter(room => {
     // Sadece yeni kampanya sistemi kontrolü
@@ -131,7 +85,7 @@ export default function Campaigns({ placeId, onRoomSelect }) {
                 {displayCampaign?.image && (
                   <div className="relative">
                     <img
-                      src={`/${displayCampaign.image}?t=${Date.now()}`}
+                      src={`${displayCampaign.image}?t=${Date.now()}`}
                       alt={displayCampaign.title}
                       className="w-full h-20 object-cover"
                     />
@@ -160,7 +114,7 @@ export default function Campaigns({ placeId, onRoomSelect }) {
                     {/* Mağaza Logo */}
                     {room.logo && (
                       <img
-                        src={`/${room.logo}?t=${Date.now()}`}
+                        src={`${room.logo}?t=${Date.now()}`}
                         alt={room.name}
                         className="w-10 h-10 object-contain rounded-lg border border-gray-200 bg-white flex-shrink-0"
                       />
