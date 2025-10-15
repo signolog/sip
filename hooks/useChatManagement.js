@@ -4,7 +4,7 @@
  */
 
 import { useState, useEffect, useCallback } from "react";
-import callOpenAI from "../utils/callOpenAI";
+import { useChatApi } from "./useChatApi";
 
 /**
  * Chat yönetimi hook'u
@@ -15,6 +15,9 @@ import callOpenAI from "../utils/callOpenAI";
  * @returns {Object} Chat state'leri ve fonksiyonları
  */
 export function useChatManagement({ functions, onFunctionCall, initialMessage }) {
+  // Chat API hook'u
+  const { sendMessage: sendChatMessage, isLoading: isChatLoading } = useChatApi();
+  
   // Chat state'leri
   const [chatMessages, setChatMessages] = useState([]);
   const [input, setInput] = useState("");
@@ -42,9 +45,9 @@ export function useChatManagement({ functions, onFunctionCall, initialMessage })
         // Assistant typing'i başlat
         setIsAssistantTyping(true);
 
-        // OpenAI'ye gönder
-        const response = await callOpenAI(newMessages, functions);
-        const reply = response.choices[0].message;
+        // Chat API hook'u ile gönder
+        const data = await sendChatMessage(newMessages, functions);
+        const reply = data.choices[0].message;
 
         // Yanıtı chat'e ekle
         setChatMessages((prev) => [...prev, reply]);
@@ -65,7 +68,7 @@ export function useChatManagement({ functions, onFunctionCall, initialMessage })
         setIsAssistantTyping(false);
       }
     },
-    [chatMessages, input, functions, onFunctionCall]
+    [chatMessages, input, functions, onFunctionCall, sendChatMessage]
   );
 
   // Mesaj ekleme fonksiyonu (ses işleme için)

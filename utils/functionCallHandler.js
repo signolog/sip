@@ -103,9 +103,9 @@ export const OPENAI_FUNCTIONS = [
         location_type: {
           type: "string",
           enum: [
-            "wc-male",
-            "wc-female",
-            "wc-disabled",
+            "wc",
+            "exit",
+            "entrance",
             "baby-care",
             "fire-exit",
             "emergency-exit",

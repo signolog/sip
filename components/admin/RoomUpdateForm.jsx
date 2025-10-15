@@ -29,8 +29,6 @@ export default function RoomUpdateForm({
       icon: room.icon || '',
       gender: room.gender || '',
       priority: room.priority || '',
-      is_special: room.is_special || false,
-      special_type: room.special_type || '',
       status: room.status || 'open', // Room'dan gelen status'u kullan
       phone: room.phone || '',
       hours: room.hours || '',
@@ -95,8 +93,6 @@ export default function RoomUpdateForm({
           icon: updatedRoom.icon || '',
           gender: updatedRoom.gender || '',
           priority: updatedRoom.priority || '',
-          is_special: updatedRoom.is_special || false,
-          special_type: updatedRoom.special_type || '',
           status: updatedRoom.status || 'open',
           phone: updatedRoom.phone || '',
           hours: updatedRoom.hours || '',
@@ -246,8 +242,6 @@ export default function RoomUpdateForm({
       icon: selectedRoom.icon || '',
       gender: selectedRoom.gender || '',
       priority: selectedRoom.priority || '',
-      is_special: selectedRoom.is_special || false,
-      special_type: selectedRoom.special_type || '',
       status: selectedRoom.status || 'open',
       phone: selectedRoom.phone || '',
       hours: selectedRoom.hours || '',
@@ -318,14 +312,8 @@ export default function RoomUpdateForm({
                       </p>
                     </div>
                     <div className="text-right">
-                      <span
-                        className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
-                          room.is_special
-                            ? 'bg-purple-100 text-purple-800'
-                            : 'bg-gray-100 text-gray-800'
-                        }`}
-                      >
-                        {room.is_special ? 'Özel' : 'Normal'}
+                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                        {room.category || 'Genel'}
                       </span>
                     </div>
                   </div>
@@ -506,39 +494,6 @@ export default function RoomUpdateForm({
                       Özel Bilgiler
                     </h4>
                     <div className="grid grid-cols-1 gap-4">
-                      <div className="flex items-center">
-                        <input
-                          type="checkbox"
-                          checked={formData.is_special}
-                          onChange={e =>
-                            handleInputChange('is_special', e.target.checked)
-                          }
-                          disabled={!isEditing}
-                          className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded disabled:bg-gray-100"
-                        />
-                        <label className="ml-2 text-sm text-gray-700">
-                          Özel Lokasyon
-                        </label>
-                      </div>
-
-                      {formData.is_special && (
-                        <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-1">
-                            Özel Tip
-                          </label>
-                          <input
-                            type="text"
-                            value={formData.special_type}
-                            onChange={e =>
-                              handleInputChange('special_type', e.target.value)
-                            }
-                            disabled={!isEditing}
-                            placeholder="Örn: WC, Asansör, Merdiven"
-                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
-                          />
-                        </div>
-                      )}
-
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">
                           Alt Tip

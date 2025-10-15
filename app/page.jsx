@@ -7,7 +7,6 @@ import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { specialLocations, geojsonURLS } from '../utils/utils.js';
 import { elevatorIcon, arrowIcon } from '../utils/icons.js';
-import callOpenAI from '../utils/callOpenAI.js';
 import { useChatManagement } from '../hooks/useChatManagement';
 import {
   createFunctionCallRouter,
@@ -273,7 +272,7 @@ export default function MapLibreMap() {
 
     const floors = Object.keys(routeByFloor)
       .map(Number)
-      .sort((a, b) => (isGoingUp ? a - b : b - a)); // ← Bu satırı değiştir
+      .sort((a, b) => (isGoingUp ? a - b : b - a));
 
     const currentIndex = floors.indexOf(currentFloor);
     const isLastFloor = currentIndex >= floors.length - 1;
@@ -571,10 +570,9 @@ export default function MapLibreMap() {
 
               # YENİ: ÖZEL LOKASYON ÖZELLİKLERİ
               - Kullanıcı özel lokasyonlar istediğinde find_special_location fonksiyonunu kullan:
-                * "Tuvalete gitmek istiyorum" → kullanıcının cinsiyetini sor, sonra wc-male veya wc-female
-                * "En yakın erkek tuvaleti nerede?" → wc-male
-                * "Kadın tuvaleti arıyorum" → wc-female  
-                * "Engelli tuvaleti var mı?" → wc-disabled
+                * "Tuvalete gitmek istiyorum" → wc
+                * "Çıkış, normal çıkış kapısı" → exit
+                * "Giriş, normal giriş kapısı" → entrance
                 * "ATM arıyorum" → atm
                 * "Eczane, ilaç" → pharmacy
                 * "Acil çıkış nerede?" → emergency-exit
@@ -970,8 +968,23 @@ export default function MapLibreMap() {
       ];
 
       try {
-        const response = await callOpenAI(newMessages, functions);
-        const followup = response.choices[0].message;
+        const response = await fetch('/api/chat', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            messages: newMessages,
+            functions: functions,
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error(`Chat API error: ${response.status}`);
+        }
+
+        const data = await response.json();
+        const followup = data.choices[0].message;
         setChatMessages(prev => [...prev, followup]);
       } catch (err) {
         console.error('Special location error:', err);
@@ -1002,8 +1015,23 @@ export default function MapLibreMap() {
       ];
 
       try {
-        const response = await callOpenAI(newMessages, functions);
-        const followup = response.choices[0].message;
+        const response = await fetch('/api/chat', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            messages: newMessages,
+            functions: functions,
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error(`Chat API error: ${response.status}`);
+        }
+
+        const data = await response.json();
+        const followup = data.choices[0].message;
         setChatMessages(prev => [...prev, followup]);
       } catch (err) {
         console.error('Special location follow-up error:', err);
@@ -1044,8 +1072,23 @@ export default function MapLibreMap() {
       ];
 
       try {
-        const response = await callOpenAI(newMessages, functions);
-        const followup = response.choices[0].message;
+        const response = await fetch('/api/chat', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            messages: newMessages,
+            functions: functions,
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error(`Chat API error: ${response.status}`);
+        }
+
+        const data = await response.json();
+        const followup = data.choices[0].message;
         setChatMessages(prev => [...prev, followup]);
       } catch (err) {
         console.error('Special location follow-up error:', err);
@@ -1079,8 +1122,23 @@ export default function MapLibreMap() {
 
     try {
       // OpenAI'ye gönder
-      const response = await callOpenAI(newMessages, OPENAI_FUNCTIONS);
-      const reply = response.choices[0].message;
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          messages: newMessages,
+          functions: OPENAI_FUNCTIONS,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Chat API error: ${response.status}`);
+      }
+
+      const data = await response.json();
+      const reply = data.choices[0].message;
 
       // Yanıtı chat'e ekle
       setChatMessages(prev => [...prev, reply]);
@@ -1422,25 +1480,35 @@ export default function MapLibreMap() {
               'room'
             );
           } else {
-            // Final'de bu kat varsa, DB room'larını üzerine yaz
+            // Final'de bu kat varsa, DB room'larını final geometry ile birleştir
             const finalFloorData = floorData[floor];
             const dbRoomIds = new Set(
               dbFloorData.features.map(f => f.properties.id)
             );
 
-            // Final'deki room'ları filtrele (DB'de olmayanları koru)
+            // Final'deki DB'de olmayan feature'ları koru (kapılar, koridorlar, vb.)
             const nonRoomFeatures = finalFloorData.features.filter(
               feature => !dbRoomIds.has(feature.properties.id)
             );
 
-            // DB room'larını ekle (yerel room'ların üzerine yazar)
+            // DB room özelliklerini final geometry ile birleştir
+            const mergedDbFeatures = dbFloorData.features.map(dbFeature => {
+              const match = finalFloorData.features.find(
+                f => f.properties.id === dbFeature.properties.id
+              );
+              return {
+                ...dbFeature,
+                geometry: match?.geometry || dbFeature.geometry,
+              };
+            });
+
             floorData[floor] = {
               ...finalFloorData,
-              features: [...nonRoomFeatures, ...dbFloorData.features],
+              features: [...nonRoomFeatures, ...mergedDbFeatures],
             };
 
             console.log(
-              `🔀 Kat ${floor} merge edildi: ${nonRoomFeatures.length} yerel + ${dbFloorData.features.length} DB room`
+              `🔀 Kat ${floor} merge edildi: ${nonRoomFeatures.length} yerel + ${mergedDbFeatures.length} DB room (geometry final'den)`
             );
           }
         });
@@ -2737,7 +2805,7 @@ export default function MapLibreMap() {
 
                           {/* Send Button - Mobile */}
                           <button
-                            onClick={sendMessage}
+                            onClick={() => sendMessage()}
                             disabled={!input.trim() || isVoiceProcessing}
                             className={`px-3 py-2 text-white rounded-xl text-sm transition-colors ${
                               input.trim() && !isVoiceProcessing
@@ -3812,7 +3880,7 @@ export default function MapLibreMap() {
 
               {/* Send Button */}
               <button
-                onClick={sendMessage}
+                onClick={() => sendMessage()}
                 disabled={!input.trim() || isVoiceProcessing}
                 className={`rounded-full text-white transition-colors shadow-sm p-4 ${
                   input.trim() && !isVoiceProcessing
