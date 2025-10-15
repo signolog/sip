@@ -101,7 +101,7 @@ export default function Campaigns({ placeId, onRoomSelect }) {
   return (
     <div>
       <h3 className="text-sm font-semibold text-gray-700 mb-2">Kampanyalar</h3>
-      <div className="bg-gray-50 rounded-lg p-2">
+      <div className="bg-gray-50 rounded-lg">
         <div className="space-y-2">
           {activeCampaignRooms.slice(0, 3).map((room, idx) => {
             // Aktif kampanyaları al
