@@ -15,9 +15,9 @@ const specialLocations = {
 // GeoJSON dosyalarının yollarını tanımlar - API'den dinamik olarak yüklenecek
 const geojsonURLS = {
   // Base klasöründen yüklenecek
-  0: "base/ankamall-floor-0.geojson",
-  1: "base/ankamall-floor-1.geojson",
-  2: "base/ankamall-floor-2.geojson",
+  0: "floor_0.geojson",
+  //  1: "base/ankamall-floor-1.geojson",
+  //  2: "base/ankamall-floor-2.geojson",
 };
 
 export { specialLocations, geojsonURLS };
