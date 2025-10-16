@@ -1,0 +1,6454 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.889423894894, 39.95305690866],
+            [32.889931299204, 39.95305690866],
+            [32.889931299204, 39.95265017286],
+            [32.889423894894, 39.95265017286],
+            [32.889423894894, 39.95305690866]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "room-101",
+        "type": "room",
+        "name": "room-101",
+        "floor": 0,
+        "title": "room-101",
+        "is_special": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.890049677374, 39.95305690866],
+            [32.890540167504, 39.95305690866],
+            [32.890540167504, 39.95266065876],
+            [32.890049677374, 39.95266065876],
+            [32.890049677374, 39.95305690866]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "room-102",
+        "type": "room",
+        "name": "room-102",
+        "floor": 0,
+        "title": "room-102",
+        "is_special": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.890595739654, 39.95305690866],
+            [32.890769732154, 39.95265856158],
+            [32.890977515052, 39.9526564644],
+            [32.891107990446, 39.95305690866],
+            [32.890595739654, 39.95305690866]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "room-103",
+        "type": "room",
+        "name": "room-103",
+        "floor": 0,
+        "title": "room-103",
+        "is_special": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.889435958374, 39.95185767306],
+            [32.8899022878, 39.95185767306],
+            [32.8899022878, 39.951409008300004],
+            [32.889435958374, 39.951409008300004],
+            [32.889435958374, 39.95185767306]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "room-104",
+        "type": "room",
+        "name": "room-104",
+        "floor": 0,
+        "title": "room-104",
+        "is_special": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.890114929834, 39.95188073472],
+            [32.890532933634, 39.95188073472],
+            [32.890532933634, 39.95139223452],
+            [32.890114929834, 39.95139223452],
+            [32.890114929834, 39.95188073472]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "room-105",
+        "type": "room",
+        "name": "room-105",
+        "floor": 0,
+        "title": "room-105",
+        "is_special": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.890750371534, 39.95188702626],
+            [32.891168375334, 39.95188702626],
+            [32.891168375334, 39.951450940920004],
+            [32.890750371534, 39.951450940920004],
+            [32.890750371534, 39.95188702626]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "room-106",
+        "type": "room",
+        "name": "room-106",
+        "floor": 0,
+        "title": "room-106",
+        "is_special": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.89136652432, 39.95305061346],
+            [32.892088970706, 39.95305061346],
+            [32.892088970706, 39.95240067798],
+            [32.89136652432, 39.95240067798],
+            [32.89136652432, 39.95305061346]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "room-107",
+        "type": "room",
+        "name": "room-107",
+        "floor": 0,
+        "title": "room-107",
+        "is_special": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.892166290864, 39.95304431826],
+            [32.892666444431995, 39.95304431826],
+            [32.892666444431995, 39.95240905572],
+            [32.892166290864, 39.95240905572],
+            [32.892166290864, 39.95304431826]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "room-108",
+        "type": "room",
+        "name": "room-108",
+        "floor": 0,
+        "title": "room-108",
+        "is_special": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.893108613154, 39.95306529006],
+            [32.893456547537994, 39.95306529006],
+            [32.893456547537994, 39.95278644564],
+            [32.893108613154, 39.95278644564],
+            [32.893108613154, 39.95306529006]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "room-109",
+        "type": "room",
+        "name": "room-109",
+        "floor": 0,
+        "title": "room-109",
+        "is_special": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.891390689242, 39.95189331414],
+            [32.891835270659996, 39.95189331414],
+            [32.891835270659996, 39.95143416714],
+            [32.891390689242, 39.95143416714],
+            [32.891390689242, 39.95189331414]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "room-110",
+        "type": "room",
+        "name": "room-110",
+        "floor": 0,
+        "title": "room-110",
+        "is_special": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.891895676638, 39.951897508500004],
+            [32.892081724182, 39.951897508500004],
+            [32.892081724182, 39.9517423611],
+            [32.891895676638, 39.9517423611],
+            [32.891895676638, 39.951897508500004]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "room-111",
+        "type": "room",
+        "name": "room-111",
+        "floor": 0,
+        "title": "room-111",
+        "is_special": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.892265354812, 39.95214699972],
+            [32.892567380483996, 39.95214699972],
+            [32.892567380483996, 39.95192476452],
+            [32.892265354812, 39.95192476452],
+            [32.892265354812, 39.95214699972]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "room-112",
+        "type": "room",
+        "name": "room-112",
+        "floor": 0,
+        "title": "room-112",
+        "is_special": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.892664031736, 39.95215119408],
+            [32.892944313617996, 39.95215119408],
+            [32.892944313617996, 39.95192266734],
+            [32.892664031736, 39.95192266734],
+            [32.892664031736, 39.95215119408]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "room-113",
+        "type": "room",
+        "name": "room-113",
+        "floor": 0,
+        "title": "room-113",
+        "is_special": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.89227018864, 39.9518241255],
+            [32.892562550874, 39.9518241255],
+            [32.892562550874, 39.95157882864],
+            [32.89227018864, 39.95157882864],
+            [32.89227018864, 39.9518241255]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "room-114",
+        "type": "room",
+        "name": "room-114",
+        "floor": 0,
+        "title": "room-114",
+        "is_special": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.892668865564, 39.95183670492],
+            [32.892951560141995, 39.95183670492],
+            [32.892951560141995, 39.95158931088],
+            [32.892668865564, 39.95158931088],
+            [32.892668865564, 39.95183670492]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "room-115",
+        "type": "room",
+        "name": "room-115",
+        "floor": 0,
+        "title": "room-115",
+        "is_special": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.889540471978, 39.95270822778],
+            [32.889787591944, 39.95270822778],
+            [32.889787591944, 39.95265097074],
+            [32.889540471978, 39.95265097074],
+            [32.889540471978, 39.95270822778]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "door-101",
+        "type": "door",
+        "name": "door-101",
+        "floor": 0,
+        "room": "room-101"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.890196442684, 39.95272199304],
+            [32.890403453688, 39.95272199304],
+            [32.890403453688, 39.95266361604],
+            [32.890196442684, 39.95266361604],
+            [32.890196442684, 39.95272199304]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "door-102",
+        "type": "door",
+        "name": "door-102",
+        "floor": 0,
+        "room": "room-102"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.890818770622, 39.95269392816],
+            [32.89091969049, 39.95269392816],
+            [32.89091969049, 39.95266024884],
+            [32.890818770622, 39.95266024884],
+            [32.890818770622, 39.95269392816]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "door-103",
+        "type": "door",
+        "name": "door-103",
+        "floor": 0,
+        "room": "room-103"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.889558896202004, 39.95185510374],
+            [32.889764789436, 39.95185510374],
+            [32.889764789436, 39.9518073444],
+            [32.889558896202004, 39.9518073444],
+            [32.889558896202004, 39.95185510374]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "door-104",
+        "type": "door",
+        "name": "door-104",
+        "floor": 0,
+        "room": "room-104"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.890237728468, 39.951876328080004],
+            [32.890300922544, 39.951876328080004],
+            [32.890300922544, 39.95183210796],
+            [32.890237728468, 39.95183210796],
+            [32.890237728468, 39.951876328080004]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "door-105",
+        "type": "door",
+        "name": "door-105",
+        "floor": 0,
+        "room": "room-105"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.890977713298, 39.95188694208],
+            [32.891165258232, 39.95188694208],
+            [32.891165258232, 39.95183918274],
+            [32.890977713298, 39.95183918274],
+            [32.890977713298, 39.95188694208]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "door-106",
+        "type": "door",
+        "name": "door-106",
+        "floor": 0,
+        "room": "room-106"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.89138542096, 39.952449436500004],
+            [32.891734009134, 39.952449436500004],
+            [32.891734009134, 39.95240521638],
+            [32.89138542096, 39.95240521638],
+            [32.89138542096, 39.952449436500004]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "door-107",
+        "type": "door",
+        "name": "door-107",
+        "floor": 0,
+        "room": "room-107"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.892298681229995, 39.9524441295],
+            [32.892492342264, 39.9524441295],
+            [32.892492342264, 39.95241051972],
+            [32.892298681229995, 39.95241051972],
+            [32.892298681229995, 39.9524441295]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "door-108",
+        "type": "door",
+        "name": "door-108",
+        "floor": 0,
+        "room": "room-108"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.893112055041996, 39.95301193092],
+            [32.89315894233, 39.95301193092],
+            [32.89315894233, 39.9528792669],
+            [32.893112055041996, 39.9528792669],
+            [32.893112055041996, 39.95301193092]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "door-109",
+        "type": "door",
+        "name": "door-109",
+        "floor": 0,
+        "room": "room-109"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.89147511673, 39.951892249080004],
+            [32.891742162528, 39.951892249080004],
+            [32.891742162528, 39.95183918274],
+            [32.89147511673, 39.95183918274],
+            [32.89147511673, 39.951892249080004]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "door-110",
+        "type": "door",
+        "name": "door-110",
+        "floor": 0,
+        "room": "room-110"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.891948055762, 39.95189401686],
+            [32.892056099832, 39.95189401686],
+            [32.892056099832, 39.95186748552],
+            [32.891948055762, 39.95186748552],
+            [32.891948055762, 39.95189401686]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "door-111",
+        "type": "door",
+        "name": "door-111",
+        "floor": 0,
+        "room": "room-111"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.892268104947995, 39.95211689256],
+            [32.892319066824, 39.95211689256],
+            [32.892319066824, 39.95198599632],
+            [32.892268104947995, 39.95198599632],
+            [32.892268104947995, 39.95211689256]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "door-112",
+        "type": "door",
+        "name": "door-112",
+        "floor": 0,
+        "room": "room-112"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.892753271962, 39.9521487309],
+            [32.892902083002, 39.9521487309],
+            [32.892902083002, 39.95210627856],
+            [32.892753271962, 39.95210627856],
+            [32.892753271962, 39.9521487309]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "door-113",
+        "type": "door",
+        "name": "door-113",
+        "floor": 0,
+        "room": "room-113"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.892272179536, 39.95177727384],
+            [32.89231702953, 39.95177727384],
+            [32.89231702953, 39.951656991600004],
+            [32.892272179536, 39.951656991600004],
+            [32.892272179536, 39.95177727384]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "door-114",
+        "type": "door",
+        "name": "door-114",
+        "floor": 0,
+        "room": "room-114"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.892906161808, 39.951789655620004],
+            [32.892953049096, 39.951789655620004],
+            [32.892953049096, 39.951648149040004],
+            [32.892906161808, 39.951648149040004],
+            [32.892906161808, 39.951789655620004]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "door-115",
+        "type": "door",
+        "name": "door-115",
+        "floor": 0,
+        "room": "room-115"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.889431436678, 39.95196376914]
+      },
+      "properties": {
+        "id": "corridor-1-pt-0",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 0,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.889660271614, 39.95196345438]
+      },
+      "properties": {
+        "id": "corridor-1-pt-1",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 1,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.889787618658005, 39.95196327992]
+      },
+      "properties": {
+        "id": "corridor-1-pt-2",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 2,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.889914965702005, 39.95196310546]
+      },
+      "properties": {
+        "id": "corridor-1-pt-3",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 3,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.890042312746004, 39.951962931000004]
+      },
+      "properties": {
+        "id": "corridor-1-pt-4",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 4,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.890169659790004, 39.95196275654]
+      },
+      "properties": {
+        "id": "corridor-1-pt-5",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 5,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.890297006834004, 39.95196258208]
+      },
+      "properties": {
+        "id": "corridor-1-pt-6",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 6,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.890424353878004, 39.95196240762]
+      },
+      "properties": {
+        "id": "corridor-1-pt-7",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 7,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.8905532373988, 39.95196214776]
+      },
+      "properties": {
+        "id": "corridor-1-pt-8",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 8,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.8906821209196, 39.9519618879]
+      },
+      "properties": {
+        "id": "corridor-1-pt-9",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 9,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.8908110044404, 39.95196162804]
+      },
+      "properties": {
+        "id": "corridor-1-pt-10",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 10,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.8909398879612, 39.95196136818]
+      },
+      "properties": {
+        "id": "corridor-1-pt-11",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 11,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.891068771482, 39.95196110832]
+      },
+      "properties": {
+        "id": "corridor-1-pt-12",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 12,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.8912009857465, 39.951960893295]
+      },
+      "properties": {
+        "id": "corridor-1-pt-13",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 13,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.891333200011, 39.95196067827]
+      },
+      "properties": {
+        "id": "corridor-1-pt-14",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 14,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.8914654142755, 39.951960463245]
+      },
+      "properties": {
+        "id": "corridor-1-pt-15",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 15,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.89159762854, 39.951960248220004]
+      },
+      "properties": {
+        "id": "corridor-1-pt-16",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 16,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.891731344764, 39.951960031060004]
+      },
+      "properties": {
+        "id": "corridor-1-pt-17",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 17,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.891865060987996, 39.951959813900004]
+      },
+      "properties": {
+        "id": "corridor-1-pt-18",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 18,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.891998777211995, 39.951959596740004]
+      },
+      "properties": {
+        "id": "corridor-1-pt-19",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 19,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892164240915996, 39.9519593259]
+      },
+      "properties": {
+        "id": "corridor-1-pt-20",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 20,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892165240581996, 39.95206307592]
+      },
+      "properties": {
+        "id": "corridor-1-pt-21",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 21,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892166797024, 39.95221244052]
+      },
+      "properties": {
+        "id": "corridor-1-pt-22",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 22,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892312490962, 39.95221290717]
+      },
+      "properties": {
+        "id": "corridor-1-pt-23",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 23,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.8924581849, 39.95221337382]
+      },
+      "properties": {
+        "id": "corridor-1-pt-24",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 24,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892603878837996, 39.95221384047]
+      },
+      "properties": {
+        "id": "corridor-1-pt-25",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 25,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892749572776, 39.95221430712]
+      },
+      "properties": {
+        "id": "corridor-1-pt-26",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 26,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892750817086, 39.95234892192]
+      },
+      "properties": {
+        "id": "corridor-1-pt-27",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 27,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892749009673, 39.95246642439]
+      },
+      "properties": {
+        "id": "corridor-1-pt-28",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 28,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.89274720226, 39.95258392686]
+      },
+      "properties": {
+        "id": "corridor-1-pt-29",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 29,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892745394847, 39.95270142933]
+      },
+      "properties": {
+        "id": "corridor-1-pt-30",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 30,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892743587434, 39.9528189318]
+      },
+      "properties": {
+        "id": "corridor-1-pt-31",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 31,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892741780021, 39.95293643427]
+      },
+      "properties": {
+        "id": "corridor-1-pt-32",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 32,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892739972608, 39.95305393674]
+      },
+      "properties": {
+        "id": "corridor-1-pt-33",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 33,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892884544557994, 39.95305282593]
+      },
+      "properties": {
+        "id": "corridor-1-pt-34",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 34,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.893029116507996, 39.95305171512]
+      },
+      "properties": {
+        "id": "corridor-1-pt-35",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 35,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.89302776253, 39.95294908506]
+      },
+      "properties": {
+        "id": "corridor-1-pt-36",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 36,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.893026151254, 39.95282669649]
+      },
+      "properties": {
+        "id": "corridor-1-pt-37",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 37,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.893024539978, 39.95270430792]
+      },
+      "properties": {
+        "id": "corridor-1-pt-38",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 38,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.893022928701996, 39.95258191935]
+      },
+      "properties": {
+        "id": "corridor-1-pt-39",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 39,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.893021317426, 39.95245953078]
+      },
+      "properties": {
+        "id": "corridor-1-pt-40",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 40,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.89301970615, 39.95233714221]
+      },
+      "properties": {
+        "id": "corridor-1-pt-41",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 41,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.893018094873995, 39.95221475364]
+      },
+      "properties": {
+        "id": "corridor-1-pt-42",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 42,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.893016475162, 39.952092283635004]
+      },
+      "properties": {
+        "id": "corridor-1-pt-43",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 43,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.89301485545, 39.95196981363]
+      },
+      "properties": {
+        "id": "corridor-1-pt-44",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 44,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.893013235737996, 39.951847343625]
+      },
+      "properties": {
+        "id": "corridor-1-pt-45",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 45,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.893011616025994, 39.95172487362]
+      },
+      "properties": {
+        "id": "corridor-1-pt-46",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 46,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.893008722477994, 39.95150622888]
+      },
+      "properties": {
+        "id": "corridor-1-pt-47",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 47,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892869333044, 39.95150567012]
+      },
+      "properties": {
+        "id": "corridor-1-pt-48",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 48,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.89272994361, 39.95150511136]
+      },
+      "properties": {
+        "id": "corridor-1-pt-49",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 49,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892590554175996, 39.9515045526]
+      },
+      "properties": {
+        "id": "corridor-1-pt-50",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 50,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892451164742, 39.95150399384]
+      },
+      "properties": {
+        "id": "corridor-1-pt-51",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 51,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892311775307995, 39.95150343508]
+      },
+      "properties": {
+        "id": "corridor-1-pt-52",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 52,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892172385874, 39.95150287632]
+      },
+      "properties": {
+        "id": "corridor-1-pt-53",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 53,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892170371778995, 39.95161473873]
+      },
+      "properties": {
+        "id": "corridor-1-pt-54",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 54,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892168357684, 39.95172660114]
+      },
+      "properties": {
+        "id": "corridor-1-pt-55",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 55,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.89216627821, 39.95184201558]
+      },
+      "properties": {
+        "id": "corridor-1-pt-56",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 56,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892164198736, 39.95195743002]
+      },
+      "properties": {
+        "id": "corridor-1-pt-57",
+        "type": "corridor-node",
+        "corridor": "corridor-1",
+        "index": 57,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.889431466204, 39.9519656211]
+      },
+      "properties": {
+        "id": "corridor-2-pt-0",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 0,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.8894301299416, 39.952092057996]
+      },
+      "properties": {
+        "id": "corridor-2-pt-1",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 1,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.8894287936792, 39.952218494892]
+      },
+      "properties": {
+        "id": "corridor-2-pt-2",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 2,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.8894274574168, 39.952344931788]
+      },
+      "properties": {
+        "id": "corridor-2-pt-3",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 3,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.8894261211544, 39.952471368684]
+      },
+      "properties": {
+        "id": "corridor-2-pt-4",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 4,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.889424784892, 39.95259780558]
+      },
+      "properties": {
+        "id": "corridor-2-pt-5",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 5,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.889651299928005, 39.95259769578]
+      },
+      "properties": {
+        "id": "corridor-2-pt-6",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 6,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.8897807857792, 39.952597632096]
+      },
+      "properties": {
+        "id": "corridor-2-pt-7",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 7,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.8899102716304, 39.952597568412]
+      },
+      "properties": {
+        "id": "corridor-2-pt-8",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 8,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.8900397574816, 39.952597504728]
+      },
+      "properties": {
+        "id": "corridor-2-pt-9",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 9,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.8901692433328, 39.952597441044]
+      },
+      "properties": {
+        "id": "corridor-2-pt-10",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 10,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.890298729184, 39.95259737736]
+      },
+      "properties": {
+        "id": "corridor-2-pt-11",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 11,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.8904417815995, 39.952597178805]
+      },
+      "properties": {
+        "id": "corridor-2-pt-12",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 12,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.890584834015, 39.95259698025]
+      },
+      "properties": {
+        "id": "corridor-2-pt-13",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 13,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.8907278864305, 39.952596781695]
+      },
+      "properties": {
+        "id": "corridor-2-pt-14",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 14,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.890870938846, 39.95259658314]
+      },
+      "properties": {
+        "id": "corridor-2-pt-15",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 15,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.8909754429595, 39.952531247565]
+      },
+      "properties": {
+        "id": "corridor-2-pt-16",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 16,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.891079947073, 39.952465911990004]
+      },
+      "properties": {
+        "id": "corridor-2-pt-17",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 17,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.8911844511865, 39.952400576415]
+      },
+      "properties": {
+        "id": "corridor-2-pt-18",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 18,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.8912889553, 39.95233524084]
+      },
+      "properties": {
+        "id": "corridor-2-pt-19",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 19,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.891420101356, 39.952336476090004]
+      },
+      "properties": {
+        "id": "corridor-2-pt-20",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 20,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.891551247411996, 39.95233771134]
+      },
+      "properties": {
+        "id": "corridor-2-pt-21",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 21,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.891693908608, 39.95233905578]
+      },
+      "properties": {
+        "id": "corridor-2-pt-22",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 22,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.891836569804, 39.95234040022]
+      },
+      "properties": {
+        "id": "corridor-2-pt-23",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 23,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.891979231, 39.95234174466]
+      },
+      "properties": {
+        "id": "corridor-2-pt-24",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 24,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892121892196, 39.9523430891]
+      },
+      "properties": {
+        "id": "corridor-2-pt-25",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 25,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892264553391996, 39.95234443354]
+      },
+      "properties": {
+        "id": "corridor-2-pt-26",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 26,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892407214588, 39.95234577798]
+      },
+      "properties": {
+        "id": "corridor-2-pt-27",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 27,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892577940246994, 39.95234738655]
+      },
+      "properties": {
+        "id": "corridor-2-pt-28",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 28,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892748665906, 39.95234899512]
+      },
+      "properties": {
+        "id": "corridor-2-pt-29",
+        "type": "corridor-node",
+        "corridor": "corridor-2",
+        "index": 29,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892752381963994, 39.9522139155]
+      },
+      "properties": {
+        "id": "corridor-3-pt-0",
+        "type": "corridor-node",
+        "corridor": "corridor-3",
+        "index": 0,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.89282643739, 39.95221397772]
+      },
+      "properties": {
+        "id": "corridor-3-pt-1",
+        "type": "corridor-node",
+        "corridor": "corridor-3",
+        "index": 1,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.893015690614, 39.95221414242]
+      },
+      "properties": {
+        "id": "corridor-3-pt-2",
+        "type": "corridor-node",
+        "corridor": "corridor-3",
+        "index": 2,
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.889664031961004, 39.95267959926]
+      },
+      "properties": {
+        "id": "door-101",
+        "type": "door-node",
+        "room": "room-101",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.890299948186, 39.95269280454]
+      },
+      "properties": {
+        "id": "door-102",
+        "type": "door-node",
+        "room": "room-102",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.890869230556, 39.9526770885]
+      },
+      "properties": {
+        "id": "door-103",
+        "type": "door-node",
+        "room": "room-103",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.889661842819, 39.95183122407]
+      },
+      "properties": {
+        "id": "door-104",
+        "type": "door-node",
+        "room": "room-104",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.890269325506, 39.95185421802]
+      },
+      "properties": {
+        "id": "door-105",
+        "type": "door-node",
+        "room": "room-105",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.891071485764996, 39.95186306241]
+      },
+      "properties": {
+        "id": "door-106",
+        "type": "door-node",
+        "room": "room-106",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.891559715047, 39.95242732644]
+      },
+      "properties": {
+        "id": "door-107",
+        "type": "door-node",
+        "room": "room-107",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892395511747, 39.95242732461]
+      },
+      "properties": {
+        "id": "door-108",
+        "type": "door-node",
+        "room": "room-108",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.893135498686, 39.95294559891]
+      },
+      "properties": {
+        "id": "door-109",
+        "type": "door-node",
+        "room": "room-109",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.891608639629, 39.95186571591]
+      },
+      "properties": {
+        "id": "door-110",
+        "type": "door-node",
+        "room": "room-110",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892002077796995, 39.951880751190004]
+      },
+      "properties": {
+        "id": "door-111",
+        "type": "door-node",
+        "room": "room-111",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892293585886, 39.95205144444]
+      },
+      "properties": {
+        "id": "door-112",
+        "type": "door-node",
+        "room": "room-112",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892827677481996, 39.95212750473]
+      },
+      "properties": {
+        "id": "door-113",
+        "type": "door-node",
+        "room": "room-113",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892294604533, 39.95171713272]
+      },
+      "properties": {
+        "id": "door-114",
+        "type": "door-node",
+        "room": "room-114",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.892929605452, 39.95171890233]
+      },
+      "properties": {
+        "id": "door-115",
+        "type": "door-node",
+        "room": "room-115",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.889431436678, 39.95196376914],
+          [32.889660271614, 39.95196345438]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-0",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-0",
+        "to": "corridor-1-pt-1",
+        "weight": 19.505955585229177,
+        "bearing": 90.10273292491325,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.889660271614, 39.95196345438],
+          [32.889431436678, 39.95196376914]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-0-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-1",
+        "to": "corridor-1-pt-0",
+        "weight": 19.505955585229177,
+        "bearing": 270.10273292491325,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.889660271614, 39.95196345438],
+          [32.889787618658005, 39.95196327992]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-2",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-1",
+        "to": "corridor-1-pt-2",
+        "weight": 10.855098458992414,
+        "bearing": 90.10235203467732,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.889787618658005, 39.95196327992],
+          [32.889660271614, 39.95196345438]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-2-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-2",
+        "to": "corridor-1-pt-1",
+        "weight": 10.855098458992414,
+        "bearing": 270.1023520346773,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.889787618658005, 39.95196327992],
+          [32.889914965702005, 39.95196310546]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-4",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-2",
+        "to": "corridor-1-pt-3",
+        "weight": 10.855098486073981,
+        "bearing": 90.10235203628866,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.889914965702005, 39.95196310546],
+          [32.889787618658005, 39.95196327992]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-4-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-3",
+        "to": "corridor-1-pt-2",
+        "weight": 10.855098486073981,
+        "bearing": 270.10235203628866,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.889914965702005, 39.95196310546],
+          [32.890042312746004, 39.951962931000004]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-6",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-3",
+        "to": "corridor-1-pt-4",
+        "weight": 10.855098513761215,
+        "bearing": 90.10235203229422,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.890042312746004, 39.951962931000004],
+          [32.889914965702005, 39.95196310546]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-6-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-4",
+        "to": "corridor-1-pt-3",
+        "weight": 10.855098513761215,
+        "bearing": 270.1023520322942,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.890042312746004, 39.951962931000004],
+          [32.890169659790004, 39.95196275654]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-8",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-4",
+        "to": "corridor-1-pt-5",
+        "weight": 10.855098541449863,
+        "bearing": 90.1023520376333,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.890169659790004, 39.95196275654],
+          [32.890042312746004, 39.951962931000004]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-8-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-5",
+        "to": "corridor-1-pt-4",
+        "weight": 10.855098541449863,
+        "bearing": 270.1023520376333,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.890169659790004, 39.95196275654],
+          [32.890297006834004, 39.95196258208]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-10",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-5",
+        "to": "corridor-1-pt-6",
+        "weight": 10.855098569135684,
+        "bearing": 90.1023520336388,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.890297006834004, 39.95196258208],
+          [32.890169659790004, 39.95196275654]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-10-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-6",
+        "to": "corridor-1-pt-5",
+        "weight": 10.855098569135684,
+        "bearing": 270.1023520336388,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.890297006834004, 39.95196258208],
+          [32.890424353878004, 39.95196240762]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-12",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-6",
+        "to": "corridor-1-pt-7",
+        "weight": 10.855098596822918,
+        "bearing": 90.10235203524445,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.890424353878004, 39.95196240762],
+          [32.890297006834004, 39.95196258208]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-12-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-7",
+        "to": "corridor-1-pt-6",
+        "weight": 10.855098596822918,
+        "bearing": 270.10235203524445,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.890424353878004, 39.95196240762],
+          [32.8905532373988, 39.95196214776]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-14",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-7",
+        "to": "corridor-1-pt-8",
+        "weight": 10.986088811122414,
+        "bearing": 90.150655558175,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8905532373988, 39.95196214776],
+          [32.890424353878004, 39.95196240762]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-14-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-8",
+        "to": "corridor-1-pt-7",
+        "weight": 10.986088811122414,
+        "bearing": 270.150655558175,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8905532373988, 39.95196214776],
+          [32.8906821209196, 39.9519618879]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-16",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-8",
+        "to": "corridor-1-pt-9",
+        "weight": 10.986088853466004,
+        "bearing": 90.1506555612832,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8906821209196, 39.9519618879],
+          [32.8905532373988, 39.95196214776]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-16-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-9",
+        "to": "corridor-1-pt-8",
+        "weight": 10.986088853466004,
+        "bearing": 270.1506555612832,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8906821209196, 39.9519618879],
+          [32.8908110044404, 39.95196162804]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-18",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-9",
+        "to": "corridor-1-pt-10",
+        "weight": 10.98608889520185,
+        "bearing": 90.15065555886639,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8908110044404, 39.95196162804],
+          [32.8906821209196, 39.9519618879]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-18-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-10",
+        "to": "corridor-1-pt-9",
+        "weight": 10.98608889520185,
+        "bearing": 270.1506555588664,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8908110044404, 39.95196162804],
+          [32.8909398879612, 39.95196136818]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-20",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-10",
+        "to": "corridor-1-pt-11",
+        "weight": 10.986088936941853,
+        "bearing": 90.15065555644958,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8909398879612, 39.95196136818],
+          [32.8908110044404, 39.95196162804]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-20-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-11",
+        "to": "corridor-1-pt-10",
+        "weight": 10.986088936941853,
+        "bearing": 270.1506555564496,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8909398879612, 39.95196136818],
+          [32.891068771482, 39.95196110832]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-22",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-11",
+        "to": "corridor-1-pt-12",
+        "weight": 10.986088978074111,
+        "bearing": 90.15065556141883,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891068771482, 39.95196110832],
+          [32.8909398879612, 39.95196136818]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-22-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-12",
+        "to": "corridor-1-pt-11",
+        "weight": 10.986088978074111,
+        "bearing": 270.15065556141883,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891068771482, 39.95196110832],
+          [32.8912009857465, 39.951960893295]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-24",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-12",
+        "to": "corridor-1-pt-13",
+        "weight": 11.269989482496413,
+        "bearing": 90.12151269918843,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8912009857465, 39.951960893295],
+          [32.891068771482, 39.95196110832]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-24-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-13",
+        "to": "corridor-1-pt-12",
+        "weight": 11.269989482496413,
+        "bearing": 270.12151269918843,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8912009857465, 39.951960893295],
+          [32.891333200011, 39.95196067827]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-26",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-13",
+        "to": "corridor-1-pt-14",
+        "weight": 11.269989517321662,
+        "bearing": 90.1215127042069,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891333200011, 39.95196067827],
+          [32.8912009857465, 39.951960893295]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-26-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-14",
+        "to": "corridor-1-pt-13",
+        "weight": 11.269989517321662,
+        "bearing": 270.1215127042069,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891333200011, 39.95196067827],
+          [32.8914654142755, 39.951960463245]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-28",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-14",
+        "to": "corridor-1-pt-15",
+        "weight": 11.269989553354886,
+        "bearing": 90.12151270202037,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8914654142755, 39.951960463245],
+          [32.891333200011, 39.95196067827]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-28-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-15",
+        "to": "corridor-1-pt-14",
+        "weight": 11.269989553354886,
+        "bearing": 270.12151270202037,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8914654142755, 39.951960463245],
+          [32.89159762854, 39.951960248220004]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-30",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-15",
+        "to": "corridor-1-pt-16",
+        "weight": 11.269989588178458,
+        "bearing": 90.12151269625099,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.89159762854, 39.951960248220004],
+          [32.8914654142755, 39.951960463245]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-30-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-16",
+        "to": "corridor-1-pt-15",
+        "weight": 11.269989588178458,
+        "bearing": 270.121512696251,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.89159762854, 39.951960248220004],
+          [32.891731344764, 39.951960031060004]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-32",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-16",
+        "to": "corridor-1-pt-17",
+        "weight": 11.398017098606298,
+        "bearing": 90.12134023575368,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891731344764, 39.951960031060004],
+          [32.89159762854, 39.951960248220004]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-32-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-17",
+        "to": "corridor-1-pt-16",
+        "weight": 11.398017098606298,
+        "bearing": 270.1213402357537,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891731344764, 39.951960031060004],
+          [32.891865060987996, 39.951959813900004]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-34",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-17",
+        "to": "corridor-1-pt-18",
+        "weight": 11.398017134793788,
+        "bearing": 90.12134023003506,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891865060987996, 39.951959813900004],
+          [32.891731344764, 39.951960031060004]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-34-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-18",
+        "to": "corridor-1-pt-17",
+        "weight": 11.398017134793788,
+        "bearing": 270.12134023003506,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891865060987996, 39.951959813900004],
+          [32.891998777211995, 39.951959596740004]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-36",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-18",
+        "to": "corridor-1-pt-19",
+        "weight": 11.398017170981278,
+        "bearing": 90.12134023498322,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891998777211995, 39.951959596740004],
+          [32.891865060987996, 39.951959813900004]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-36-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-19",
+        "to": "corridor-1-pt-18",
+        "weight": 11.398017170981278,
+        "bearing": 270.1213402349832,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891998777211995, 39.951959596740004],
+          [32.892164240915996, 39.9519593259]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-38",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-19",
+        "to": "corridor-1-pt-20",
+        "weight": 14.104183896068733,
+        "bearing": 90.12228808610291,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892164240915996, 39.9519593259],
+          [32.891998777211995, 39.951959596740004]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-38-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-20",
+        "to": "corridor-1-pt-19",
+        "weight": 14.104183896068733,
+        "bearing": 270.1222880861029,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892164240915996, 39.9519593259],
+          [32.892165240581996, 39.95206307592]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-40",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-20",
+        "to": "corridor-1-pt-21",
+        "weight": 11.53679055764929,
+        "bearing": 0.4231945499273593,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892165240581996, 39.95206307592],
+          [32.892164240915996, 39.9519593259]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-40-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-21",
+        "to": "corridor-1-pt-20",
+        "weight": 11.53679055764929,
+        "bearing": 180.42319454992736,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892165240581996, 39.95206307592],
+          [32.892166797024, 39.95221244052]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-42",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-21",
+        "to": "corridor-1-pt-22",
+        "weight": 16.609115626207277,
+        "bearing": 0.45767407004319693,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892166797024, 39.95221244052],
+          [32.892165240581996, 39.95206307592]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-42-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-22",
+        "to": "corridor-1-pt-21",
+        "weight": 16.609115626207277,
+        "bearing": 180.4576740700432,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892166797024, 39.95221244052],
+          [32.892312490962, 39.95221290717]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-44",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-22",
+        "to": "corridor-1-pt-23",
+        "weight": 12.41903625581793,
+        "bearing": 89.76055977984208,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892312490962, 39.95221290717],
+          [32.892166797024, 39.95221244052]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-44-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-23",
+        "to": "corridor-1-pt-22",
+        "weight": 12.41903625581793,
+        "bearing": 269.7605597798421,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892312490962, 39.95221290717],
+          [32.8924581849, 39.95221337382]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-46",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-23",
+        "to": "corridor-1-pt-24",
+        "weight": 12.419036171089969,
+        "bearing": 89.76055978473505,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8924581849, 39.95221337382],
+          [32.892312490962, 39.95221290717]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-46-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-24",
+        "to": "corridor-1-pt-23",
+        "weight": 12.419036171089969,
+        "bearing": 269.76055978473505,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8924581849, 39.95221337382],
+          [32.892603878837996, 39.95221384047]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-48",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-24",
+        "to": "corridor-1-pt-25",
+        "weight": 12.419036085756346,
+        "bearing": 89.76055977819493,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892603878837996, 39.95221384047],
+          [32.8924581849, 39.95221337382]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-48-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-25",
+        "to": "corridor-1-pt-24",
+        "weight": 12.419036085756346,
+        "bearing": 269.76055977819493,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892603878837996, 39.95221384047],
+          [32.892749572776, 39.95221430712]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-50",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-25",
+        "to": "corridor-1-pt-26",
+        "weight": 12.419036001634042,
+        "bearing": 89.76055977657302,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892749572776, 39.95221430712],
+          [32.892603878837996, 39.95221384047]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-50-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-26",
+        "to": "corridor-1-pt-25",
+        "weight": 12.419036001634042,
+        "bearing": 269.760559776573,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892749572776, 39.95221430712],
+          [32.892750817086, 39.95234892192]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-52",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-26",
+        "to": "corridor-1-pt-27",
+        "weight": 14.968858586290876,
+        "bearing": 0.4059830752582343,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892750817086, 39.95234892192],
+          [32.892749572776, 39.95221430712]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-52-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-27",
+        "to": "corridor-1-pt-26",
+        "weight": 14.968858586290876,
+        "bearing": 180.40598307525823,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892750817086, 39.95234892192],
+          [32.892749009673, 39.95246642439]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-54",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-27",
+        "to": "corridor-1-pt-28",
+        "weight": 13.06658681431008,
+        "bearing": 359.32443218722756,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892749009673, 39.95246642439],
+          [32.892750817086, 39.95234892192]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-54-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-28",
+        "to": "corridor-1-pt-27",
+        "weight": 13.06658681431008,
+        "bearing": 179.32443218722756,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892749009673, 39.95246642439],
+          [32.89274720226, 39.95258392686]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-56",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-28",
+        "to": "corridor-1-pt-29",
+        "weight": 13.066586810399425,
+        "bearing": 359.32443334760984,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.89274720226, 39.95258392686],
+          [32.892749009673, 39.95246642439]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-56-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-29",
+        "to": "corridor-1-pt-28",
+        "weight": 13.066586810399425,
+        "bearing": 179.32443334760978,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.89274720226, 39.95258392686],
+          [32.892745394847, 39.95270142933]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-58",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-29",
+        "to": "corridor-1-pt-30",
+        "weight": 13.066586807278807,
+        "bearing": 359.3244345081778,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892745394847, 39.95270142933],
+          [32.89274720226, 39.95258392686]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-58-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-30",
+        "to": "corridor-1-pt-29",
+        "weight": 13.066586807278807,
+        "bearing": 179.32443450817777,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892745394847, 39.95270142933],
+          [32.892743587434, 39.9528189318]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-60",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-30",
+        "to": "corridor-1-pt-31",
+        "weight": 13.066586804948216,
+        "bearing": 359.32443566865715,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892743587434, 39.9528189318],
+          [32.892745394847, 39.95270142933]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-60-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-31",
+        "to": "corridor-1-pt-30",
+        "weight": 13.066586804948216,
+        "bearing": 179.3244356686571,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892743587434, 39.9528189318],
+          [32.892741780021, 39.95293643427]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-62",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-31",
+        "to": "corridor-1-pt-32",
+        "weight": 13.066586801037555,
+        "bearing": 359.32443682906626,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892741780021, 39.95293643427],
+          [32.892743587434, 39.9528189318]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-62-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-32",
+        "to": "corridor-1-pt-31",
+        "weight": 13.066586801037555,
+        "bearing": 179.32443682906626,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892741780021, 39.95293643427],
+          [32.892739972608, 39.95305393674]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-64",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-32",
+        "to": "corridor-1-pt-33",
+        "weight": 13.066586797916928,
+        "bearing": 359.3244379896427,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892739972608, 39.95305393674],
+          [32.892741780021, 39.95293643427]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-64-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-33",
+        "to": "corridor-1-pt-32",
+        "weight": 13.066586797916928,
+        "bearing": 179.32443798964277,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892739972608, 39.95305393674],
+          [32.892884544557994, 39.95305282593]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-66",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-33",
+        "to": "corridor-1-pt-34",
+        "weight": 12.323757300538677,
+        "bearing": 90.57421748178984,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892884544557994, 39.95305282593],
+          [32.892739972608, 39.95305393674]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-66-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-34",
+        "to": "corridor-1-pt-33",
+        "weight": 12.323757300538677,
+        "bearing": 270.57421748178984,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892884544557994, 39.95305282593],
+          [32.893029116507996, 39.95305171512]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-68",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-34",
+        "to": "corridor-1-pt-35",
+        "weight": 12.323757501280015,
+        "bearing": 90.5742174806573,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893029116507996, 39.95305171512],
+          [32.892884544557994, 39.95305282593]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-68-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-35",
+        "to": "corridor-1-pt-34",
+        "weight": 12.323757501280015,
+        "bearing": 270.5742174806573,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893029116507996, 39.95305171512],
+          [32.89302776253, 39.95294908506]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-70",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-35",
+        "to": "corridor-1-pt-36",
+        "weight": 11.412525569610661,
+        "bearing": 180.5794257950174,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.89302776253, 39.95294908506],
+          [32.893029116507996, 39.95305171512]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-70-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-36",
+        "to": "corridor-1-pt-35",
+        "weight": 11.412525569610661,
+        "bearing": 0.5794257950174142,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.89302776253, 39.95294908506],
+          [32.893026151254, 39.95282669649]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-72",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-36",
+        "to": "corridor-1-pt-37",
+        "weight": 13.60968108933159,
+        "bearing": 180.57821681412176,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893026151254, 39.95282669649],
+          [32.89302776253, 39.95294908506]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-72-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-37",
+        "to": "corridor-1-pt-36",
+        "weight": 13.60968108933159,
+        "bearing": 0.578216814121788,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893026151254, 39.95282669649],
+          [32.893024539978, 39.95270430792]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-74",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-37",
+        "to": "corridor-1-pt-38",
+        "weight": 13.609681091811723,
+        "bearing": 180.57821784870674,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893024539978, 39.95270430792],
+          [32.893026151254, 39.95282669649]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-74-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-38",
+        "to": "corridor-1-pt-37",
+        "weight": 13.609681091811723,
+        "bearing": 0.5782178487067426,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893024539978, 39.95270430792],
+          [32.893022928701996, 39.95258191935]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-76",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-38",
+        "to": "corridor-1-pt-39",
+        "weight": 13.609681094297965,
+        "bearing": 180.5782188858387,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893022928701996, 39.95258191935],
+          [32.893024539978, 39.95270430792]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-76-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-39",
+        "to": "corridor-1-pt-38",
+        "weight": 13.609681094297965,
+        "bearing": 0.5782188858387372,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893022928701996, 39.95258191935],
+          [32.893021317426, 39.95245953078]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-78",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-39",
+        "to": "corridor-1-pt-40",
+        "weight": 13.609681097562026,
+        "bearing": 180.57821991785372,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893021317426, 39.95245953078],
+          [32.893022928701996, 39.95258191935]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-78-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-40",
+        "to": "corridor-1-pt-39",
+        "weight": 13.609681097562026,
+        "bearing": 0.5782199178537439,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893021317426, 39.95245953078],
+          [32.89301970615, 39.95233714221]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-80",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-40",
+        "to": "corridor-1-pt-41",
+        "weight": 13.609681099252107,
+        "bearing": 180.57822095243077,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.89301970615, 39.95233714221],
+          [32.893021317426, 39.95245953078]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-80-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-41",
+        "to": "corridor-1-pt-40",
+        "weight": 13.609681099252107,
+        "bearing": 0.5782209524307973,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.89301970615, 39.95233714221],
+          [32.893018094873995, 39.95221475364]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-82",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-41",
+        "to": "corridor-1-pt-42",
+        "weight": 13.609681101738346,
+        "bearing": 180.57822198956987,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893018094873995, 39.95221475364],
+          [32.89301970615, 39.95233714221]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-82-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-42",
+        "to": "corridor-1-pt-41",
+        "weight": 13.609681101738346,
+        "bearing": 0.5782219895698972,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893018094873995, 39.95221475364],
+          [32.893016475162, 39.952092283635004]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-84",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-42",
+        "to": "corridor-1-pt-43",
+        "weight": 13.618743072915244,
+        "bearing": 180.5808636906422,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893016475162, 39.952092283635004],
+          [32.893018094873995, 39.95221475364]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-84-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-43",
+        "to": "corridor-1-pt-42",
+        "weight": 13.618743072915244,
+        "bearing": 0.580863690642218,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893016475162, 39.952092283635004],
+          [32.89301485545, 39.95196981363]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-86",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-43",
+        "to": "corridor-1-pt-44",
+        "weight": 13.61874307621759,
+        "bearing": 180.58086473314478,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.89301485545, 39.95196981363],
+          [32.893016475162, 39.952092283635004]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-86-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-44",
+        "to": "corridor-1-pt-43",
+        "weight": 13.61874307621759,
+        "bearing": 0.5808647331447787,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.89301485545, 39.95196981363],
+          [32.893013235737996, 39.951847343625]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-88",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-44",
+        "to": "corridor-1-pt-45",
+        "weight": 13.618743078723746,
+        "bearing": 180.5808657730967,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893013235737996, 39.951847343625],
+          [32.89301485545, 39.95196981363]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-88-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-45",
+        "to": "corridor-1-pt-44",
+        "weight": 13.618743078723746,
+        "bearing": 0.5808657730966615,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893013235737996, 39.951847343625],
+          [32.893011616025994, 39.95172487362]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-90",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-45",
+        "to": "corridor-1-pt-46",
+        "weight": 13.618743080439852,
+        "bearing": 180.5808668131214,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893011616025994, 39.95172487362],
+          [32.893013235737996, 39.951847343625]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-90-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-46",
+        "to": "corridor-1-pt-45",
+        "weight": 13.618743080439852,
+        "bearing": 0.5808668131213608,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893011616025994, 39.95172487362],
+          [32.893008722477994, 39.95150622888]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-92",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-46",
+        "to": "corridor-1-pt-47",
+        "weight": 24.31343691713537,
+        "bearing": 180.58124807263377,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893008722477994, 39.95150622888],
+          [32.893011616025994, 39.95172487362]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-92-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-47",
+        "to": "corridor-1-pt-46",
+        "weight": 24.31343691713537,
+        "bearing": 0.5812480726337981,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893008722477994, 39.95150622888],
+          [32.892869333044, 39.95150567012]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-94",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-47",
+        "to": "corridor-1-pt-48",
+        "weight": 11.881818157701616,
+        "bearing": 269.70043772987344,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892869333044, 39.95150567012],
+          [32.893008722477994, 39.95150622888]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-94-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-48",
+        "to": "corridor-1-pt-47",
+        "weight": 11.881818157701616,
+        "bearing": 89.70043772987344,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892869333044, 39.95150567012],
+          [32.89272994361, 39.95150511136]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-96",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-48",
+        "to": "corridor-1-pt-49",
+        "weight": 11.881818254761692,
+        "bearing": 269.7004377306152,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.89272994361, 39.95150511136],
+          [32.892869333044, 39.95150567012]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-96-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-49",
+        "to": "corridor-1-pt-48",
+        "weight": 11.881818254761692,
+        "bearing": 89.70043773061519,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.89272994361, 39.95150511136],
+          [32.892590554175996, 39.9515045526]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-98",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-49",
+        "to": "corridor-1-pt-50",
+        "weight": 11.881818352427425,
+        "bearing": 269.70043773307754,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892590554175996, 39.9515045526],
+          [32.89272994361, 39.95150511136]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-98-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-50",
+        "to": "corridor-1-pt-49",
+        "weight": 11.881818352427425,
+        "bearing": 89.70043773307754,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892590554175996, 39.9515045526],
+          [32.892451164742, 39.95150399384]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-100",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-50",
+        "to": "corridor-1-pt-51",
+        "weight": 11.881818448881837,
+        "bearing": 269.7004377372147,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892451164742, 39.95150399384],
+          [32.892590554175996, 39.9515045526]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-100-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-51",
+        "to": "corridor-1-pt-50",
+        "weight": 11.881818448881837,
+        "bearing": 89.70043773721471,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892451164742, 39.95150399384],
+          [32.892311775307995, 39.95150343508]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-102",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-51",
+        "to": "corridor-1-pt-52",
+        "weight": 11.88181854654757,
+        "bearing": 269.7004377396771,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892311775307995, 39.95150343508],
+          [32.892451164742, 39.95150399384]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-102-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-52",
+        "to": "corridor-1-pt-51",
+        "weight": 11.88181854654757,
+        "bearing": 89.70043773967711,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892311775307995, 39.95150343508],
+          [32.892172385874, 39.95150287632]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-104",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-52",
+        "to": "corridor-1-pt-53",
+        "weight": 11.881818643001978,
+        "bearing": 269.7004377404035,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892172385874, 39.95150287632],
+          [32.892311775307995, 39.95150343508]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-104-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-53",
+        "to": "corridor-1-pt-52",
+        "weight": 11.881818643001978,
+        "bearing": 89.70043774040352,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892172385874, 39.95150287632],
+          [32.892170371778995, 39.95161473873]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-106",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-53",
+        "to": "corridor-1-pt-54",
+        "weight": 12.439717243265536,
+        "bearing": 359.20922618179134,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892170371778995, 39.95161473873],
+          [32.892172385874, 39.95150287632]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-106-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-54",
+        "to": "corridor-1-pt-53",
+        "weight": 12.439717243265536,
+        "bearing": 179.20922618179134,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892170371778995, 39.95161473873],
+          [32.892168357684, 39.95172660114]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-108",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-54",
+        "to": "corridor-1-pt-55",
+        "weight": 12.43971723938217,
+        "bearing": 359.20922747769026,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892168357684, 39.95172660114],
+          [32.892170371778995, 39.95161473873]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-108-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-55",
+        "to": "corridor-1-pt-54",
+        "weight": 12.43971723938217,
+        "bearing": 179.20922747769032,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892168357684, 39.95172660114],
+          [32.89216627821, 39.95184201558]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-110",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-55",
+        "to": "corridor-1-pt-56",
+        "weight": 12.834724246672945,
+        "bearing": 359.2086868787663,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.89216627821, 39.95184201558],
+          [32.892168357684, 39.95172660114]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-110-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-56",
+        "to": "corridor-1-pt-55",
+        "weight": 12.834724246672945,
+        "bearing": 179.20868687876623,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.89216627821, 39.95184201558],
+          [32.892164198736, 39.95195743002]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-112",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-56",
+        "to": "corridor-1-pt-57",
+        "weight": 12.834724243332293,
+        "bearing": 359.208688213943,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892164198736, 39.95195743002],
+          [32.89216627821, 39.95184201558]
+        ]
+      },
+      "properties": {
+        "id": "corridor-1-edge-112-rev",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-57",
+        "to": "corridor-1-pt-56",
+        "weight": 12.834724243332293,
+        "bearing": 179.208688213943,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.889431466204, 39.9519656211],
+          [32.8894301299416, 39.952092057996]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-114",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-0",
+        "to": "corridor-2-pt-1",
+        "weight": 14.059602772916477,
+        "bearing": 359.53581674591265,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8894301299416, 39.952092057996],
+          [32.889431466204, 39.9519656211]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-114-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-1",
+        "to": "corridor-2-pt-0",
+        "weight": 14.059602772916477,
+        "bearing": 179.5358167459126,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8894301299416, 39.952092057996],
+          [32.8894287936792, 39.952218494892]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-116",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-1",
+        "to": "corridor-2-pt-2",
+        "weight": 14.059602772000751,
+        "bearing": 359.53581760391086,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8894287936792, 39.952218494892],
+          [32.8894301299416, 39.952092057996]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-116-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-2",
+        "to": "corridor-2-pt-1",
+        "weight": 14.059602772000751,
+        "bearing": 179.5358176039108,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8894287936792, 39.952218494892],
+          [32.8894274574168, 39.952344931788]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-118",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-2",
+        "to": "corridor-2-pt-3",
+        "weight": 14.059602769504902,
+        "bearing": 359.5358184619463,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8894274574168, 39.952344931788],
+          [32.8894287936792, 39.952218494892]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-118-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-3",
+        "to": "corridor-2-pt-2",
+        "weight": 14.059602769504902,
+        "bearing": 179.5358184619463,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8894274574168, 39.952344931788],
+          [32.8894261211544, 39.952471368684]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-120",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-3",
+        "to": "corridor-2-pt-4",
+        "weight": 14.059602768589178,
+        "bearing": 359.53581931999565,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8894261211544, 39.952471368684],
+          [32.8894274574168, 39.952344931788]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-120-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-4",
+        "to": "corridor-2-pt-3",
+        "weight": 14.059602768589178,
+        "bearing": 179.53581931999565,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8894261211544, 39.952471368684],
+          [32.889424784892, 39.95259780558]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-122",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-4",
+        "to": "corridor-2-pt-5",
+        "weight": 14.059602766093326,
+        "bearing": 359.5358201780006,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.889424784892, 39.95259780558],
+          [32.8894261211544, 39.952471368684]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-122-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-5",
+        "to": "corridor-2-pt-4",
+        "weight": 14.059602766093326,
+        "bearing": 179.53582017800068,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.889424784892, 39.95259780558],
+          [32.889651299928005, 39.95259769578]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-124",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-5",
+        "to": "corridor-2-pt-6",
+        "weight": 19.308000411791813,
+        "bearing": 90.03615763096195,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.889651299928005, 39.95259769578],
+          [32.889424784892, 39.95259780558]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-124-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-6",
+        "to": "corridor-2-pt-5",
+        "weight": 19.308000411791813,
+        "bearing": 270.03615763096195,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.889651299928005, 39.95259769578],
+          [32.8897807857792, 39.952597632096]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-126",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-6",
+        "to": "corridor-2-pt-7",
+        "weight": 11.037293286223973,
+        "bearing": 90.03671841709235,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8897807857792, 39.952597632096],
+          [32.889651299928005, 39.95259769578]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-126-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-7",
+        "to": "corridor-2-pt-6",
+        "weight": 11.037293286223973,
+        "bearing": 270.03671841709235,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8897807857792, 39.952597632096],
+          [32.8899102716304, 39.952597568412]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-128",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-7",
+        "to": "corridor-2-pt-8",
+        "weight": 11.037293296500676,
+        "bearing": 90.03671841338638,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8899102716304, 39.952597568412],
+          [32.8897807857792, 39.952597632096]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-128-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-8",
+        "to": "corridor-2-pt-7",
+        "weight": 11.037293296500676,
+        "bearing": 270.0367184133864,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8899102716304, 39.952597568412],
+          [32.8900397574816, 39.952597504728]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-130",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-8",
+        "to": "corridor-2-pt-9",
+        "weight": 11.037293307383552,
+        "bearing": 90.03671841885784,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8900397574816, 39.952597504728],
+          [32.8899102716304, 39.952597568412]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-130-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-9",
+        "to": "corridor-2-pt-8",
+        "weight": 11.037293307383552,
+        "bearing": 270.03671841885784,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8900397574816, 39.952597504728],
+          [32.8901692433328, 39.952597441044]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-132",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-9",
+        "to": "corridor-2-pt-10",
+        "weight": 11.037293317054084,
+        "bearing": 90.036718413318,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8901692433328, 39.952597441044],
+          [32.8900397574816, 39.952597504728]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-132-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-10",
+        "to": "corridor-2-pt-9",
+        "weight": 11.037293317054084,
+        "bearing": 270.036718413318,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8901692433328, 39.952597441044],
+          [32.890298729184, 39.95259737736]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-134",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-10",
+        "to": "corridor-2-pt-11",
+        "weight": 11.03729332793645,
+        "bearing": 90.03671841328179,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.890298729184, 39.95259737736],
+          [32.8901692433328, 39.952597441044]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-134-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-11",
+        "to": "corridor-2-pt-10",
+        "weight": 11.03729332793645,
+        "bearing": 270.0367184132818,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.890298729184, 39.95259737736],
+          [32.8904417815995, 39.952597178805]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-136",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-11",
+        "to": "corridor-2-pt-12",
+        "weight": 12.193716322050102,
+        "bearing": 90.1036955840595,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8904417815995, 39.952597178805],
+          [32.890298729184, 39.95259737736]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-136-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-12",
+        "to": "corridor-2-pt-11",
+        "weight": 12.193716322050102,
+        "bearing": 270.1036955840595,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8904417815995, 39.952597178805],
+          [32.890584834015, 39.95259698025]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-138",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-12",
+        "to": "corridor-2-pt-13",
+        "weight": 12.19371635805359,
+        "bearing": 90.10369558209158,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.890584834015, 39.95259698025],
+          [32.8904417815995, 39.952597178805]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-138-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-13",
+        "to": "corridor-2-pt-12",
+        "weight": 12.19371635805359,
+        "bearing": 270.1036955820916,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.890584834015, 39.95259698025],
+          [32.8907278864305, 39.952596781695]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-140",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-13",
+        "to": "corridor-2-pt-14",
+        "weight": 12.193716392845754,
+        "bearing": 90.10369558511923,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8907278864305, 39.952596781695],
+          [32.890584834015, 39.95259698025]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-140-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-14",
+        "to": "corridor-2-pt-13",
+        "weight": 12.193716392845754,
+        "bearing": 270.1036955851192,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8907278864305, 39.952596781695],
+          [32.890870938846, 39.95259658314]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-142",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-14",
+        "to": "corridor-2-pt-15",
+        "weight": 12.19371642884924,
+        "bearing": 90.10369558148949,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.890870938846, 39.95259658314],
+          [32.8907278864305, 39.952596781695]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-142-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-15",
+        "to": "corridor-2-pt-14",
+        "weight": 12.19371642884924,
+        "bearing": 270.1036955814895,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.890870938846, 39.95259658314],
+          [32.8909754429595, 39.952531247565]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-144",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-15",
+        "to": "corridor-2-pt-16",
+        "weight": 11.494786351394085,
+        "bearing": 129.19959768218683,
+        "direction": "southeast",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8909754429595, 39.952531247565],
+          [32.890870938846, 39.95259658314]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-144-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-16",
+        "to": "corridor-2-pt-15",
+        "weight": 11.494786351394085,
+        "bearing": 309.19959768218683,
+        "direction": "northwest",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8909754429595, 39.952531247565],
+          [32.891079947073, 39.952465911990004]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-146",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-16",
+        "to": "corridor-2-pt-17",
+        "weight": 11.494792945013034,
+        "bearing": 129.19957087032594,
+        "direction": "southeast",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891079947073, 39.952465911990004],
+          [32.8909754429595, 39.952531247565]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-146-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-17",
+        "to": "corridor-2-pt-16",
+        "weight": 11.494792945013034,
+        "bearing": 309.19957087032594,
+        "direction": "northwest",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891079947073, 39.952465911990004],
+          [32.8911844511865, 39.952400576415]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-148",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-17",
+        "to": "corridor-2-pt-18",
+        "weight": 11.494799539154872,
+        "bearing": 129.19954407136913,
+        "direction": "southeast",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8911844511865, 39.952400576415],
+          [32.891079947073, 39.952465911990004]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-148-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-18",
+        "to": "corridor-2-pt-17",
+        "weight": 11.494799539154872,
+        "bearing": 309.19954407136913,
+        "direction": "northwest",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8911844511865, 39.952400576415],
+          [32.8912889553, 39.95233524084]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-150",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-18",
+        "to": "corridor-2-pt-19",
+        "weight": 11.494806133729615,
+        "bearing": 129.19951726319914,
+        "direction": "southeast",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8912889553, 39.95233524084],
+          [32.8911844511865, 39.952400576415]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-150-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-19",
+        "to": "corridor-2-pt-18",
+        "weight": 11.494806133729615,
+        "bearing": 309.19951726319914,
+        "direction": "northwest",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.8912889553, 39.95233524084],
+          [32.891420101356, 39.952336476090004]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-152",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-19",
+        "to": "corridor-2-pt-20",
+        "weight": 11.179692391246546,
+        "bearing": 89.2960050908851,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891420101356, 39.952336476090004],
+          [32.8912889553, 39.95233524084]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-152-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-20",
+        "to": "corridor-2-pt-19",
+        "weight": 11.179692391246546,
+        "bearing": 269.2960050908851,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891420101356, 39.952336476090004],
+          [32.891551247411996, 39.95233771134]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-154",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-20",
+        "to": "corridor-2-pt-21",
+        "weight": 11.179692189364772,
+        "bearing": 89.29600508360954,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891551247411996, 39.95233771134],
+          [32.891420101356, 39.952336476090004]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-154-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-21",
+        "to": "corridor-2-pt-20",
+        "weight": 11.179692189364772,
+        "bearing": 269.29600508360954,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891551247411996, 39.95233771134],
+          [32.891693908608, 39.95233905578]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-156",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-21",
+        "to": "corridor-2-pt-22",
+        "weight": 12.161313943455415,
+        "bearing": 89.29561886919191,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891693908608, 39.95233905578],
+          [32.891551247411996, 39.95233771134]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-156-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-22",
+        "to": "corridor-2-pt-21",
+        "weight": 12.161313943455415,
+        "bearing": 269.2956188691919,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891693908608, 39.95233905578],
+          [32.891836569804, 39.95234040022]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-158",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-22",
+        "to": "corridor-2-pt-23",
+        "weight": 12.161313704446881,
+        "bearing": 89.29561886034617,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891836569804, 39.95234040022],
+          [32.891693908608, 39.95233905578]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-158-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-23",
+        "to": "corridor-2-pt-22",
+        "weight": 12.161313704446881,
+        "bearing": 269.29561886034617,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891836569804, 39.95234040022],
+          [32.891979231, 39.95234174466]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-160",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-23",
+        "to": "corridor-2-pt-24",
+        "weight": 12.161313465438342,
+        "bearing": 89.29561884150388,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891979231, 39.95234174466],
+          [32.891836569804, 39.95234040022]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-160-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-24",
+        "to": "corridor-2-pt-23",
+        "weight": 12.161313465438342,
+        "bearing": 269.2956188415039,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891979231, 39.95234174466],
+          [32.892121892196, 39.9523430891]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-162",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-24",
+        "to": "corridor-2-pt-25",
+        "weight": 12.161313226420083,
+        "bearing": 89.295618830992,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892121892196, 39.9523430891],
+          [32.891979231, 39.95234174466]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-162-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-25",
+        "to": "corridor-2-pt-24",
+        "weight": 12.161313226420083,
+        "bearing": 269.295618830992,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892121892196, 39.9523430891],
+          [32.892264553391996, 39.95234443354]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-164",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-25",
+        "to": "corridor-2-pt-26",
+        "weight": 12.161312986815624,
+        "bearing": 89.29561881711288,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892264553391996, 39.95234443354],
+          [32.892121892196, 39.9523430891]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-164-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-26",
+        "to": "corridor-2-pt-25",
+        "weight": 12.161312986815624,
+        "bearing": 269.2956188171129,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892264553391996, 39.95234443354],
+          [32.892407214588, 39.95234577798]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-166",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-26",
+        "to": "corridor-2-pt-27",
+        "weight": 12.161312748412682,
+        "bearing": 89.29561880496999,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892407214588, 39.95234577798],
+          [32.892264553391996, 39.95234443354]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-166-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-27",
+        "to": "corridor-2-pt-26",
+        "weight": 12.161312748412682,
+        "bearing": 269.29561880497,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892407214588, 39.95234577798],
+          [32.892577940246994, 39.95234738655]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-168",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-27",
+        "to": "corridor-2-pt-28",
+        "weight": 14.553698401806683,
+        "bearing": 89.29576283274974,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892577940246994, 39.95234738655],
+          [32.892407214588, 39.95234577798]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-168-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-28",
+        "to": "corridor-2-pt-27",
+        "weight": 14.553698401806683,
+        "bearing": 269.29576283274974,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892577940246994, 39.95234738655],
+          [32.892748665906, 39.95234899512]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-170",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-28",
+        "to": "corridor-2-pt-29",
+        "weight": 14.553698060182917,
+        "bearing": 89.295762825964,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892748665906, 39.95234899512],
+          [32.892577940246994, 39.95234738655]
+        ]
+      },
+      "properties": {
+        "id": "corridor-2-edge-170-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-29",
+        "to": "corridor-2-pt-28",
+        "weight": 14.553698060182917,
+        "bearing": 269.295762825964,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892752381963994, 39.9522139155],
+          [32.89282643739, 39.95221397772]
+        ]
+      },
+      "properties": {
+        "id": "corridor-3-edge-172",
+        "type": "corridor-edge",
+        "from": "corridor-3-pt-0",
+        "to": "corridor-3-pt-1",
+        "weight": 6.312476281688453,
+        "bearing": 89.93717936310111,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.89282643739, 39.95221397772],
+          [32.892752381963994, 39.9522139155]
+        ]
+      },
+      "properties": {
+        "id": "corridor-3-edge-172-rev",
+        "type": "corridor-edge",
+        "from": "corridor-3-pt-1",
+        "to": "corridor-3-pt-0",
+        "weight": 6.312476281688453,
+        "bearing": 269.9371793631011,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.89282643739, 39.95221397772],
+          [32.893015690614, 39.95221414242]
+        ]
+      },
+      "properties": {
+        "id": "corridor-3-edge-174",
+        "type": "corridor-edge",
+        "from": "corridor-3-pt-1",
+        "to": "corridor-3-pt-2",
+        "weight": 16.131924458547726,
+        "bearing": 89.93489405684096,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893015690614, 39.95221414242],
+          [32.89282643739, 39.95221397772]
+        ]
+      },
+      "properties": {
+        "id": "corridor-3-edge-174-rev",
+        "type": "corridor-edge",
+        "from": "corridor-3-pt-2",
+        "to": "corridor-3-pt-1",
+        "weight": 16.131924458547726,
+        "bearing": 269.93489405684096,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.889431451441, 39.95196469512],
+          [32.889431451441, 39.95196469512]
+        ]
+      },
+      "properties": {
+        "id": "snap-corridor-1-pt-0-to-corridor-2-pt-0",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-0",
+        "to": "corridor-2-pt-0",
+        "weight": 0.0,
+        "bearing": 0.0,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.889431451441, 39.95196469512],
+          [32.889431451441, 39.95196469512]
+        ]
+      },
+      "properties": {
+        "id": "snap-corridor-1-pt-0-to-corridor-2-pt-0-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-0",
+        "to": "corridor-1-pt-0",
+        "weight": 0.0,
+        "bearing": 180.0,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.89275097737, 39.95221411131],
+          [32.89275097737, 39.95221411131]
+        ]
+      },
+      "properties": {
+        "id": "snap-corridor-1-pt-26-to-corridor-3-pt-0",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-26",
+        "to": "corridor-3-pt-0",
+        "weight": 0.0,
+        "bearing": 0.0,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.89275097737, 39.95221411131],
+          [32.89275097737, 39.95221411131]
+        ]
+      },
+      "properties": {
+        "id": "snap-corridor-1-pt-26-to-corridor-3-pt-0-rev",
+        "type": "corridor-edge",
+        "from": "corridor-3-pt-0",
+        "to": "corridor-1-pt-26",
+        "weight": 0.0,
+        "bearing": 180.0,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892749741496, 39.95234895852],
+          [32.892749741496, 39.95234895852]
+        ]
+      },
+      "properties": {
+        "id": "snap-corridor-1-pt-27-to-corridor-2-pt-29",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-27",
+        "to": "corridor-2-pt-29",
+        "weight": 0.0,
+        "bearing": 0.0,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892749741496, 39.95234895852],
+          [32.892749741496, 39.95234895852]
+        ]
+      },
+      "properties": {
+        "id": "snap-corridor-1-pt-27-to-corridor-2-pt-29-rev",
+        "type": "corridor-edge",
+        "from": "corridor-2-pt-29",
+        "to": "corridor-1-pt-27",
+        "weight": 0.0,
+        "bearing": 180.0,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893016892743994, 39.95221444803],
+          [32.893016892743994, 39.95221444803]
+        ]
+      },
+      "properties": {
+        "id": "snap-corridor-1-pt-42-to-corridor-3-pt-2",
+        "type": "corridor-edge",
+        "from": "corridor-1-pt-42",
+        "to": "corridor-3-pt-2",
+        "weight": 0.0,
+        "bearing": 0.0,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893016892743994, 39.95221444803],
+          [32.893016892743994, 39.95221444803]
+        ]
+      },
+      "properties": {
+        "id": "snap-corridor-1-pt-42-to-corridor-3-pt-2-rev",
+        "type": "corridor-edge",
+        "from": "corridor-3-pt-2",
+        "to": "corridor-1-pt-42",
+        "weight": 0.0,
+        "bearing": 180.0,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.889664031961004, 39.95267959926],
+          [32.889651299928005, 39.95259769578]
+        ]
+      },
+      "properties": {
+        "id": "door-101-to-corridor-2-pt-6",
+        "type": "door-connection",
+        "from": "door-101",
+        "to": "corridor-2-pt-6",
+        "weight": 9.171686828525043,
+        "bearing": 186.7956352557413,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.889651299928005, 39.95259769578],
+          [32.889664031961004, 39.95267959926]
+        ]
+      },
+      "properties": {
+        "id": "door-101-to-corridor-2-pt-6-rev",
+        "type": "door-connection",
+        "from": "corridor-2-pt-6",
+        "to": "door-101",
+        "weight": 9.171686828525043,
+        "bearing": 6.795635255741331,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.890299948186, 39.95269280454],
+          [32.890298729184, 39.95259737736]
+        ]
+      },
+      "properties": {
+        "id": "door-102-to-corridor-2-pt-11",
+        "type": "door-connection",
+        "from": "door-102",
+        "to": "corridor-2-pt-11",
+        "weight": 10.61152701438465,
+        "bearing": 180.5610431758181,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.890298729184, 39.95259737736],
+          [32.890299948186, 39.95269280454]
+        ]
+      },
+      "properties": {
+        "id": "door-102-to-corridor-2-pt-11-rev",
+        "type": "door-connection",
+        "from": "corridor-2-pt-11",
+        "to": "door-102",
+        "weight": 10.61152701438465,
+        "bearing": 0.5610431758180994,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.890869230556, 39.9526770885],
+          [32.890870938846, 39.95259658314]
+        ]
+      },
+      "properties": {
+        "id": "door-103-to-corridor-2-pt-15",
+        "type": "door-connection",
+        "from": "door-103",
+        "to": "corridor-2-pt-15",
+        "weight": 8.952971825981992,
+        "bearing": 179.06808490485946,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.890870938846, 39.95259658314],
+          [32.890869230556, 39.9526770885]
+        ]
+      },
+      "properties": {
+        "id": "door-103-to-corridor-2-pt-15-rev",
+        "type": "door-connection",
+        "from": "corridor-2-pt-15",
+        "to": "door-103",
+        "weight": 8.952971825981992,
+        "bearing": 359.06808490485946,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.889661842819, 39.95183122407],
+          [32.889660271614, 39.95196345438]
+        ]
+      },
+      "properties": {
+        "id": "door-104-to-corridor-1-pt-1",
+        "type": "door-connection",
+        "from": "door-104",
+        "to": "corridor-1-pt-1",
+        "weight": 14.703949578802819,
+        "bearing": 359.4781187535944,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.889660271614, 39.95196345438],
+          [32.889661842819, 39.95183122407]
+        ]
+      },
+      "properties": {
+        "id": "door-104-to-corridor-1-pt-1-rev",
+        "type": "door-connection",
+        "from": "corridor-1-pt-1",
+        "to": "door-104",
+        "weight": 14.703949578802819,
+        "bearing": 179.47811875359434,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.890269325506, 39.95185421802],
+          [32.890424353878004, 39.95196240762]
+        ]
+      },
+      "properties": {
+        "id": "door-105-to-corridor-1-pt-7",
+        "type": "door-connection",
+        "from": "door-105",
+        "to": "corridor-1-pt-7",
+        "weight": 17.870399409072846,
+        "bearing": 47.6863711218021,
+        "direction": "northeast",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.890424353878004, 39.95196240762],
+          [32.890269325506, 39.95185421802]
+        ]
+      },
+      "properties": {
+        "id": "door-105-to-corridor-1-pt-7-rev",
+        "type": "door-connection",
+        "from": "corridor-1-pt-7",
+        "to": "door-105",
+        "weight": 17.870399409072846,
+        "bearing": 227.6863711218021,
+        "direction": "southwest",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891071485764996, 39.95186306241],
+          [32.891068771482, 39.95196110832]
+        ]
+      },
+      "properties": {
+        "id": "door-106-to-corridor-1-pt-12",
+        "type": "door-connection",
+        "from": "door-106",
+        "to": "corridor-1-pt-12",
+        "weight": 10.904662512999966,
+        "bearing": 358.7842554296475,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891068771482, 39.95196110832],
+          [32.891071485764996, 39.95186306241]
+        ]
+      },
+      "properties": {
+        "id": "door-106-to-corridor-1-pt-12-rev",
+        "type": "door-connection",
+        "from": "corridor-1-pt-12",
+        "to": "door-106",
+        "weight": 10.904662512999966,
+        "bearing": 178.7842554296475,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891559715047, 39.95242732644],
+          [32.891551247411996, 39.95233771134]
+        ]
+      },
+      "properties": {
+        "id": "door-107-to-corridor-2-pt-21",
+        "type": "door-connection",
+        "from": "door-107",
+        "to": "corridor-2-pt-21",
+        "weight": 9.990850611009284,
+        "bearing": 184.14288260823506,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891551247411996, 39.95233771134],
+          [32.891559715047, 39.95242732644]
+        ]
+      },
+      "properties": {
+        "id": "door-107-to-corridor-2-pt-21-rev",
+        "type": "door-connection",
+        "from": "corridor-2-pt-21",
+        "to": "door-107",
+        "weight": 9.990850611009284,
+        "bearing": 4.142882608235027,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892395511747, 39.95242732461],
+          [32.892407214588, 39.95234577798]
+        ]
+      },
+      "properties": {
+        "id": "door-108-to-corridor-2-pt-27",
+        "type": "door-connection",
+        "from": "door-108",
+        "to": "corridor-2-pt-27",
+        "weight": 9.122277740372398,
+        "bearing": 173.72199301937076,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892407214588, 39.95234577798],
+          [32.892395511747, 39.95242732461]
+        ]
+      },
+      "properties": {
+        "id": "door-108-to-corridor-2-pt-27-rev",
+        "type": "door-connection",
+        "from": "corridor-2-pt-27",
+        "to": "door-108",
+        "weight": 9.122277740372398,
+        "bearing": 353.72199301937076,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893135498686, 39.95294559891],
+          [32.89302776253, 39.95294908506]
+        ]
+      },
+      "properties": {
+        "id": "door-109-to-corridor-1-pt-36",
+        "type": "door-connection",
+        "from": "door-109",
+        "to": "corridor-1-pt-36",
+        "weight": 9.191491831781072,
+        "bearing": 272.417145046514,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.89302776253, 39.95294908506],
+          [32.893135498686, 39.95294559891]
+        ]
+      },
+      "properties": {
+        "id": "door-109-to-corridor-1-pt-36-rev",
+        "type": "door-connection",
+        "from": "corridor-1-pt-36",
+        "to": "door-109",
+        "weight": 9.191491831781072,
+        "bearing": 92.41714504651401,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891608639629, 39.95186571591],
+          [32.89159762854, 39.951960248220004]
+        ]
+      },
+      "properties": {
+        "id": "door-110-to-corridor-1-pt-16",
+        "type": "door-connection",
+        "from": "door-110",
+        "to": "corridor-1-pt-16",
+        "weight": 10.553333974551997,
+        "bearing": 354.89751599947624,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.89159762854, 39.951960248220004],
+          [32.891608639629, 39.95186571591]
+        ]
+      },
+      "properties": {
+        "id": "door-110-to-corridor-1-pt-16-rev",
+        "type": "door-connection",
+        "from": "corridor-1-pt-16",
+        "to": "door-110",
+        "weight": 10.553333974551997,
+        "bearing": 174.89751599947624,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892002077796995, 39.951880751190004],
+          [32.891998777211995, 39.951959596740004]
+        ]
+      },
+      "properties": {
+        "id": "door-111-to-corridor-1-pt-19",
+        "type": "door-connection",
+        "from": "door-111",
+        "to": "corridor-1-pt-19",
+        "weight": 8.771738164595408,
+        "bearing": 358.1619953192662,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.891998777211995, 39.951959596740004],
+          [32.892002077796995, 39.951880751190004]
+        ]
+      },
+      "properties": {
+        "id": "door-111-to-corridor-1-pt-19-rev",
+        "type": "door-connection",
+        "from": "corridor-1-pt-19",
+        "to": "door-111",
+        "weight": 8.771738164595408,
+        "bearing": 178.16199531926623,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892293585886, 39.95205144444],
+          [32.892165240581996, 39.95206307592]
+        ]
+      },
+      "properties": {
+        "id": "door-112-to-corridor-1-pt-21",
+        "type": "door-connection",
+        "from": "door-112",
+        "to": "corridor-1-pt-21",
+        "weight": 11.01634421536081,
+        "bearing": 276.7423379437031,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892165240581996, 39.95206307592],
+          [32.892293585886, 39.95205144444]
+        ]
+      },
+      "properties": {
+        "id": "door-112-to-corridor-1-pt-21-rev",
+        "type": "door-connection",
+        "from": "corridor-1-pt-21",
+        "to": "door-112",
+        "weight": 11.01634421536081,
+        "bearing": 96.74233794370309,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892827677481996, 39.95212750473],
+          [32.89282643739, 39.95221397772]
+        ]
+      },
+      "properties": {
+        "id": "door-113-to-corridor-3-pt-1",
+        "type": "door-connection",
+        "from": "door-113",
+        "to": "corridor-3-pt-1",
+        "weight": 9.615938791538117,
+        "bearing": 359.37015134293836,
+        "direction": "north",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.89282643739, 39.95221397772],
+          [32.892827677481996, 39.95212750473]
+        ]
+      },
+      "properties": {
+        "id": "door-113-to-corridor-3-pt-1-rev",
+        "type": "door-connection",
+        "from": "corridor-3-pt-1",
+        "to": "door-113",
+        "weight": 9.615938791538117,
+        "bearing": 179.37015134293836,
+        "direction": "south",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892294604533, 39.95171713272],
+          [32.892168357684, 39.95172660114]
+        ]
+      },
+      "properties": {
+        "id": "door-114-to-corridor-1-pt-55",
+        "type": "door-connection",
+        "from": "door-114",
+        "to": "corridor-1-pt-55",
+        "weight": 10.812718222101998,
+        "bearing": 275.58781529120245,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892168357684, 39.95172660114],
+          [32.892294604533, 39.95171713272]
+        ]
+      },
+      "properties": {
+        "id": "door-114-to-corridor-1-pt-55-rev",
+        "type": "door-connection",
+        "from": "corridor-1-pt-55",
+        "to": "door-114",
+        "weight": 10.812718222101998,
+        "bearing": 95.58781529120245,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.892929605452, 39.95171890233],
+          [32.893011616025994, 39.95172487362]
+        ]
+      },
+      "properties": {
+        "id": "door-115-to-corridor-1-pt-46",
+        "type": "door-connection",
+        "from": "door-115",
+        "to": "corridor-1-pt-46",
+        "weight": 7.022080171147214,
+        "bearing": 84.57423000944834,
+        "direction": "east",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.893011616025994, 39.95172487362],
+          [32.892929605452, 39.95171890233]
+        ]
+      },
+      "properties": {
+        "id": "door-115-to-corridor-1-pt-46-rev",
+        "type": "door-connection",
+        "from": "corridor-1-pt-46",
+        "to": "door-115",
+        "weight": 7.022080171147214,
+        "bearing": 264.57423000944834,
+        "direction": "west",
+        "floor": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "type": "store-index",
+        "floor": 0,
+        "stores": [
+          "room-101",
+          "room-102",
+          "room-103",
+          "room-104",
+          "room-105",
+          "room-106",
+          "room-107",
+          "room-108",
+          "room-109",
+          "room-110",
+          "room-111",
+          "room-112",
+          "room-113",
+          "room-114",
+          "room-115"
+        ]
+      }
+    }
+  ]
+}
