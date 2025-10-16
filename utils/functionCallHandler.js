@@ -113,6 +113,7 @@ export const OPENAI_FUNCTIONS = [
             "atm",
             "info-desk",
             "pharmacy",
+            "point"
           ],
           description: "Aranan özel lokasyon tipi",
         },

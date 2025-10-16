@@ -8,6 +8,7 @@ const specialLocations = {
   "entrance": { name: "Giriş", icon: "🚪" },
   "fire-exit": { name: "Yangın Merdiveni", icon: "🔥" },
   "emergency-exit": { name: "Acil Çıkış", icon: "🚪" },
+  "point": { name: "Nokta", icon: "📍" },
   // "first-aid": { name: "En Yakın İlk Yardım", icon: "🏥" },
   // "info-desk": { name: "En Yakın Bilgi Danışma", icon: "ℹ️" },
 };
