@@ -116,7 +116,6 @@ export async function POST(request) {
 
     return NextResponse.json({
       success: true,
-      message: "Place'ler güncellendi",
       places: results,
     });
   } catch (error) {

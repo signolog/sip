@@ -116,7 +116,6 @@ export async function PUT(request) {
 
     return NextResponse.json({
       success: true,
-      message: "Slug ve isim başarıyla güncellendi",
       oldSlug: oldSlug,
       newSlug: newSlug,
       oldName: oldName,

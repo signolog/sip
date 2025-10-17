@@ -120,7 +120,6 @@ export async function POST(request) {
 
     return NextResponse.json({
       success: true,
-      message: "Kat planı başarıyla yüklendi",
       fileName: fileName,
       filePath: `images/places/${place.slug}/floors/${fileName}`,
       floor: floor,

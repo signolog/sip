@@ -2,12 +2,23 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import ConfirmDialog from './ConfirmDialog';
+import SuccessNotification from './SuccessNotification';
+import ErrorNotification from './ErrorNotification';
 
 export default function CampaignManager({ room, placeId, onCampaignUpdate }) {
   const [campaigns, setCampaigns] = useState([]);
   const [showAddForm, setShowAddForm] = useState(false);
   const [loading, setLoading] = useState(false);
   const [editingCampaign, setEditingCampaign] = useState(null);
+  const [showConfirmDialog, setShowConfirmDialog] = useState(false);
+  const [pendingFormData, setPendingFormData] = useState(null);
+  const [successMessage, setSuccessMessage] = useState('');
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [showError, setShowError] = useState(false);
+  const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+  const [campaignToDelete, setCampaignToDelete] = useState(null);
 
   // Form state
   const [formData, setFormData] = useState({
@@ -46,9 +57,16 @@ export default function CampaignManager({ room, placeId, onCampaignUpdate }) {
     setEditingCampaign(null);
   };
 
-  // Kampanya ekleme/güncelleme
+  // Kampanya ekleme/güncelleme - Onay dialog'u göster
   const handleSubmit = async e => {
     e.preventDefault();
+    setPendingFormData(e);
+    setShowConfirmDialog(true);
+  };
+
+  // Gerçek kaydetme işlemi
+  const performSave = async () => {
+    setShowConfirmDialog(false);
     setLoading(true);
 
     try {
@@ -118,28 +136,37 @@ export default function CampaignManager({ room, placeId, onCampaignUpdate }) {
           await onCampaignUpdate();
         }
         resetForm();
-        alert(
-          editingCampaign !== null
-            ? '✅ Kampanya başarıyla güncellendi!'
-            : '✅ Kampanya başarıyla eklendi!'
-        );
+        // Başarı mesajı göster
+        const successMsg = editingCampaign !== null
+          ? 'Kampanya başarıyla güncellendi!'
+          : 'Kampanya başarıyla eklendi!';
+        
+        setSuccessMessage(successMsg);
+        setShowSuccess(true);
       } else {
-        alert(`❌ Hata: ${result.error}`);
+        setErrorMessage(`Hata: ${result.error}`);
+        setShowError(true);
       }
     } catch (error) {
       console.error('Kampanya ekleme hatası:', error);
-      alert('❌ Kampanya eklenirken hata oluştu!');
+      setErrorMessage('Kampanya eklenirken hata oluştu!');
+      setShowError(true);
     } finally {
       setLoading(false);
+      setPendingFormData(null);
     }
   };
 
-  // Kampanya silme
-  const handleDeleteCampaign = async campaignIndex => {
-    if (!confirm('Bu kampanyayı silmek istediğinizden emin misiniz?')) {
-      return;
-    }
+  // Kampanya silme onayı
+  const handleDeleteClick = (campaignIndex) => {
+    setCampaignToDelete(campaignIndex);
+    setShowDeleteDialog(true);
+  };
 
+  // Gerçek silme işlemi
+  const handleDeleteCampaign = async () => {
+    setShowDeleteDialog(false);
+    const campaignIndex = campaignToDelete;
     setLoading(true);
 
     try {
@@ -164,15 +191,19 @@ export default function CampaignManager({ room, placeId, onCampaignUpdate }) {
         if (onCampaignUpdate) {
           await onCampaignUpdate();
         }
-        alert('✅ Kampanya başarıyla silindi!');
+        setSuccessMessage('Kampanya başarıyla silindi!');
+        setShowSuccess(true);
       } else {
-        alert(`❌ Hata: ${result.error}`);
+        setErrorMessage(`Hata: ${result.error}`);
+        setShowError(true);
       }
     } catch (error) {
       console.error('Kampanya silme hatası:', error);
-      alert('❌ Kampanya silinirken hata oluştu!');
+      setErrorMessage('Kampanya silinirken hata oluştu!');
+      setShowError(true);
     } finally {
       setLoading(false);
+      setCampaignToDelete(null);
     }
   };
 
@@ -295,7 +326,7 @@ export default function CampaignManager({ room, placeId, onCampaignUpdate }) {
                       Düzenle
                     </button>
                     <button
-                      onClick={() => handleDeleteCampaign(index)}
+                      onClick={() => handleDeleteClick(index)}
                       className="px-2 py-1 bg-red-500 text-white text-xs rounded hover:bg-red-600 transition-colors"
                     >
                       Sil
@@ -497,6 +528,54 @@ export default function CampaignManager({ room, placeId, onCampaignUpdate }) {
           </form>
         </div>
       )}
+
+      {/* Onay Dialog'u */}
+      <ConfirmDialog
+        isOpen={showConfirmDialog}
+        onConfirm={performSave}
+        onCancel={() => {
+          setShowConfirmDialog(false);
+          setPendingFormData(null);
+        }}
+        title="Değişiklikleri Kaydet"
+        message={
+          editingCampaign !== null
+            ? 'Kampanya güncellemelerini kaydetmek istediğinizden emin misiniz?'
+            : 'Yeni kampanyayı kaydetmek istediğinizden emin misiniz?'
+        }
+        confirmText="Kaydet"
+        cancelText="İptal"
+        type="success"
+      />
+
+      {/* Silme Onay Dialog'u */}
+      <ConfirmDialog
+        isOpen={showDeleteDialog}
+        onConfirm={handleDeleteCampaign}
+        onCancel={() => {
+          setShowDeleteDialog(false);
+          setCampaignToDelete(null);
+        }}
+        title="Kampanyayı Sil"
+        message="Bu kampanyayı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz."
+        confirmText="Sil"
+        cancelText="İptal"
+        type="danger"
+      />
+
+      {/* Başarı Notification */}
+      <SuccessNotification
+        message={successMessage}
+        isVisible={showSuccess}
+        onClose={() => setShowSuccess(false)}
+      />
+
+      {/* Hata Notification */}
+      <ErrorNotification
+        message={errorMessage}
+        isVisible={showError}
+        onClose={() => setShowError(false)}
+      />
     </div>
   );
 }

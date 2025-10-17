@@ -155,7 +155,6 @@ export async function POST(request) {
 
     return NextResponse.json({
       success: true,
-      message: `Room ${effectiveRoomId} başarıyla güncellendi`,
       room: updatedRoom,
       cacheCleared: true,
     });

@@ -2,6 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import CampaignManager from './CampaignManager';
+import ConfirmDialog from './ConfirmDialog';
+import SuccessNotification from './SuccessNotification';
+import ErrorNotification from './ErrorNotification';
 
 export default function RoomUpdateForm({
   rooms,
@@ -17,6 +20,11 @@ export default function RoomUpdateForm({
   const [searchQuery, setSearchQuery] = useState('');
   const [showAll, setShowAll] = useState(false);
   const [activeTab, setActiveTab] = useState('basic'); // "basic" veya "content"
+  const [showConfirmDialog, setShowConfirmDialog] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [showError, setShowError] = useState(false);
 
   // Oda seçildiğinde form verilerini hazırla
   const handleRoomSelect = room => {
@@ -176,8 +184,14 @@ export default function RoomUpdateForm({
     }
   };
 
-  // Güncelleme kaydet
+  // Kaydetme onayı iste
+  const handleSaveClick = () => {
+    setShowConfirmDialog(true);
+  };
+
+  // Gerçek güncelleme kaydet
   const handleSave = async () => {
+    setShowConfirmDialog(false);
     try {
       const updatedPayload = { ...formData };
 
@@ -227,8 +241,14 @@ export default function RoomUpdateForm({
         await onRoomUpdated();
       }
       setIsEditing(false);
+      
+      // Başarı mesajı göster
+      setSuccessMessage('Değişiklikler başarıyla kaydedildi!');
+      setShowSuccess(true);
     } catch (error) {
       console.error('Güncelleme hatası:', error);
+      setErrorMessage('Güncelleme sırasında hata oluştu!');
+      setShowError(true);
     }
   };
 
@@ -381,7 +401,7 @@ export default function RoomUpdateForm({
                 ) : (
                   <>
                     <button
-                      onClick={handleSave}
+                      onClick={handleSaveClick}
                       className="px-3 py-1 bg-green-500 text-white text-sm rounded-md hover:bg-green-600 transition-colors"
                     >
                       Kaydet
@@ -855,6 +875,32 @@ export default function RoomUpdateForm({
           )}
         </div>
       </div>
+
+      {/* Onay Dialog'u */}
+      <ConfirmDialog
+        isOpen={showConfirmDialog}
+        onConfirm={handleSave}
+        onCancel={() => setShowConfirmDialog(false)}
+        title="Değişiklikleri Kaydet"
+        message="Yaptığınız değişiklikleri kaydetmek istediğinizden emin misiniz?"
+        confirmText="Kaydet"
+        cancelText="İptal"
+        type="success"
+      />
+
+      {/* Başarı Notification */}
+      <SuccessNotification
+        message={successMessage}
+        isVisible={showSuccess}
+        onClose={() => setShowSuccess(false)}
+      />
+
+      {/* Hata Notification */}
+      <ErrorNotification
+        message={errorMessage}
+        isVisible={showError}
+        onClose={() => setShowError(false)}
+      />
     </div>
   );
 }
