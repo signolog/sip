@@ -21,6 +21,7 @@ import SVGVoiceProcessing from '../public/assets/icons/SVGVoiceProccesing.jsx';
 import SVGMicrophone from '../public/assets/icons/SVGMicrophone.jsx';
 import PopularPlaces from '../components/Discover/PopularPlaces.jsx';
 import Campaigns from '../components/Discover/Campaigns.jsx';
+import ProfilePanel from '../components/Profile/ProfilePanel.jsx';
 
 export default function MapLibreMap() {
   // Chat yönetimi hook'u
@@ -1097,14 +1098,117 @@ export default function MapLibreMap() {
     }, 1000);
   };
 
+  // Kullanıcı kayıt handler'ı
+  const handleRegisterUser = async (argsStr) => {
+    const args = JSON.parse(argsStr);
+    console.log('register_user tetiklendi:', args);
+
+    try {
+      const response = await fetch('/api/auth/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username: args.username,
+          password: args.password,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        // Token ve kullanıcı bilgilerini kaydet
+        localStorage.setItem('user_token', data.token);
+        localStorage.setItem('user_data', JSON.stringify(data.user));
+        
+        setChatMessages(prev => [
+          ...prev,
+          { 
+            role: 'assistant', 
+            content: `Hoş geldin ${args.username}! Başarıyla kayıt oldun. Artık sistemimizi kullanabilirsin. 🎉` 
+          },
+        ]);
+      } else {
+        setChatMessages(prev => [
+          ...prev,
+          { 
+            role: 'assistant', 
+            content: `Kayıt başarısız: ${data.error}` 
+          },
+        ]);
+      }
+    } catch (error) {
+      console.error('Register error:', error);
+      setChatMessages(prev => [
+        ...prev,
+        { 
+          role: 'assistant', 
+          content: 'Kayıt sırasında bir hata oluştu. Lütfen tekrar dener misin?' 
+        },
+      ]);
+    }
+  };
+
+  // Kullanıcı giriş handler'ı
+  const handleLoginUser = async (argsStr) => {
+    const args = JSON.parse(argsStr);
+    console.log('login_user tetiklendi:', args);
+
+    try {
+      const response = await fetch('/api/auth/signin', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username: args.username,
+          password: args.password,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        // Token ve kullanıcı bilgilerini kaydet
+        localStorage.setItem('user_token', data.token);
+        localStorage.setItem('user_data', JSON.stringify(data.user));
+        
+        setChatMessages(prev => [
+          ...prev,
+          { 
+            role: 'assistant', 
+            content: `Hoş geldin ${args.username}! Başarıyla giriş yaptın. Sana nasıl yardımcı olabilirim? 😊` 
+          },
+        ]);
+      } else {
+        setChatMessages(prev => [
+          ...prev,
+          { 
+            role: 'assistant', 
+            content: `Giriş başarısız: ${data.error}` 
+          },
+        ]);
+      }
+    } catch (error) {
+      console.error('Login error:', error);
+      setChatMessages(prev => [
+        ...prev,
+        { 
+          role: 'assistant', 
+          content: 'Giriş sırasında bir hata oluştu. Lütfen tekrar dener misin?' 
+        },
+      ]);
+    }
+  };
+
   // Function call handler'ları
   const functionCallHandlers = {
     navigateUser: handleNavigateUser,
     changeFloor: handleChangeFloor,
     findSpecialLocation: handleFindSpecialLocation,
-    // Eksik handler'lar için placeholder'lar
-    registerUser: null,
-    loginUser: null,
+    registerUser: handleRegisterUser,
+    loginUser: handleLoginUser,
     visitLocation: null,
   };
 
@@ -2965,13 +3069,8 @@ export default function MapLibreMap() {
                       activeNavItem === 3 ? 'block' : 'hidden'
                     }`}
                   >
-                    <div className="h-80 flex items-center justify-center bg-gray-50 rounded-lg">
-                      <div className="text-center text-gray-500">
-                        <div className="text-4xl mb-2">🔧</div>
-                        <div className="text-sm">
-                          Bu bölüm henüz hazır değil
-                        </div>
-                      </div>
+                    <div className="h-80 bg-white rounded-lg overflow-hidden">
+                      <ProfilePanel />
                     </div>
                   </div>
                 </>
@@ -3836,7 +3935,7 @@ export default function MapLibreMap() {
               </span>
             </button>
 
-            {/* Boş 2 */}
+            {/* Profil */}
             <button
               onClick={() => {
                 if (activeNavItem === 3 && !isCardMinimized) {
@@ -3872,7 +3971,7 @@ export default function MapLibreMap() {
                     : 'text-gray-500'
                 }`}
               >
-                Boş
+                Profil
               </span>
             </button>
           </div>

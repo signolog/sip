@@ -127,15 +127,14 @@ export const OPENAI_FUNCTIONS = [
   },
   {
     name: "register_user",
-    description: "Kullanıcı kayıt işlemi",
+    description: "Kullanıcı kayıt işlemi - sadece kullanıcı adı ve şifre ile temel kullanıcı oluşturur",
     parameters: {
       type: "object",
       properties: {
-        username: { type: "string" },
-        email: { type: "string" },
-        password: { type: "string" },
+        username: { type: "string", description: "Kullanıcı adı" },
+        password: { type: "string", description: "Şifre (en az 4 karakter)" },
       },
-      required: ["username", "email", "password"],
+      required: ["username", "password"],
     },
   },
   {

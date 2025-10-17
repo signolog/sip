@@ -18,9 +18,14 @@ const UserSchema = new mongoose.Schema(
       unique: true,
       sparse: true, // allows null values
     },
+    phone: {
+      type: String,
+      sparse: true, // allows null values
+    },
     role: {
       type: String,
-      enum: ["admin", "place_owner", "store_owner"],
+      enum: ["admin", "place_owner", "store_owner", "basic_user", "advanced_user"],
+      default: "basic_user",
       required: true,
     },
 
@@ -64,4 +69,9 @@ UserSchema.methods.comparePassword = async function(candidatePassword) {
   return bcrypt.compare(candidatePassword, this.password);
 };
 
-module.exports = mongoose.models.User || mongoose.model("User", UserSchema);
+// Model cache'ini temizle ve yeniden oluştur
+if (mongoose.models.User) {
+  delete mongoose.models.User;
+}
+
+module.exports = mongoose.model("User", UserSchema);
