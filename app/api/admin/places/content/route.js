@@ -112,7 +112,6 @@ export async function PUT(request) {
 
     return NextResponse.json({
       success: true,
-      message: "Content başarıyla güncellendi",
     });
   } catch (error) {
     console.error("❌ Content güncelleme hatası:", error);

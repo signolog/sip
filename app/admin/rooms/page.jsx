@@ -245,13 +245,9 @@ function RoomsPageContent() {
           const allRoomsData = await allRoomsResponse.json();
           setAllRooms(Array.isArray(allRoomsData) ? allRoomsData : allRoomsData.rooms || []);
         }
-        
-        // Başarı mesajı göster
-        alert('✅ Değişiklikler kaydedildi!');
       }
     } catch (error) {
       console.error("Güncelleme hatası:", error);
-      alert('❌ Güncelleme sırasında hata oluştu!');
     }
   };
 

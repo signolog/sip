@@ -88,7 +88,6 @@ export async function DELETE(request) {
 
     return NextResponse.json({
       success: true,
-      message: "Kat planı başarıyla silindi",
       floor: floor,
     });
   } catch (error) {

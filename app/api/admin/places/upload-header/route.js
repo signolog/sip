@@ -107,7 +107,6 @@ export async function POST(request) {
 
     return NextResponse.json({
       success: true,
-      message: "Header image başarıyla yüklendi",
       fileName: fileName,
       filePath: `/images/places/${fileName}`,
     });

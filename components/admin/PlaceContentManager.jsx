@@ -1,5 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
+import ConfirmDialog from "./ConfirmDialog";
+import SuccessNotification from "./SuccessNotification";
+import ErrorNotification from "./ErrorNotification";
 
 export default function PlaceContentManager({ placeId, user }) {
   const [content, setContent] = useState({
@@ -26,7 +29,11 @@ export default function PlaceContentManager({ placeId, user }) {
   });
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
-  const [message, setMessage] = useState("");
+  const [showConfirmDialog, setShowConfirmDialog] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [showError, setShowError] = useState(false);
 
   const days = [
     { key: "monday", label: "Pazartesi" },
@@ -80,8 +87,6 @@ export default function PlaceContentManager({ placeId, user }) {
         ...prev,
         header_image: base64Image, // Geçici preview için base64
       }));
-      setMessage("📸 Header image seçildi. Değişiklikleri kaydetmek için 'Kaydet' butonuna basın.");
-      setTimeout(() => setMessage(""), 3000);
     };
     reader.readAsDataURL(file);
   };
@@ -99,16 +104,19 @@ export default function PlaceContentManager({ placeId, user }) {
         ...prev,
         logo: base64Image, // Geçici preview için base64
       }));
-      setMessage("🏢 Logo seçildi. Değişiklikleri kaydetmek için 'Kaydet' butonuna basın.");
-      setTimeout(() => setMessage(""), 3000);
     };
     reader.readAsDataURL(file);
   };
 
-  // Content'i kaydet
+  // Kaydetme onayı iste
+  const handleSaveClick = () => {
+    setShowConfirmDialog(true);
+  };
+
+  // Gerçek kaydetme işlemi
   const saveContent = async () => {
+    setShowConfirmDialog(false);
     setSaving(true);
-    setMessage("");
 
     try {
       const token = localStorage.getItem("admin_token");
@@ -144,7 +152,8 @@ export default function PlaceContentManager({ placeId, user }) {
           finalContent.header_image = uploadData.filePath;
         } else {
           console.log("❌ Header image yüklenemedi:", uploadData.error);
-          setMessage(`❌ Header image yüklenemedi: ${uploadData.error}`);
+          setErrorMessage(`Header image yüklenemedi: ${uploadData.error}`);
+          setShowError(true);
           return;
         }
       }
@@ -178,7 +187,8 @@ export default function PlaceContentManager({ placeId, user }) {
           finalContent.logo = uploadData.filePath;
         } else {
           console.log("❌ Logo yüklenemedi:", uploadData.error);
-          setMessage(`❌ Logo yüklenemedi: ${uploadData.error}`);
+          setErrorMessage(`Logo yüklenemedi: ${uploadData.error}`);
+          setShowError(true);
           return;
         }
       }
@@ -199,20 +209,20 @@ export default function PlaceContentManager({ placeId, user }) {
       const data = await response.json();
 
       if (data.success) {
-        setMessage("✅ İçerik başarıyla kaydedildi!");
+        setSuccessMessage("İçerik başarıyla kaydedildi!");
+        setShowSuccess(true);
         setTimeout(async () => {
-          setMessage("");
           // Content'i yeniden yükle
           await loadContent();
         }, 2000);
       } else {
-        setMessage("❌ İçerik kaydedilmedi");
-        setTimeout(() => setMessage(""), 3000);
+        setErrorMessage("İçerik kaydedilmedi");
+        setShowError(true);
       }
     } catch (error) {
       console.error("❌ Content kaydedilemedi:", error);
-      setMessage("❌ İçerik kaydedilmedi");
-      setTimeout(() => setMessage(""), 3000);
+      setErrorMessage("İçerik kaydedilmedi");
+      setShowError(true);
     } finally {
       setSaving(false);
     }
@@ -264,17 +274,6 @@ export default function PlaceContentManager({ placeId, user }) {
 
   return (
     <div className="space-y-6">
-      {/* Mesaj */}
-      {message && (
-        <div
-          className={`p-3 rounded-md ${
-            message.includes("✅") ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"
-          }`}
-        >
-          {message}
-        </div>
-      )}
-
       {/* Header Image */}
       <div className="bg-white rounded-lg shadow-sm p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Header Image</h3>
@@ -509,19 +508,39 @@ export default function PlaceContentManager({ placeId, user }) {
       {/* Kaydet Butonu */}
       <div className="flex justify-end">
         <button
-          onClick={saveContent}
+          onClick={handleSaveClick}
           disabled={saving}
-          className={`px-6 py-3 text-white rounded-lg font-medium disabled:opacity-50 transition-all duration-300 ${
-            message === "✅ İçerik başarıyla kaydedildi!"
-              ? "bg-green-600 scale-105"
-              : message === "❌ İçerik kaydedilmedi"
-              ? "bg-red-500 scale-105"
-              : "bg-blue-600 hover:bg-blue-700"
-          }`}
+          className="px-6 py-3 text-white rounded-lg font-medium disabled:opacity-50 transition-all duration-300 bg-blue-600 hover:bg-blue-700"
         >
-          {message || (saving ? "Kaydediliyor..." : "İçeriği Kaydet")}
+          {saving ? "Kaydediliyor..." : "İçeriği Kaydet"}
         </button>
       </div>
+
+      {/* Onay Dialog'u */}
+      <ConfirmDialog
+        isOpen={showConfirmDialog}
+        onConfirm={saveContent}
+        onCancel={() => setShowConfirmDialog(false)}
+        title="İçeriği Kaydet"
+        message="Yaptığınız değişiklikleri kaydetmek istediğinizden emin misiniz?"
+        confirmText="Kaydet"
+        cancelText="İptal"
+        type="success"
+      />
+
+      {/* Başarı Notification */}
+      <SuccessNotification
+        message={successMessage}
+        isVisible={showSuccess}
+        onClose={() => setShowSuccess(false)}
+      />
+
+      {/* Hata Notification */}
+      <ErrorNotification
+        message={errorMessage}
+        isVisible={showError}
+        onClose={() => setShowError(false)}
+      />
     </div>
   );
 }

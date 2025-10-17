@@ -261,7 +261,6 @@ export async function POST(request) {
 
     return NextResponse.json({
       success: true,
-      message: "Kampanya başarıyla eklendi",
       campaign: {
         ...campaign,
         id: room.content.campaigns.length - 1 // Array index
@@ -465,7 +464,6 @@ export async function PUT(request) {
 
     return NextResponse.json({
       success: true,
-      message: "Kampanya başarıyla güncellendi",
       campaign: updatedCampaign
     });
 
@@ -556,7 +554,6 @@ export async function DELETE(request) {
 
     return NextResponse.json({
       success: true,
-      message: "Kampanya başarıyla silindi",
       deletedCampaign: deletedCampaign.title
     });
 
